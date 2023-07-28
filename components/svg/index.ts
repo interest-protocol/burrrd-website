@@ -1,0 +1,10 @@
+export { default as BurrrdSVG } from './logo';
+export { default as MenuSVG } from './list-two-lines';
+export { default as HeroSVG } from './hero';
+export { default as HeadToPrizeSVG } from './head-to-prize';
+export { default as SmokerBurrrdSVG } from './smoker-burrrd';
+export { default as BodyBagSVG } from './body-bag';
+export { default as BurrrdCleaningSVG } from './burrrd-cleaning';
+export { default as StabbedPepeSVG } from './stabbed-pepe';
+export { default as DeadDogeSVG } from './dead-doge';
+export { default as DogeBloodSVG } from './doge-blood';
