@@ -24,8 +24,8 @@ const TokenomicsSection: FC = () => {
               position="absolute"
             >
               <SmokerBurrrdSVG
-                maxHeight="800px"
-                maxWidth="500px"
+                maxHeight="50rem"
+                maxWidth="31.25rem"
                 width="125%"
               />
             </Box>

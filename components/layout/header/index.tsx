@@ -1,4 +1,4 @@
-import { BurrrdSVG } from '@/svg';
+import { BurrrdLogoSVG } from '@/svg';
 import { Box } from '@interest-protocol/ui-kit';
 import { FC, useCallback, useState } from 'react';
 import Navbar from './navbar';
@@ -28,7 +28,7 @@ const Header: FC = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         {!isMobile ? (
           <Box display={['none', 'none', 'none', 'unset']}>
-            <BurrrdSVG
+            <BurrrdLogoSVG
               maxHeight="3.5625rem"
               maxWidth="12.625rem"
               width="100%"
@@ -36,7 +36,11 @@ const Header: FC = () => {
           </Box>
         ) : (
           <Box display={['unset', 'unset', 'unset', 'none']}>
-            <BurrrdSVG maxHeight="1.75rem" maxWidth="6.875rem" width="100%" />
+            <BurrrdLogoSVG
+              maxHeight="1.75rem"
+              maxWidth="6.875rem"
+              width="100%"
+            />
           </Box>
         )}
         <Navbar />

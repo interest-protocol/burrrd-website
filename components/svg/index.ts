@@ -1,4 +1,4 @@
-export { default as BurrrdSVG } from './logo';
+export { default as BurrrdLogoSVG } from './logo';
 export { default as MenuSVG } from './list-two-lines';
 export { default as HeroSVG } from './hero';
 export { default as HeadToPrizeSVG } from './head-to-prize';
@@ -8,3 +8,11 @@ export { default as BurrrdCleaningSVG } from './burrrd-cleaning';
 export { default as StabbedPepeSVG } from './stabbed-pepe';
 export { default as DeadDogeSVG } from './dead-doge';
 export { default as DogeBloodSVG } from './doge-blood';
+export { default as QuestionSVG } from './question';
+export { default as KillingSpreeSVG } from './killing-spree';
+export { default as BurrrdSVG } from './burrrd';
+export { default as ConverstionBalloonSVG } from './conversation-balloon';
+export { default as TelegramSVG } from './telegram';
+export { default as TwitterSVG } from './twitter';
+export { default as DiscordSVG } from './discord';
+export { default as MediumSVG } from './medium';

@@ -32,7 +32,7 @@ const HeroSection: FC = () => {
           <Button variant="primary">Buy now</Button>
         </Box>
 
-        <HeroSVG maxHeight="599px" maxWidth="599px" width="100%" />
+        <HeroSVG maxHeight="37.4375rem" maxWidth="37.4375rem" width="100%" />
       </Box>
     </Box>
   );

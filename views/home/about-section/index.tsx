@@ -22,12 +22,12 @@ const AboutSection: FC = () => {
         borderBottom="2px solid black"
       >
         <Box
-          top="-78px"
-          left="185px"
+          top="-4.875rem"
+          left="11.5625rem"
           position="absolute"
           transform="scale(1.3)"
         >
-          <HeadToPrizeSVG maxHeight="800px" maxWidth="500px" width="150%" />
+          <HeadToPrizeSVG maxHeight="50rem" maxWidth="31.25rem" width="150%" />
         </Box>
         <Box p="6rem" marginTop="auto">
           <Typography
@@ -41,7 +41,7 @@ const AboutSection: FC = () => {
           </Typography>
         </Box>
         <Box
-          p="186px"
+          p="11.625rem"
           width="100%"
           minHeight="100%"
           borderLeft="2px solid black"

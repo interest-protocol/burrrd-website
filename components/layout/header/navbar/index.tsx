@@ -1,4 +1,4 @@
-import { BurrrdSVG } from '@/svg';
+import { BurrrdLogoSVG } from '@/svg';
 import { Box, Typography } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 

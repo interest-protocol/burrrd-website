@@ -18,6 +18,7 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
     <Frame
       flex="1"
       p="1rem"
+      mb="12.5rem"
       position="relative"
       borderRadius=".625rem"
       bg={
@@ -26,10 +27,10 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
     >
       <Frame
         bg="white"
-        top="-30px"
-        width="76px"
-        right="-30px"
-        height="76px"
+        top="-1.875rem"
+        width="4.75rem"
+        right="-1.875rem"
+        height="4.75rem"
         display="flex"
         boxSize="small"
         borderRadius="50%"
@@ -73,8 +74,8 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
           <Box
             position="absolute"
             zIndex="2"
-            bottom="-300px"
-            left="-120px"
+            bottom="-18.75rem"
+            left="-7.5rem"
             right="0"
             p="1.5rem"
             display="flex"
@@ -90,30 +91,34 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
             right="0"
             zIndex="1"
             p="1.5rem"
-            left="-90px"
+            left="-5.625rem"
             display="flex"
-            bottom="-232px"
+            bottom="-14.5rem"
             position="absolute"
             justifyContent="center"
           >
-            <DogeBloodSVG maxHeight="100px" maxWidth="100px" width="100%" />
+            <DogeBloodSVG maxHeight="6.25rem" maxWidth="6.25rem" width="100%" />
           </Box>
         </>
       ) : index === 1 ? (
         <>
           <Box
             position="absolute"
-            bottom="-270px"
-            left="-155px"
+            bottom="-16.875rem"
+            left="-9.6875rem"
             p="1.5rem"
             justifyContent="center"
           >
-            <StabbedPepeSVG maxHeight="430px" maxWidth="430px" width="140%" />
+            <StabbedPepeSVG
+              maxHeight="26.875rem"
+              maxWidth="26.875rem"
+              width="140%"
+            />
           </Box>
           <Box
             p="1.5rem"
-            right="-110px"
-            bottom="-260px"
+            right="-6.875rem"
+            bottom="-16.25rem"
             position="absolute"
             justifyContent="center"
           >
@@ -126,15 +131,15 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
         </>
       ) : index === 2 ? (
         <Box
-          bottom="-370px"
+          bottom="-23.125rem"
           left="0"
-          right="-240px"
+          right="-15rem"
           p="1.5rem"
           display="flex"
           position="absolute"
           justifyContent="center"
         >
-          <BodyBagSVG maxHeight="418px" maxWidth="418px" width="80%" />
+          <BodyBagSVG maxHeight="26.125rem" maxWidth="26.125rem" width="80%" />
         </Box>
       ) : null}
     </Frame>

@@ -11,12 +11,11 @@ const RoadmapSection: FC = () => {
   const { theme } = useTheme();
   return (
     <Box
-      mt="0px"
+      mt="0"
       bg="white"
       variant="container"
       p="7.5rem 9.375rem"
       borderBottom="2px solid black"
-      pb="18.75rem"
     >
       <Typography
         as="h2"
