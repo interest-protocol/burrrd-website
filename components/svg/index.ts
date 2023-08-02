@@ -16,3 +16,6 @@ export { default as TelegramSVG } from './telegram';
 export { default as TwitterSVG } from './twitter';
 export { default as DiscordSVG } from './discord';
 export { default as MediumSVG } from './medium';
+export { default as InterestProtocolLogoSVG } from './interest-protocol-logo';
+export { default as SuishiLogoSVG } from './suishi-logo';
+export { default as SuipainsLogoSVG } from './suipains-logo';

@@ -1,6 +1,6 @@
 import Frame from '@/components/frame';
 import { useTheme } from '@/context/theme-context';
-import { HeadToPrizeSVG, SmokerBurrrdSVG } from '@/svg';
+import { SmokerBurrrdSVG } from '@/svg';
 import { Box, Typography } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 
@@ -12,28 +12,28 @@ const TokenomicsSection: FC = () => {
         <Box
           position="relative"
           width="100%"
-          p="16.5625rem"
+          p="14.6875rem"
           minHeight="100%"
           bg={theme.theme.colors.primary}
         >
           <Box position="relative" mt="5rem">
             <Box
               zIndex="1"
-              top="-13.375rem"
+              top="-12.3rem"
               left="-1.5625rem"
               position="absolute"
             >
               <SmokerBurrrdSVG
                 maxHeight="50rem"
                 maxWidth="31.25rem"
-                width="125%"
+                width="115%"
               />
             </Box>
-            <Box position="absolute" top="-13.125rem" right="2.5rem">
+            <Box position="absolute" top="-11.125rem" right="2.5rem">
               <Typography
                 as="h2"
                 color="white"
-                fontSize="5.5rem"
+                fontSize="4.5rem"
                 variant="displayLarge"
                 textTransform="uppercase"
               >

@@ -10,40 +10,36 @@ const Footer: FC = () => {
     <Box
       zIndex={3}
       as="footer"
+      px="7.5rem"
       bg="#8C4FE8"
       width="100%"
-      px="12.5rem"
       display="flex"
-      pt="6.875rem"
-      pb="16.125rem"
+      pt="5.625rem"
+      pb="14.375rem"
       gridColumn="1/-1"
     >
       <Box position="relative" flex="1">
-        <Box
-          left="-3.125rem"
-          bottom="-8.75rem"
-          position="absolute"
-          transform="scale(1.3)"
-        >
+        <Box left="-3.125rem" bottom="-8.75rem" position="absolute">
           <BurrrdSVG maxHeight="21.875rem" maxWidth="21.25rem" width="100%" />
         </Box>
-        <Box position="absolute" bottom="-1.5625rem" left="10.625rem">
+        <Box position="absolute" bottom="-1.5625rem" left="9.375rem">
           <Typography
             top="20%"
-            left="40%"
+            left="37%"
             color="white"
             variant="small"
             fontWeight="700"
             fontSize="1.5rem"
             position="absolute"
+            textTransform="uppercase"
             transform="translate(-50%, -50%)"
           >
             Follow me
           </Typography>
           <ConverstionBalloonSVG
-            width="100%"
-            maxHeight="21.875rem"
+            width="90%"
             maxWidth="21.25rem"
+            maxHeight="21.875rem"
           />
         </Box>
       </Box>
@@ -77,7 +73,12 @@ const Footer: FC = () => {
               justifyContent="center"
             >
               <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
-              <Typography variant="medium" m="0">
+              <Typography
+                m="0"
+                variant="medium"
+                fontFamily="Roboto Mono"
+                textDecoration="underline"
+              >
                 {name}
               </Typography>
             </Frame>

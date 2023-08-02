@@ -1,7 +1,7 @@
 import Frame from '@/components/frame';
 import { useTheme } from '@/context/theme-context';
-import { Box, Typography } from '@interest-protocol/ui-kit';
-import { FC } from 'react';
+import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { FC, useState } from 'react';
 import { RoadmapCardProps } from './roadmap.types';
 import { v4 } from 'uuid';
 import {
@@ -14,11 +14,19 @@ import {
 
 const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
   const { theme } = useTheme();
+  const [isDoge, setIsDoge] = useState(false);
+  const [isPepe, setIsPepe] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsDoge(true);
+    setIsPepe(true);
+  };
+
   return (
     <Frame
       flex="1"
-      p="1rem"
-      mb="12.5rem"
+      py="1rem"
+      mb="9.375rem"
       position="relative"
       borderRadius=".625rem"
       bg={
@@ -69,79 +77,111 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
           </Box>
         ))}
       </Box>
-      {index === 0 ? (
-        <>
+      <Box onMouseEnter={handleMouseEnter}>
+        {index === 0 ? (
+          <>
+            <Box
+              right="0"
+              p="1.5rem"
+              zIndex="2"
+              display="flex"
+              left="-6.25rem"
+              position="absolute"
+              bottom="-17.1875rem"
+              justifyContent="center"
+            >
+              <DeadDogeSVG
+                maxHeight="16.8125rem"
+                maxWidth="23.625rem"
+                width="90%"
+              />
+            </Box>
+            <Motion
+              initial={{ scale: 0, translateY: '-10%' }}
+              animate={{ scale: isDoge ? 1 : 0, translateY: '-5%' }}
+              transition={{ duration: 2.5 }}
+              right="0"
+              zIndex="1"
+              p="1.5rem"
+              display="flex"
+              left="-5.625rem"
+              bottom="-13.75rem"
+              position="absolute"
+              justifyContent="center"
+            >
+              <DogeBloodSVG
+                maxHeight="6.25rem"
+                maxWidth="6.25rem"
+                width="100%"
+              />
+            </Motion>
+          </>
+        ) : index === 1 ? (
+          <>
+            <Motion
+              initial={{ opacity: 0.4, translateY: '0' }}
+              animate={{
+                opacity: isPepe ? 0 : 0,
+                translateY: '-100%',
+              }}
+              transition={{ duration: 2.5 }}
+              position="absolute"
+              bottom="-15.9375rem"
+              left="-9.0625rem"
+              p="1.5rem"
+              justifyContent="center"
+            >
+              <StabbedPepeSVG
+                maxHeight="26.875rem"
+                maxWidth="26.875rem"
+                width="130%"
+              />
+            </Motion>
+            <Box
+              position="absolute"
+              bottom="-15.9375rem"
+              left="-9.0625rem"
+              p="1.5rem"
+              justifyContent="center"
+            >
+              <StabbedPepeSVG
+                maxHeight="26.875rem"
+                maxWidth="26.875rem"
+                width="130%"
+              />
+            </Box>
+            <Box
+              p="1.5rem"
+              right="-7.5rem"
+              bottom="-15rem"
+              position="absolute"
+              justifyContent="center"
+            >
+              <BurrrdCleaningSVG
+                maxHeight="23.3125rem"
+                maxWidth="23.3125rem"
+                width="110%"
+              />
+            </Box>
+          </>
+        ) : index === 2 ? (
           <Box
-            position="absolute"
-            zIndex="2"
-            bottom="-18.75rem"
-            left="-7.5rem"
-            right="0"
+            bottom="-19.375rem"
+            left="0"
+            right="-13.75rem"
             p="1.5rem"
             display="flex"
-            justifyContent="center"
-          >
-            <DeadDogeSVG
-              maxHeight="16.8125rem"
-              maxWidth="23.625rem"
-              width="100%"
-            />
-          </Box>
-          <Box
-            right="0"
-            zIndex="1"
-            p="1.5rem"
-            left="-5.625rem"
-            display="flex"
-            bottom="-14.5rem"
             position="absolute"
             justifyContent="center"
           >
-            <DogeBloodSVG maxHeight="6.25rem" maxWidth="6.25rem" width="100%" />
-          </Box>
-        </>
-      ) : index === 1 ? (
-        <>
-          <Box
-            position="absolute"
-            bottom="-16.875rem"
-            left="-9.6875rem"
-            p="1.5rem"
-            justifyContent="center"
-          >
-            <StabbedPepeSVG
-              maxHeight="26.875rem"
-              maxWidth="26.875rem"
-              width="140%"
+            <BodyBagSVG
+              maxHeight="26.125rem"
+              maxWidth="26.125rem"
+              width="65%"
             />
           </Box>
-          <Box
-            p="1.5rem"
-            right="-6.875rem"
-            bottom="-16.25rem"
-            position="absolute"
-            justifyContent="center"
-          >
-            <BurrrdCleaningSVG
-              maxHeight="23.3125rem"
-              maxWidth="23.3125rem"
-              width="120%"
-            />
-          </Box>
-        </>
-      ) : index === 2 ? (
-        <Box
-          bottom="-23.125rem"
-          left="0"
-          right="-15rem"
-          p="1.5rem"
-          display="flex"
-          position="absolute"
-          justifyContent="center"
-        >
-          <BodyBagSVG maxHeight="26.125rem" maxWidth="26.125rem" width="80%" />
-        </Box>
-      ) : null}
+        ) : null}
+      </Box>
     </Frame>
   );
 };

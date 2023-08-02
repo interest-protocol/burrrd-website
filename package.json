@@ -21,6 +21,8 @@
     "@vercel/analytics": "^0.1.5",
     "usehooks-ts": "^2.9.1",
     "web-vitals": "^1.0.1",
+    "react-slick": "^0.29.0",
+    "framer-motion": "^10.12.2",
     "next-intl": "^2.7.4",
     "uuid": "^8.3.2"
   },
@@ -35,6 +37,7 @@
     "@commitlint/config-conventional": "^12.1.4",
     "@emotion/babel-plugin": "^11.10.5",
     "@emotion/eslint-plugin": "^11.2.0",
+    "@types/react-slick": "^0.23.10",
     "@types/ramda": "^0.28.23",
     "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
