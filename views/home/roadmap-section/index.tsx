@@ -23,7 +23,11 @@ const RoadmapSection: FC = () => {
       >
         Roadmap
       </Typography>
-      <Box display="flex" gap="4rem">
+      <Box
+        gap="4rem"
+        display={['none', 'none', 'none', 'flex']}
+        height={['37.5rem', '37.5rem', '37.5rem', 'unset']}
+      >
         {ROADMAP_DATA.map((item, index) => (
           <RoadmapCard key={v4()} {...item} index={index} />
         ))}

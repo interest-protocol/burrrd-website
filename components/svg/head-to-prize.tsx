@@ -13,8 +13,7 @@ const HeadToPrize: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
       x="0.889648"
       y="132.444"
       width="371.913"
-      height="463.024"
-      transform="rotate(-20.7492 0.889648 132.444)"
+      height="440"
       fill="url(#pattern0)"
     />
     <defs>

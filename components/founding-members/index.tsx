@@ -25,12 +25,12 @@ const FoundingMembers: FC = () => {
             </a>
           ))}
           <Typography
-            ml="2.5625rem"
-            mr="4.4375rem"
-            variant="medium"
-            color={defaultTheme.theme.colors.primary}
+            ml={['0', '2.5625rem', '2.5625rem', '2.5625rem']}
+            mr={['0', '4.4375rem', '4.4375rem', '4.4375rem']}
             fontWeight="600"
+            variant="medium"
             fontSize="1.25rem"
+            color={defaultTheme.theme.colors.primary}
           >
             Our funding members
           </Typography>

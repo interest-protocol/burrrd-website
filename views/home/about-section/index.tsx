@@ -20,26 +20,50 @@ const AboutSection: FC = () => {
         gridColumn="1/-1"
         position="relative"
         borderBottom="2px solid black"
+        flexDirection={['column', 'column', 'column', 'row']}
       >
-        <Box top="-7.1875rem" left="13.125rem" position="absolute">
-          <HeadToPrizeSVG maxHeight="50rem" maxWidth="31.25rem" width="150%" />
+        <Box
+          top={['12.5%', '5.5%', '5.5%', '-6.8rem']}
+          left={['75%', '75%', '75%', '19.125rem']}
+          position="absolute"
+          transform={[
+            'rotate(16.01deg) scale(1.7)',
+            'rotate(16.01deg) scale(1.7)',
+            'rotate(16.01deg) scale(1.7)',
+            'rotate(-20.75deg) scale(1.7)',
+          ]}
+        >
+          <HeadToPrizeSVG maxHeight="50rem" maxWidth="31.25rem" width="100%" />
         </Box>
-        <Box p="6rem" marginTop="auto">
+        <Box
+          p={['2.5rem 1.25rem', '2.5rem 1.25rem', '2.5rem 1.25rem', '6rem']}
+          marginTop="auto"
+          borderBottom={[
+            '2px solid black',
+            '2px solid black',
+            '2px solid black',
+            'none',
+          ]}
+        >
           <Typography
             as="h2"
+            margin="0"
             color="black"
-            fontSize="5.5rem"
+            fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
+            textAlign="center"
             variant="displayLarge"
             textTransform="uppercase"
+            mb={['0', '0', '0', '10rem']}
           >
             About
           </Typography>
         </Box>
         <Box
-          p="9.0625rem"
+          p={['1.5625rem', '1.5625rem', '1.5625rem', '9.0625rem']}
+          py={['9.0625rem', '9.0625rem', '9.0625rem', '']}
           width="100%"
           minHeight="100%"
-          borderLeft="2px solid black"
+          borderLeft={['none', 'none', 'none', '2px solid black']}
           bg={theme.theme.colors.secondary}
         >
           <Frame
@@ -48,7 +72,11 @@ const AboutSection: FC = () => {
             borderRadius="2rem"
             bg={theme.theme.colors.septenary}
           >
-            <Box fontSize="1.5rem" p="2rem" pb="0">
+            <Box
+              fontSize={['1rem', , '1rem', '1rem', '1.5rem']}
+              p="2rem"
+              pb="0"
+            >
               <Typography variant="medium">
                 BURRRD had enough of the never-ending sh¡tcoin circus, with all
                 those ridiculous dog derivatives and even that green thing. They
@@ -62,7 +90,11 @@ const AboutSection: FC = () => {
               </Typography>
             </Box>
             {toggle && (
-              <Box fontSize="1.5rem" p="2rem" pt="0">
+              <Box
+                fontSize={['1rem', , '1rem', '1rem', '1.5rem']}
+                p="2rem"
+                pt="0"
+              >
                 <Typography variant="medium">
                   But BURRRD inst just on a mission to eliminate the rubbish; he
                   has a bigger plan in mind. As he soars through the crypto

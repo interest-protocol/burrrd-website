@@ -8,34 +8,56 @@ const TokenomicsSection: FC = () => {
   const { theme } = useTheme();
   return (
     <Box variant="container" borderBottom="2px solid black">
-      <Box width="100%" display="flex" gridColumn="1/-1">
+      <Box
+        width="100%"
+        display="flex"
+        gridColumn="1/-1"
+        pb={['10.625rem', '10.625rem', '10.625rem', '0']}
+        bg={theme.theme.colors.primary}
+      >
         <Box
-          position="relative"
           width="100%"
-          p="14.6875rem"
           minHeight="100%"
-          bg={theme.theme.colors.primary}
+          position="relative"
+          p={['1.25rem', '1.25rem', '1.25rem', '14.6875rem']}
         >
-          <Box position="relative" mt="5rem">
+          <Box
+            mt="5rem"
+            position="relative"
+            pt={['6.25rem', '6.25rem', '6.25rem', '0']}
+          >
             <Box
               zIndex="1"
-              top="-12.3rem"
-              left="-1.5625rem"
+              top={['-22%', '-20.4%', '-0.4%', '-12.3rem']}
+              left={['40%', '40%', '-1.5625rem', '-1.5625rem']}
+              transform={['scale(0.8)', 'scale(0.5)', 'scale(0.5)', 'scale(1)']}
               position="absolute"
+              transformOrigin="right bottom"
             >
               <SmokerBurrrdSVG
                 maxHeight="50rem"
                 maxWidth="31.25rem"
-                width="115%"
+                width="100%"
               />
             </Box>
-            <Box position="absolute" top="-11.125rem" right="2.5rem">
+            <Box
+              position="absolute"
+              top={['-50%', '-50%', '-50%', '-12.25rem']}
+              right={['unset', 'unset', 'unset', '2.5rem']}
+              left={['50%', '50%', '50%', 'unset']}
+              transform={[
+                'translateX(-50%)',
+                'translateX(-50%)',
+                'translateX(-50%)',
+                'unset',
+              ]}
+            >
               <Typography
                 as="h2"
                 color="white"
-                fontSize="4.5rem"
                 variant="displayLarge"
                 textTransform="uppercase"
+                fontSize={['3.125rem', '3.125rem', '3.125rem', '4.5rem']}
               >
                 Tokenomics
               </Typography>
@@ -49,7 +71,7 @@ const TokenomicsSection: FC = () => {
               <Box p="2rem" display="flex" justifyContent="center">
                 <Typography
                   as="span"
-                  fontSize="5rem"
+                  fontSize={['1.875rem', '1.875rem', '1.875rem', '5rem']}
                   variant="medium"
                   fontWeight="bold"
                 >
@@ -57,6 +79,7 @@ const TokenomicsSection: FC = () => {
                 </Typography>
               </Box>
               <Frame
+                display={['none', 'none', 'none', 'block']}
                 bg="white"
                 bottom="-2rem"
                 right="1rem"
@@ -72,7 +95,11 @@ const TokenomicsSection: FC = () => {
             </Frame>
           </Box>
           <Box mt="6.25rem" position="relative" mb="6rem">
-            <Box color="white" fontSize="2.25rem" textAlign="center">
+            <Box
+              color="white"
+              fontSize={['1rem', '1rem', '1rem', '2.25rem']}
+              textAlign="center"
+            >
               <Typography variant="medium">
                 90% of the tokens will be added to the liquidity pool, with LP
                 tokens being burned and the contract renounced to ensure
@@ -89,29 +116,20 @@ const TokenomicsSection: FC = () => {
           <Frame
             p="2rem"
             left="50%"
-            width="max-content"
-            transform="translateX(-50%) rotate(11.04deg)"
-            bottom="-4rem"
+            bottom={['-5rem', '-5rem', '-5rem', '-4']}
             display="flex"
+            width="max-content"
             position="absolute"
             borderRadius="2rem"
             flexDirection="column"
             bg={theme.theme.colors.septenary}
+            transform="translateX(-50%) rotate(11.04deg)"
+            fontSize={['1.875rem', '1.875rem', '1.875rem', '5.5rem']}
           >
-            <Typography
-              as="span"
-              fontWeight="700"
-              fontSize="5.5rem"
-              variant="displayLarge"
-            >
+            <Typography as="span" fontWeight="700" variant="displayLarge">
               No Taxes,
             </Typography>
-            <Typography
-              as="span"
-              fontWeight="700"
-              fontSize="5.5rem"
-              variant="displayLarge"
-            >
+            <Typography as="span" fontWeight="700" variant="displayLarge">
               No Sh¡tcoin Bullsh¡t
             </Typography>
           </Frame>
