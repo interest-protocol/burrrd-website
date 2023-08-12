@@ -51,8 +51,8 @@ const Footer: FC = () => {
           }}
           position="absolute"
           transition={{ duration: 1.5 }}
-          bottom={['-21.875rem', '-28.875rem', '-28.875rem', '-28.875rem']}
           width={['15.625rem', '21.875rem', '21.875rem', '21.875rem']}
+          bottom={['-21.875rem', '-28.875rem', '-28.875rem', '-28.875rem']}
         >
           <BurrrdSVG maxHeight="21.875rem" maxWidth="21.25rem" width="100%" />
         </Motion>

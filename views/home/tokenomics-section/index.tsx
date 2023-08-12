@@ -1,5 +1,6 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
-import { FC, useCallback, useState } from 'react';
+import { FC, useCallback, useRef, useState } from 'react';
+import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
 import { useTheme } from '@/context/theme-context';
@@ -8,7 +9,6 @@ import { SmokerBurrrdSVG } from '@/svg';
 
 const TokenomicsSection: FC = () => {
   const { theme } = useTheme();
-  const [isTakenomicsHovered, setIsTakenomicsHovered] = useState(false);
   const [isNoTaxesHovered, setIsNoTaxesHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -19,8 +19,19 @@ const TokenomicsSection: FC = () => {
 
   useEventListener('resize', handleSetDesktop, true);
 
+  const countUpRef = useRef(null);
+
+  useCountUp({
+    ref: countUpRef,
+    start: 0,
+    duration: 10,
+    end: 420000000000000,
+    scrollSpyOnce: true,
+    enableScrollSpy: true,
+  });
+
   return (
-    <Box variant="container" borderBottom="2px solid black" id="takenomics">
+    <Box variant="container" borderBottom="2px solid black" id="tokenomics">
       <Box
         width="100%"
         display="flex"
@@ -35,7 +46,6 @@ const TokenomicsSection: FC = () => {
           p={['1.25rem', '1.25rem', '1.25rem', '14.6875rem']}
         >
           <Box
-            onMouseEnter={() => setIsTakenomicsHovered(true)}
             mt="5rem"
             position="relative"
             pt={['6.25rem', '6.25rem', '6.25rem', '0']}
@@ -89,20 +99,19 @@ const TokenomicsSection: FC = () => {
               <Box p="2rem" display="flex" justifyContent="center">
                 <Typography
                   as="span"
+                  ref={countUpRef}
                   fontSize={['1.875rem', '1.875rem', '1.875rem', '5rem']}
                   variant="medium"
                   fontWeight="bold"
-                >
-                  420,000,000,000,000
-                </Typography>
+                />
               </Box>
               <Motion
-                right="1rem"
+                right="2rem"
                 bottom="-2rem"
-                animate={isTakenomicsHovered ? { x: 0 } : { x: 400 }}
                 position="absolute"
-                initial={{ x: 400 }}
-                transition={{ duration: 1 }}
+                initial={{ x: 300, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 5, opacity: { delay: 5 } }}
               >
                 <Frame
                   display={['none', 'none', 'none', 'block']}
