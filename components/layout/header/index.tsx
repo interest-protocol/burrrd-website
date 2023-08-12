@@ -30,12 +30,11 @@ const Header: FC = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         {!isMobile ? (
           <Box
-            bg="red"
             gap="1rem"
             width="14.375rem"
             position="relative"
             alignItems="center"
-            display={['none', 'none', 'none', 'flex']}
+            display="flex"
           >
             <Motion
               animate={{
@@ -76,8 +75,50 @@ const Header: FC = () => {
             </Motion>
           </Box>
         ) : (
-          <Box display={['unset', 'unset', 'unset', 'none']}>
-            <BurrrdSVG maxHeight="1.75rem" maxWidth="6.875rem" width="100%" />
+          <Box
+            gap="1rem"
+            width="9.0625rem"
+            position="relative"
+            alignItems="center"
+            display="flex"
+          >
+            <Motion
+              animate={{
+                x: [-60, -60, -100, 0],
+                rotate: [
+                  50, 50, 50, 50, 50, 50, 50, 50, 20, -20, 20, -20, 20, -20, 20,
+                  -20, 20, 0,
+                ],
+              }}
+              position="absolute"
+              initial={{ x: -60, rotate: 50 }}
+              transition={{ duration: 3.5 }}
+            >
+              <BurrrdSVG
+                width="80%"
+                maxWidth="12.625rem"
+                maxHeight="3.5625rem"
+              />
+            </Motion>
+            <Motion
+              position="absolute"
+              right="0"
+              initial={{ x: -300 }}
+              animate={{ x: 0 }}
+              transition={{ duration: 2 }}
+            >
+              <Typography
+                margin="0"
+                color="white"
+                variant="medium"
+                fontWeight="700"
+                fontFamily="Asap"
+                fontSize="1.5rem"
+                textTransform="capitalize"
+              >
+                BURRRD
+              </Typography>
+            </Motion>
           </Box>
         )}
         <Navbar />
