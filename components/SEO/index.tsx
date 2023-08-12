@@ -4,18 +4,16 @@ import { FC } from 'react';
 import { capitalize } from '@/utils';
 
 const SEO: FC<{ pageTitle: string }> = ({ pageTitle }) => {
-  const title = `${
-    pageTitle ? `${capitalize(pageTitle)} | ` : ''
-  }Interest Protocol`;
+  const title = `${pageTitle ? `${capitalize(pageTitle)} | ` : ''}BURRRD`;
   return (
     <Head>
       <meta name="theme-color" content="#282828" />
       <meta charSet="utf-8" />
-      <meta name="title" content="Interest Protocol" />
+      <meta name="title" content="BURRRD" />
       <meta name="description" content="Description" />
       <meta property="og:locale" content="en_US" />
-      <meta property="og:title" content="Interest Protocol" />
-      <meta property="og:site_name" content="Interest Protocol" />
+      <meta property="og:title" content="BURRRD" />
+      <meta property="og:site_name" content="BURRRD" />
       <meta property="og:description" content="Description" />
       <meta property="og:image" content="/android-chrome-256x256.png" />
       <meta
@@ -25,9 +23,9 @@ const SEO: FC<{ pageTitle: string }> = ({ pageTitle }) => {
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="256" />
       <meta property="og:image:height" content="256" />
-      <meta property="og:image:alt" content="Interest Protocol" />
+      <meta property="og:image:alt" content="BURRRD" />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:title" content="Interest Protocol" />
+      <meta name="twitter:title" content="BURRRD" />
       <meta name="twitter:site" content="https://interestprotocol.com" />
       <meta name="twitter:image" content="/android-chrome-256x256.png" />
       <meta name="twitter:description" content="Description" />
