@@ -3,7 +3,6 @@ import { FC } from 'react';
 
 import Frame from '@/components/frame';
 import { useTheme } from '@/context/theme-context';
-import { HeadToPrizeSVG, SmokerBurrrdSVG } from '@/svg';
 
 const HowToBuySection: FC = () => {
   const { theme } = useTheme();
