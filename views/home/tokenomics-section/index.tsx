@@ -9,7 +9,6 @@ import { SmokerBurrrdSVG } from '@/svg';
 
 const TokenomicsSection: FC = () => {
   const { theme } = useTheme();
-  const [isNoTaxesHovered, setIsNoTaxesHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
@@ -152,8 +151,7 @@ const TokenomicsSection: FC = () => {
             position="absolute"
             initial={{ rotate: 0, x: '-50%' }}
             bottom={['-5rem', '-5rem', '-5rem', '-4rem']}
-            onMouseEnter={() => setIsNoTaxesHovered(true)}
-            animate={isNoTaxesHovered ? { rotate: 11.04 } : { rotate: 0 }}
+            whileInView={{ rotate: 11.04 }}
           >
             <Frame
               p="2rem"
