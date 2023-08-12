@@ -11,12 +11,4 @@ export const MENU_ITEMS = [
     title: 'Roadmap',
     url: '#roadmap',
   },
-  {
-    title: 'How to buy',
-    url: '#how-to-buy',
-  },
-  {
-    title: 'Bridge',
-    url: '#bridge',
-  },
 ];

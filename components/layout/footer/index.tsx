@@ -29,7 +29,7 @@ const Footer: FC = () => {
       gridColumn="1/-1"
       bg={colors.primary}
       px={['1.25rem', '1.25rem', '1.25rem', '7.5rem']}
-      pb={['23.375rem', '25rem', '25rem', '25rem']}
+      pb={['23.375rem', '25rem', '25rem', '13rem']}
       flexDirection={[
         'column-reverse',
         'column-reverse',
@@ -52,7 +52,7 @@ const Footer: FC = () => {
           position="absolute"
           transition={{ duration: 1.5 }}
           width={['15.625rem', '21.875rem', '21.875rem', '21.875rem']}
-          bottom={['-21.875rem', '-28.875rem', '-28.875rem', '-28.875rem']}
+          bottom={['-21.875rem', '-28.875rem', '-28.875rem', '-13.875rem']}
         >
           <BurrrdSVG maxHeight="21.875rem" maxWidth="21.25rem" width="100%" />
         </Motion>
@@ -63,7 +63,7 @@ const Footer: FC = () => {
           transition={{ delay: 1.5 }}
           ml={['220px', '290px', '220px', '220px']}
           // left={['45%', '46%', '46%', '45%']}
-          bottom={['-15.275rem', '-20.275rem', '-20.275rem', '-20.275rem']}
+          bottom={['-15.275rem', '-20.275rem', '-20.275rem', '-5.275rem']}
         >
           <Typography
             top="20%"

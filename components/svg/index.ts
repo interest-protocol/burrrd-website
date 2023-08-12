@@ -20,3 +20,4 @@ export { default as SuipainsLogoSVG } from './suipains-logo';
 export { default as SuishiLogoSVG } from './suishi-logo';
 export { default as TelegramSVG } from './telegram';
 export { default as TwitterSVG } from './twitter';
+export { default as XSVG } from './x';

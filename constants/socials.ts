@@ -1,4 +1,4 @@
-import { DiscordSVG, MediumSVG, TelegramSVG, TwitterSVG } from '@/svg';
+import { DiscordSVG, MediumSVG, TelegramSVG, XSVG } from '@/svg';
 
 export const SOCIALS = [
   {
@@ -12,9 +12,9 @@ export const SOCIALS = [
     Icon: DiscordSVG,
   },
   {
-    name: 'Twitter',
+    name: 'X',
     url: 'https://twitter.com/interest_dinero',
-    Icon: TwitterSVG,
+    Icon: XSVG,
   },
   {
     name: 'Medium',

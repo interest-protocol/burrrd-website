@@ -35,7 +35,7 @@ const FoundingMembers: FC = () => {
             fontSize="1.25rem"
             color={defaultTheme.theme.colors.primary}
           >
-            Our funding members
+            Our founding members
           </Typography>
         </Slider>
       </Box>

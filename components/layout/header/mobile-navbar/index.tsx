@@ -7,7 +7,7 @@ const MobileNavbar: FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
 
   const toggleMenu = () => {
-    setToggle(!toggle);
+    setToggle(false);
   };
 
   return (
@@ -62,16 +62,6 @@ const MobileNavbar: FC = () => {
           <Box as="li">
             <Typography as="a" variant="medium">
               Roadmap
-            </Typography>
-          </Box>
-          <Box as="li">
-            <Typography as="a" variant="medium">
-              How to buy
-            </Typography>
-          </Box>
-          <Box as="li">
-            <Typography as="a" variant="medium">
-              Bridge
             </Typography>
           </Box>
         </Box>
