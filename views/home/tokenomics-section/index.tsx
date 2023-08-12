@@ -1,13 +1,26 @@
+import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { FC, useCallback, useState } from 'react';
+
 import Frame from '@/components/frame';
 import { useTheme } from '@/context/theme-context';
+import useEventListener from '@/hooks/use-event-listener';
 import { SmokerBurrrdSVG } from '@/svg';
-import { Box, Typography } from '@interest-protocol/ui-kit';
-import { FC } from 'react';
 
 const TokenomicsSection: FC = () => {
   const { theme } = useTheme();
+  const [isTakenomicsHovered, setIsTakenomicsHovered] = useState(false);
+  const [isNoTaxesHovered, setIsNoTaxesHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleSetDesktop = useCallback(() => {
+    const mediaIsMobile = !window.matchMedia('(min-width: 55em)').matches;
+    setIsMobile(mediaIsMobile);
+  }, []);
+
+  useEventListener('resize', handleSetDesktop, true);
+
   return (
-    <Box variant="container" borderBottom="2px solid black">
+    <Box variant="container" borderBottom="2px solid black" id="takenomics">
       <Box
         width="100%"
         display="flex"
@@ -22,35 +35,40 @@ const TokenomicsSection: FC = () => {
           p={['1.25rem', '1.25rem', '1.25rem', '14.6875rem']}
         >
           <Box
+            onMouseEnter={() => setIsTakenomicsHovered(true)}
             mt="5rem"
             position="relative"
             pt={['6.25rem', '6.25rem', '6.25rem', '0']}
           >
-            <Box
+            <Motion
               zIndex="1"
-              top={['-22%', '-20.4%', '-0.4%', '-12.3rem']}
-              left={['40%', '40%', '-1.5625rem', '-1.5625rem']}
-              transform={['scale(0.8)', 'scale(0.5)', 'scale(0.5)', 'scale(1)']}
               position="absolute"
-              transformOrigin="right bottom"
+              initial={{ x: '-100%', rotate: 0 }}
+              right={['2rem', '2rem', '2rem', 'unset']}
+              maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
+              top={['-.625rem', '-.75rem', '-0.4%', '-10.7rem']}
+              left={['unset', 'unset', 'unset', '-1.5625rem']}
+              transition={{ duration: 1.5, rotate: { duration: 0.9 } }}
+              whileInView={{ x: 0, rotate: [0, 5, -5, 5, -5, 5, -5, 0] }}
             >
               <SmokerBurrrdSVG
                 maxHeight="50rem"
                 maxWidth="31.25rem"
                 width="100%"
               />
-            </Box>
-            <Box
+            </Motion>
+            <Motion
               position="absolute"
-              top={['-50%', '-50%', '-50%', '-12.25rem']}
-              right={['unset', 'unset', 'unset', '2.5rem']}
-              left={['50%', '50%', '50%', 'unset']}
-              transform={[
-                'translateX(-50%)',
-                'translateX(-50%)',
-                'translateX(-50%)',
-                'unset',
-              ]}
+              initial={isMobile ? { x: '50%' } : { x: '90%' }}
+              left={['50%', '50%', '50%', '']}
+              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-11.25rem']}
+              whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
+              transition={{
+                type: 'spring',
+                stiffness: 300,
+                bounce: 0.5,
+                duration: 2,
+              }}
             >
               <Typography
                 as="h2"
@@ -61,7 +79,7 @@ const TokenomicsSection: FC = () => {
               >
                 Tokenomics
               </Typography>
-            </Box>
+            </Motion>
             <Frame
               zIndex="2"
               bg="white"
@@ -78,20 +96,26 @@ const TokenomicsSection: FC = () => {
                   420,000,000,000,000
                 </Typography>
               </Box>
-              <Frame
-                display={['none', 'none', 'none', 'block']}
-                bg="white"
-                bottom="-2rem"
+              <Motion
                 right="1rem"
-                p="1rem 1.5rem"
-                width="max-content"
+                bottom="-2rem"
+                animate={isTakenomicsHovered ? { x: 0 } : { x: 400 }}
                 position="absolute"
-                borderRadius="2rem"
+                initial={{ x: 400 }}
+                transition={{ duration: 1 }}
               >
-                <Typography as="span" fontSize="1.5rem" variant="medium">
-                  weeds
-                </Typography>
-              </Frame>
+                <Frame
+                  display={['none', 'none', 'none', 'block']}
+                  bg="white"
+                  p="1rem 1.5rem"
+                  width="max-content"
+                  borderRadius="2rem"
+                >
+                  <Typography as="span" fontSize="1.5rem" variant="medium">
+                    weeds
+                  </Typography>
+                </Frame>
+              </Motion>
             </Frame>
           </Box>
           <Box mt="6.25rem" position="relative" mb="6rem">
@@ -113,26 +137,32 @@ const TokenomicsSection: FC = () => {
               </Typography>
             </Box>
           </Box>
-          <Frame
-            p="2rem"
+          <Motion
             left="50%"
-            bottom={['-5rem', '-5rem', '-5rem', '-4']}
-            display="flex"
-            width="max-content"
+            height="auto"
             position="absolute"
-            borderRadius="2rem"
-            flexDirection="column"
-            bg={theme.theme.colors.septenary}
-            transform="translateX(-50%) rotate(11.04deg)"
-            fontSize={['1.875rem', '1.875rem', '1.875rem', '5.5rem']}
+            initial={{ rotate: 0, x: '-50%' }}
+            bottom={['-5rem', '-5rem', '-5rem', '-4rem']}
+            onMouseEnter={() => setIsNoTaxesHovered(true)}
+            animate={isNoTaxesHovered ? { rotate: 11.04 } : { rotate: 0 }}
           >
-            <Typography as="span" fontWeight="700" variant="displayLarge">
-              No Taxes,
-            </Typography>
-            <Typography as="span" fontWeight="700" variant="displayLarge">
-              No Sh¡tcoin Bullsh¡t
-            </Typography>
-          </Frame>
+            <Frame
+              p="2rem"
+              display="flex"
+              width="max-content"
+              borderRadius="2rem"
+              flexDirection="column"
+              bg={theme.theme.colors.septenary}
+              fontSize={['1.875rem', '1.875rem', '1.875rem', '5.5rem']}
+            >
+              <Typography as="span" fontWeight="700" variant="displayLarge">
+                No Taxes,
+              </Typography>
+              <Typography as="span" fontWeight="700" variant="displayLarge">
+                No Sh¡tcoin Bullsh¡t
+              </Typography>
+            </Frame>
+          </Motion>
         </Box>
       </Box>
     </Box>

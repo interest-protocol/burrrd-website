@@ -1,12 +1,15 @@
 import { Box, Typography } from '@interest-protocol/ui-kit';
+import Link from 'next/link';
 import { FC } from 'react';
 import Slider from 'react-slick';
 import { v4 } from 'uuid';
+
+import { defaultTheme } from '@/design-system/theme/default-theme';
+
 import {
   FOUNDING_MEMBERS_LIST,
   foundingMembersSlick,
 } from './founding-members.data';
-import { defaultTheme } from '@/design-system/theme/default-theme';
 
 const FoundingMembers: FC = () => {
   return (
@@ -17,12 +20,12 @@ const FoundingMembers: FC = () => {
     >
       <Box>
         <Slider {...foundingMembersSlick}>
-          {FOUNDING_MEMBERS_LIST.map(({ Icon, name }) => (
-            <a key={v4()} href={'#'} target="_blank" rel="noreferrer">
-              <Box title={name} mr="1.875rem">
+          {FOUNDING_MEMBERS_LIST.map(({ Icon, name, url }) => (
+            <Box key={v4()} title={name} mr="1.875rem">
+              <Link href={url} target="_blank" rel="noreferrer">
                 <Icon maxHeight="4rem" maxWidth="4rem" width="100%" />
-              </Box>
-            </a>
+              </Link>
+            </Box>
           ))}
           <Typography
             ml={['0', '2.5625rem', '2.5625rem', '2.5625rem']}

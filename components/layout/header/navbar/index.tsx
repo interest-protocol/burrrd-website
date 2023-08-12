@@ -1,6 +1,9 @@
-import { BurrrdLogoSVG } from '@/svg';
-import { Box, Typography } from '@interest-protocol/ui-kit';
+import { Box, Motion } from '@interest-protocol/ui-kit';
+import Link from 'next/link';
 import { FC } from 'react';
+import { v4 } from 'uuid';
+
+import { MENU_ITEMS } from './menu-items';
 
 const Navbar: FC = () => {
   return (
@@ -15,31 +18,11 @@ const Navbar: FC = () => {
         fontSize="1.125rem"
         textTransform="uppercase"
       >
-        <Box as="li">
-          <Typography as="a" variant="medium">
-            About
-          </Typography>
-        </Box>
-        <Box as="li">
-          <Typography as="a" variant="medium">
-            Takeonomics
-          </Typography>
-        </Box>
-        <Box as="li">
-          <Typography as="a" variant="medium">
-            Roadmap
-          </Typography>
-        </Box>
-        <Box as="li">
-          <Typography as="a" variant="medium">
-            How to buy
-          </Typography>
-        </Box>
-        <Box as="li">
-          <Typography as="a" variant="medium">
-            Bridge
-          </Typography>
-        </Box>
+        {MENU_ITEMS.map(({ title, url }) => (
+          <Motion as="li" key={v4()} initial={{ y: 0 }} whileHover={{ y: -5 }}>
+            <Link href={url}>{title}</Link>
+          </Motion>
+        ))}
       </Box>
     </Box>
   );

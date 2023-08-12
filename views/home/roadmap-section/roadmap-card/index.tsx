@@ -1,9 +1,9 @@
-import Frame from '@/components/frame';
-import { useTheme } from '@/context/theme-context';
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
 import { FC, useState } from 'react';
-import { RoadmapCardProps } from './roadmap.types';
 import { v4 } from 'uuid';
+
+import Frame from '@/components/frame';
+import { useTheme } from '@/context/theme-context';
 import {
   BodyBagSVG,
   BurrrdCleaningSVG,
@@ -12,7 +12,14 @@ import {
   StabbedPepeSVG,
 } from '@/svg';
 
-const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
+import { RoadmapCardProps } from './roadmap.types';
+
+const RoadmapCard: FC<RoadmapCardProps> = ({
+  title,
+  items,
+  index,
+  isHovered,
+}) => {
   const { theme } = useTheme();
   const [isDoge, setIsDoge] = useState(false);
   const [isPepe, setIsPepe] = useState(false);
@@ -33,20 +40,30 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
         index === 1 ? theme.theme.colors.primary : theme.theme.colors.secondary
       }
     >
-      <Frame
-        bg="white"
+      <Motion
         top="-1.875rem"
-        width="4.75rem"
         right="-1.875rem"
-        height="4.75rem"
-        display="flex"
-        boxSize="small"
-        borderRadius="50%"
         position="absolute"
-        alignItems="center"
-        justifyContent="center"
+        transformOrigin="top"
+        initial={{ rotate: 0 }}
+        transition={{
+          type: 'spring',
+          stiffness: 300,
+          bounce: 0.5,
+          delay: index === 1 ? 1 : index === 2 ? 2 : 0,
+        }}
+        animate={isHovered ? { rotate: -20.53 } : { rotate: 0 }}
       >
-        <Box transform="rotate(-20.53deg)">
+        <Frame
+          bg="white"
+          display="flex"
+          boxSize="small"
+          width="4.75rem"
+          height="4.75rem"
+          borderRadius="50%"
+          alignItems="center"
+          justifyContent="center"
+        >
           <Typography
             as="span"
             fontWeight="700"
@@ -55,8 +72,8 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
           >
             {index + 1}
           </Typography>
-        </Box>
-      </Frame>
+        </Frame>
+      </Motion>
       <Typography
         p="0"
         m="0"
@@ -91,9 +108,9 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
               justifyContent="center"
             >
               <DeadDogeSVG
-                maxHeight="16.8125rem"
-                maxWidth="23.625rem"
                 width="90%"
+                maxWidth="23.625rem"
+                maxHeight="16.8125rem"
               />
             </Box>
             <Motion
@@ -110,9 +127,9 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
               justifyContent="center"
             >
               <DogeBloodSVG
-                maxHeight="6.25rem"
-                maxWidth="6.25rem"
                 width="100%"
+                maxWidth="6.25rem"
+                maxHeight="6.25rem"
               />
             </Motion>
           </>
@@ -125,29 +142,29 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
                 translateY: '-100%',
               }}
               transition={{ duration: 2.5 }}
+              p="1.5rem"
+              left="-9.0625rem"
               position="absolute"
               bottom="-15.9375rem"
-              left="-9.0625rem"
-              p="1.5rem"
               justifyContent="center"
             >
               <StabbedPepeSVG
-                maxHeight="26.875rem"
-                maxWidth="26.875rem"
                 width="130%"
+                maxWidth="26.875rem"
+                maxHeight="26.875rem"
               />
             </Motion>
             <Box
+              p="1.5rem"
+              left="-9.0625rem"
               position="absolute"
               bottom="-15.9375rem"
-              left="-9.0625rem"
-              p="1.5rem"
               justifyContent="center"
             >
               <StabbedPepeSVG
-                maxHeight="26.875rem"
-                maxWidth="26.875rem"
                 width="130%"
+                maxWidth="26.875rem"
+                maxHeight="26.875rem"
               />
             </Box>
             <Box
@@ -158,26 +175,26 @@ const RoadmapCard: FC<RoadmapCardProps> = ({ title, items, index }) => {
               justifyContent="center"
             >
               <BurrrdCleaningSVG
-                maxHeight="23.3125rem"
-                maxWidth="23.3125rem"
                 width="110%"
+                maxWidth="23.3125rem"
+                maxHeight="23.3125rem"
               />
             </Box>
           </>
         ) : index === 2 ? (
           <Box
-            bottom="-19.375rem"
             left="0"
-            right="-13.75rem"
             p="1.5rem"
             display="flex"
+            right="-13.75rem"
+            bottom="-19.375rem"
             position="absolute"
             justifyContent="center"
           >
             <BodyBagSVG
-              maxHeight="26.125rem"
-              maxWidth="26.125rem"
               width="65%"
+              maxWidth="26.125rem"
+              maxHeight="26.125rem"
             />
           </Box>
         ) : null}

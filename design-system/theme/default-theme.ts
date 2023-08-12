@@ -13,3 +13,7 @@ export const defaultTheme: ThemeProps = {
     },
   },
 };
+
+export type ThemeType = typeof defaultTheme;
+
+export type ColorType = typeof defaultTheme.theme.colors;

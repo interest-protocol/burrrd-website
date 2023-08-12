@@ -15,14 +15,17 @@ export const foundingMembersSlick = {
 
 export const FOUNDING_MEMBERS_LIST = [
   {
+    url: 'https://twitter.com/interest_dinero',
     name: 'Interest Protocol',
     Icon: InterestProtocolLogoSVG,
   },
   {
+    url: 'https://twitter.com/suishi_nft',
     name: 'Suishi',
     Icon: SuishiLogoSVG,
   },
   {
+    url: 'https://twitter.com/suipiens',
     name: 'SUIPIENS',
     Icon: SuipainsLogoSVG,
   },

@@ -1,9 +1,10 @@
-import { MenuSVG } from '@/svg';
 import { Box, Button, Typography } from '@interest-protocol/ui-kit';
 import { FC, useState } from 'react';
 
+import { MenuSVG } from '@/svg';
+
 const MobileNavbar: FC = () => {
-  const [toggle, setToggle] = useState<Boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setToggle(!toggle);

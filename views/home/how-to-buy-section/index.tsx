@@ -1,13 +1,14 @@
+import { Box, Typography } from '@interest-protocol/ui-kit';
+import { FC } from 'react';
+
 import Frame from '@/components/frame';
 import { useTheme } from '@/context/theme-context';
 import { HeadToPrizeSVG, SmokerBurrrdSVG } from '@/svg';
-import { Box, Typography } from '@interest-protocol/ui-kit';
-import { FC } from 'react';
 
 const HowToBuySection: FC = () => {
   const { theme } = useTheme();
   return (
-    <Box variant="container" borderBottom="2px solid black">
+    <Box variant="container" borderBottom="2px solid black" id="how-to-buy">
       <Box
         width="100%"
         display="flex"
