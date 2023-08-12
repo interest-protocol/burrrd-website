@@ -16,10 +16,12 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
   return (
     <Motion
       as="button"
+      color="inherit"
       cursor="pointer"
       fontSize="1.5rem"
       onClick={onClick}
       borderRadius="1rem"
+      textDecoration="none"
       whileHover={{ scale: 1.05 }}
       border={hasBorder ? '1px solid #1B1B1F' : '0'}
       fontWeight={size === 'small' ? 'normal' : 'bold'}

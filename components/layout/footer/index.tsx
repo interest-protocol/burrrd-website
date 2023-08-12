@@ -46,12 +46,11 @@ const Footer: FC = () => {
         <Motion
           initial={{ x: isMobile ? '-100%' : '-90%', rotate: 0 }}
           whileInView={{
-            x: isMobile ? '-75%' : 0,
+            x: isMobile ? '20%' : 0,
             rotate: [0, 20, -20, 20, -20, 20, -20, 0],
           }}
           position="absolute"
           transition={{ duration: 1.5 }}
-          left={['50%', '50%', '50%', '0%']}
           bottom={['-21.875rem', '-28.875rem', '-28.875rem', '-28.875rem']}
           width={['15.625rem', '21.875rem', '21.875rem', '21.875rem']}
         >
@@ -62,7 +61,8 @@ const Footer: FC = () => {
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ delay: 1.5 }}
-          left={['45%', '46%', '46%', '45%']}
+          ml={['220px', '290px', '220px', '220px']}
+          // left={['45%', '46%', '46%', '45%']}
           bottom={['-15.275rem', '-20.275rem', '-20.275rem', '-20.275rem']}
         >
           <Typography
@@ -78,7 +78,7 @@ const Footer: FC = () => {
           >
             Follow me
           </Typography>
-          <Box width={['12.5rem', '18.75rem', '18.75rem', '18.75rem']}>
+          <Box width={['12.5rem', '12.75rem', '18.75rem', '18.75rem']}>
             <ConverstionBalloonSVG
               width="100%"
               maxWidth="21.25rem"
