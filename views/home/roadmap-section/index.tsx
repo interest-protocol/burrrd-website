@@ -10,19 +10,21 @@ const RoadmapSection: FC = () => {
   return (
     <Box
       mt="0"
-      bg="white"
       id="roadmap"
       variant="container"
-      p="7.5rem 6.5625rem"
+      p={['3.375rem 1rem', '3.375rem 1rem', '3.375rem 1rem', '6rem 6.5625rem']}
       borderBottom="2px solid black"
+      minHeight={['100vh', '100vh', '100vh', 'unset']}
+      mx="auto"
     >
       <Typography
         as="h2"
         fontWeight="700"
         textAlign="center"
-        fontSize="3.75rem"
+        fontSize={['3.125rem', '3.125rem', '3.125rem', '6rem']}
         variant="displayLarge"
         textTransform="uppercase"
+        my={['0', '0', '0', '5rem']}
       >
         Roadmap
       </Typography>

@@ -35,14 +35,15 @@ const AboutSection: FC = () => {
         flexDirection={['column', 'column', 'column', 'row']}
       >
         <Box
-          top={['12.5%', '5.5%', '5.5%', '-6.8rem']}
-          left={['75%', '75%', '75%', '19.125rem']}
+          top={['12.5%', '12.5%', '12.5%', '-0.8rem']}
+          left={['55%', '55%', '55%', '15.125rem']}
           position="absolute"
+          width={['7rem', '9rem', '10rem', 'unset']}
           transform={[
-            'rotate(16.01deg) scale(1.7)',
-            'rotate(16.01deg) scale(1.7)',
-            'rotate(16.01deg) scale(1.7)',
-            'rotate(-20.75deg) scale(1.7)',
+            'rotate(45.01deg) scale(1.7)',
+            'rotate(45.01deg) scale(1.7)',
+            'rotate(45.01deg) scale(1.7)',
+            'rotate(0.75deg) scale(1.7)',
           ]}
         >
           <HeadToPrizeSVG maxHeight="50rem" maxWidth="31.25rem" width="100%" />
@@ -75,17 +76,17 @@ const AboutSection: FC = () => {
               textAlign="center"
               variant="displayLarge"
               textTransform="uppercase"
-              mb={['0', '0', '0', '10rem']}
+              mb={['0', '0', '0', '1em']}
+              fontWeight="700"
             >
               About
             </Typography>
           </Motion>
         </Box>
         <Box
-          p={['1.5625rem', '1.5625rem', '1.5625rem', '9.0625rem']}
-          py={['9.0625rem', '9.0625rem', '9.0625rem', '']}
+          p={['1.5625rem', '1.5625rem', '1.5625rem', '8%']}
+          py={['10.0625rem', '12.0625rem', '18.0625rem', '10rem']}
           width="100%"
-          minHeight="100%"
           borderLeft={['none', 'none', 'none', '2px solid black']}
           bg={theme.theme.colors.secondary}
         >
@@ -93,10 +94,17 @@ const AboutSection: FC = () => {
             zIndex="1"
             position="relative"
             borderRadius="2rem"
+            border="4px solid"
             bg={theme.theme.colors.septenary}
           >
-            <Box fontSize={['1rem', '1rem', '1rem', '1.5rem']} p="2rem" pb="0">
-              <Typography variant="medium">
+            <Box
+              fontSize={['1rem', '1rem', '1rem', '1.5rem']}
+              lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
+              px="2rem"
+              pt="1rem"
+              pb="0"
+            >
+              <Typography variant="medium" fontWeight="400">
                 BURRRD had enough of the never-ending sh¡tcoin circus, with all
                 those ridiculous dog derivatives and even that green thing. They
                 had their moment to shine, but now it is BURRRD&apos;s turn to
@@ -114,7 +122,7 @@ const AboutSection: FC = () => {
                 <Motion
                   layout
                   pt="0"
-                  p="2rem"
+                  px="2rem"
                   exit={{ scale: 0 }}
                   initial={{ scale: 0 }}
                   variants={wrapperVariants}
@@ -122,6 +130,7 @@ const AboutSection: FC = () => {
                   animate={
                     toggle ? wrapperVariants.open : wrapperVariants.closed
                   }
+                  lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
                 >
                   <Typography variant="medium">
                     But BURRRD inst just on a mission to eliminate the rubbish;

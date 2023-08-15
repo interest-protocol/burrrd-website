@@ -4,7 +4,7 @@ export const MENU_ITEMS = [
     url: '#about',
   },
   {
-    title: 'Takeonomics',
+    title: 'Tokenomics',
     url: '#tokenomics',
   },
   {

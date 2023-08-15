@@ -14,7 +14,7 @@ const Footer: FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
-    const mediaIsMobile = !window.matchMedia('(min-width: 55em)').matches;
+    const mediaIsMobile = !window.matchMedia('(min-width: 62em)').matches;
     setIsMobile(mediaIsMobile);
   }, []);
 
@@ -25,60 +25,66 @@ const Footer: FC = () => {
       as="footer"
       width="100%"
       display="flex"
-      pt="5.625rem"
+      pt="6.688rem"
       gridColumn="1/-1"
       bg={colors.primary}
       px={['1.25rem', '1.25rem', '1.25rem', '7.5rem']}
-      pb={['23.375rem', '25rem', '25rem', '13rem']}
+      pb={['18rem', '18rem', '18rem', '22rem']}
       flexDirection={[
         'column-reverse',
         'column-reverse',
         'column-reverse',
         'row',
       ]}
+      justifyContent="space-between"
     >
       <Box
-        flex="1"
         position="relative"
         width="max-content"
-        transform="scale(0.8)"
+        minWidth={['100%', '100%', '100%', '32rem']}
       >
         <Motion
           initial={{ x: isMobile ? '-100%' : '-90%', rotate: 0 }}
           whileInView={{
-            x: isMobile ? '20%' : 0,
+            x: 0,
             rotate: [0, 20, -20, 20, -20, 20, -20, 0],
           }}
           position="absolute"
           transition={{ duration: 1.5 }}
-          width={['15.625rem', '21.875rem', '21.875rem', '21.875rem']}
-          bottom={['-21.875rem', '-28.875rem', '-28.875rem', '-13.875rem']}
+          width="100%"
+          height={['11.813rem', '11.813rem', '11.813rem', '21.875rem']}
+          bottom={['-15.875rem', '-15.875rem', '-15.875rem', '-72%']}
         >
-          <BurrrdSVG maxHeight="21.875rem" maxWidth="21.25rem" width="100%" />
+          <BurrrdSVG
+            maxHeight="21.875rem"
+            maxWidth="21.313rem"
+            width="100%"
+            height="100%"
+          />
         </Motion>
         <Motion
           position="absolute"
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
           transition={{ delay: 1.5 }}
-          ml={['220px', '290px', '220px', '220px']}
+          ml={['13.75rem', '13.75rem', '13.75rem', '14.375rem']}
           // left={['45%', '46%', '46%', '45%']}
-          bottom={['-15.275rem', '-20.275rem', '-20.275rem', '-5.275rem']}
+          bottom={['-12rem', '-12rem', '-12rem', '-30%']}
         >
           <Typography
-            top="20%"
-            left="37%"
+            top="25%"
+            left="40%"
             color="white"
             variant="small"
             fontWeight="700"
             position="absolute"
             textTransform="uppercase"
             transform="translate(-50%, -50%)"
-            fontSize={['1rem', '1rem', '1rem', '1.5rem']}
+            fontSize={['0.75rem', '0.75rem', '0.75rem', '1.5rem']}
           >
             Follow me
           </Typography>
-          <Box width={['12.5rem', '12.75rem', '18.75rem', '18.75rem']}>
+          <Box width={['9.75rem', '9.75rem', '9.75rem', '100%']}>
             <ConverstionBalloonSVG
               width="100%"
               maxWidth="21.25rem"
@@ -88,80 +94,97 @@ const Footer: FC = () => {
         </Motion>
       </Box>
       <Box
-        flex="1"
         display="flex"
         flexDirection="column"
-        gap={['1.25rem', '1.25rem', '1.25rem', '3.75rem']}
+        width={['100%', '100%', '100%', 'max-content']}
+        alignItems="flex-end"
       >
-        <Motion
-          initial={{ x: '100%', opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.5, type: 'spring', stiffness: 100 }}
-        >
-          <Typography
-            m="0"
-            color="white"
-            variant="small"
-            fontWeight="700"
-            textTransform="uppercase"
-            fontSize={['3.125rem', '3.125rem', '3.125rem', '6rem']}
+        <Box width="100%">
+          <Motion
+            initial={{ x: '50%', opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.5, type: 'spring', stiffness: 100 }}
           >
-            Follow Us
-          </Typography>
-        </Motion>
-        <Motion
-          initial={{ x: '-100%', opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{
-            duration: 1.8,
-            type: 'spring',
-            stiffness: 100,
-          }}
-        >
-          <Typography variant="small" color="white" fontSize="1.125rem">
-            Stay tuned for our latest updates and announcements. Follow us on
-            socials.
-          </Typography>
-        </Motion>
-        <Box
-          display="flex"
-          gap=".5rem"
-          justifyContent={['center', 'flex-start', 'flex-start', 'unset']}
-          transform={['scale(0.8)', 'scale(1)', 'scale(1)', 'scale(1)']}
-        >
-          {SOCIALS.map(({ Icon, name, url }) => (
-            <Motion
-              key={v4()}
-              borderRadius="50%"
-              initial={{ y: 0 }}
-              whileHover={{ y: -10 }}
+            <Typography
+              my="0"
+              color="white"
+              variant="small"
+              fontWeight="700"
+              textTransform="uppercase"
+              fontSize={['3.125rem', '3.125rem', '3.125rem', '6rem']}
             >
-              <Frame
-                bg="white"
-                display="flex"
-                boxSize="small"
+              Follow Us
+            </Typography>
+          </Motion>
+          <Motion
+            initial={{ x: '-100%', opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 1.8,
+              type: 'spring',
+              stiffness: 100,
+            }}
+            mt="1.5rem"
+            mb="4rem"
+          >
+            <Typography
+              my="0"
+              variant="small"
+              color="white"
+              fontSize="1.125rem"
+            >
+              Stay tuned for our latest updates and announcements. Follow us on
+              socials.
+            </Typography>
+          </Motion>
+          <Box
+            display="flex"
+            gap=".5rem"
+            justifyContent={[
+              'space-between',
+              'space-between',
+              'space-between',
+              'unset',
+            ]}
+            transform="scale(1)"
+            width="100%"
+            flexWrap="wrap"
+          >
+            {SOCIALS.map(({ Icon, name, url }) => (
+              <Motion
+                key={v4()}
                 borderRadius="50%"
-                alignItems="center"
-                flexDirection="column"
-                justifyContent="center"
-                width={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
-                height={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
+                initial={{ y: 0 }}
+                whileHover={{ y: -10 }}
               >
-                <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
-                <Typography
-                  m="0"
-                  variant="medium"
-                  fontFamily="Roboto Mono"
-                  textDecoration="underline"
-                  fontSize={['.75rem', '.75rem', '.75rem', '1rem']}
+                <Frame
+                  bg="white"
+                  display="flex"
+                  boxSize="small"
+                  borderRadius="50%"
+                  alignItems="center"
+                  flexDirection="column"
+                  justifyContent="center"
+                  width={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
+                  height={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
+                  border="4px solid"
                 >
-                  <Link href={url} target="_blank">
-                    {name}
-                  </Link>
-                </Typography>
-              </Frame>
-            </Motion>
-          ))}
+                  <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
+                  <Typography
+                    m="0"
+                    variant="medium"
+                    fontFamily="Roboto Mono"
+                    textDecoration="underline"
+                    fontSize={['.75rem', '.75rem', '.75rem', '1rem']}
+                  >
+                    <Link href={url} target="_blank">
+                      {name}
+                    </Link>
+                  </Typography>
+                </Frame>
+              </Motion>
+            ))}
+          </Box>
         </Box>
       </Box>
     </Box>
