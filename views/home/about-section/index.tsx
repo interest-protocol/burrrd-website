@@ -25,20 +25,19 @@ const AboutSection: FC = () => {
     setToggle(!toggle);
   };
   return (
-    <Box variant="container" id="about">
+    <Box gridColumn="1/-1" mx="auto" maxWidth="80rem" id="about">
       <Box
         width="100%"
         display="flex"
-        gridColumn="1/-1"
         position="relative"
         borderBottom="2px solid black"
         flexDirection={['column', 'column', 'column', 'row']}
       >
         <Box
-          top={['12.5%', '12.5%', '12.5%', '-0.8rem']}
-          left={['55%', '55%', '55%', '15.125rem']}
           position="absolute"
+          left={['60%', '60%', '60%', '15.125rem']}
           width={['7rem', '9rem', '10rem', 'unset']}
+          top={['15.6%', '15.6%', '15.6%', '-0.8rem']}
           transform={[
             'rotate(45.01deg) scale(1.7)',
             'rotate(45.01deg) scale(1.7)',

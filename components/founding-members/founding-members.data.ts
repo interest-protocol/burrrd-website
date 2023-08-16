@@ -196,4 +196,19 @@ export const FOUNDING_MEMBERS_LIST = [
     name: 'SUIPIENS',
     Icon: SuipainsLogoSVG,
   },
+  {
+    url: 'https://twitter.com/owlswap_finance',
+    name: 'Owlit Finance',
+    Icon: null,
+  },
+  {
+    url: 'https://twitter.com/skool_nft',
+    name: 'Skool NFT',
+    Icon: null,
+  },
+  {
+    url: 'https://twitter.com/Releap_IO',
+    name: 'Releap Protocol',
+    Icon: null,
+  },
 ];

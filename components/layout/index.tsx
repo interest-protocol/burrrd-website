@@ -6,11 +6,13 @@ import Header from './header';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <Box variant="container">
+    <>
       <Header />
-      {children}
-      <Footer />
-    </Box>
+      <Box variant="container">
+        {children}
+        <Footer />
+      </Box>
+    </>
   );
 };
 

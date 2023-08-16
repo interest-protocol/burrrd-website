@@ -20,17 +20,21 @@ const FoundingMembers: FC = () => {
       <Box>
         <Slider {...foundingMembersSlick}>
           {FOUNDING_MEMBERS_LIST.map(({ Icon, url }) => (
-            <a key={v4()} href={url} target="_blank" rel="noreferrer">
-              <Box
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                width="4rem"
-                height="4rem"
-              >
-                <Icon maxHeight="4rem" maxWidth="4rem" width="2.813rem" />
-              </Box>
-            </a>
+            <>
+              {Icon && (
+                <a key={v4()} href={url} target="_blank" rel="noreferrer">
+                  <Box
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    width="4rem"
+                    height="4rem"
+                  >
+                    <Icon maxHeight="4rem" maxWidth="4rem" width="2.813rem" />
+                  </Box>
+                </a>
+              )}
+            </>
           ))}
           <Typography
             fontWeight="600"

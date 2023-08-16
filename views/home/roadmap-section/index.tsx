@@ -16,6 +16,7 @@ const RoadmapSection: FC = () => {
       borderBottom="2px solid black"
       minHeight={['100vh', '100vh', '100vh', 'unset']}
       mx="auto"
+      maxWidth="80rem"
     >
       <Typography
         as="h2"
