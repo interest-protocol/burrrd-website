@@ -13,7 +13,7 @@ const Header: FC = () => {
   const { theme } = useTheme();
 
   const handleSetDesktop = useCallback(() => {
-    const mediaIsMobile = !window.matchMedia('(min-width: 55em)').matches;
+    const mediaIsMobile = !window.matchMedia('(min-width: 62em)').matches;
     setIsMobile(mediaIsMobile);
   }, []);
 
@@ -23,11 +23,18 @@ const Header: FC = () => {
     <Box
       width="100%"
       gridColumn="1/-1"
-      p="1rem 2rem"
+      p="0.625rem 1.25rem"
       bg={theme.theme.colors.primary}
-      borderBottom="2px #1B1B1F solid"
+      borderBottom="2px solid"
+      borderColor="#1B1B1F"
     >
-      <Box display="flex" justifyContent="space-between" alignItems="center">
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        alignItems="center"
+        maxWidth="64rem"
+        mx="auto"
+      >
         {!isMobile ? (
           <Box
             gap="1rem"
@@ -76,11 +83,11 @@ const Header: FC = () => {
           </Box>
         ) : (
           <Box
-            gap="1rem"
-            width="9.0625rem"
             position="relative"
             alignItems="center"
             display="flex"
+            height="0.625rem"
+            gap="1.25rem"
           >
             <Motion
               animate={{
@@ -90,25 +97,21 @@ const Header: FC = () => {
                   -20, 20, 0,
                 ],
               }}
-              position="absolute"
               initial={{ x: -60, rotate: 50 }}
               transition={{ duration: 3.5 }}
             >
               <BurrrdSVG
-                width="80%"
+                width="1.75rem"
                 maxWidth="12.625rem"
                 maxHeight="3.5625rem"
               />
             </Motion>
             <Motion
-              position="absolute"
-              right="0"
               initial={{ x: -300 }}
               animate={{ x: 0 }}
               transition={{ duration: 2 }}
             >
               <Typography
-                margin="0"
                 color="white"
                 variant="medium"
                 fontWeight="700"

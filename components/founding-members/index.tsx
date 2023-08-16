@@ -1,5 +1,4 @@
 import { Box, Typography } from '@interest-protocol/ui-kit';
-import Link from 'next/link';
 import { FC } from 'react';
 import Slider from 'react-slick';
 import { v4 } from 'uuid';
@@ -20,16 +19,20 @@ const FoundingMembers: FC = () => {
     >
       <Box>
         <Slider {...foundingMembersSlick}>
-          {FOUNDING_MEMBERS_LIST.map(({ Icon, name, url }) => (
-            <Box key={v4()} title={name} mr="1.875rem">
-              <Link href={url} target="_blank" rel="noreferrer">
-                <Icon maxHeight="4rem" maxWidth="4rem" width="100%" />
-              </Link>
-            </Box>
+          {FOUNDING_MEMBERS_LIST.map(({ Icon, url }) => (
+            <a key={v4()} href={url} target="_blank" rel="noreferrer">
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                width="4rem"
+                height="4rem"
+              >
+                <Icon maxHeight="4rem" maxWidth="4rem" width="2.813rem" />
+              </Box>
+            </a>
           ))}
           <Typography
-            ml={['0', '2.5625rem', '2.5625rem', '2.5625rem']}
-            mr={['0', '4.4375rem', '4.4375rem', '4.4375rem']}
             fontWeight="600"
             variant="medium"
             fontSize="1.25rem"

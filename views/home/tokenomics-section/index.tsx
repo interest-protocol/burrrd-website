@@ -12,7 +12,7 @@ const TokenomicsSection: FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
-    const mediaIsMobile = !window.matchMedia('(min-width: 55em)').matches;
+    const mediaIsMobile = !window.matchMedia('(min-width: 62em)').matches;
     setIsMobile(mediaIsMobile);
   }, []);
 
@@ -23,7 +23,7 @@ const TokenomicsSection: FC = () => {
   useCountUp({
     ref: countUpRef,
     start: 0,
-    duration: 10,
+    duration: 1,
     end: 420000000000000,
     scrollSpyOnce: true,
     enableScrollSpy: true,
@@ -42,7 +42,10 @@ const TokenomicsSection: FC = () => {
           width="100%"
           minHeight="100%"
           position="relative"
-          p={['1.25rem', '1.25rem', '1.25rem', '14.6875rem']}
+          px={['2.313rem', '2.313rem', '2.313rem', '3.6875rem']}
+          py={['2.313rem', '2.313rem', '2.313rem', '14.6875rem']}
+          maxWidth="64rem"
+          mx="auto"
         >
           <Box
             mt="5rem"
@@ -53,10 +56,11 @@ const TokenomicsSection: FC = () => {
               zIndex="1"
               position="absolute"
               initial={{ x: '-100%', rotate: 0 }}
-              right={['2rem', '2rem', '2rem', 'unset']}
+              right={['0rem', '0rem', '0rem', 'unset']}
+              width={['9.375rem', '9.375rem', '9.375rem', '23.563rem']}
               maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
-              top={['-.625rem', '-.75rem', '-0.4%', '-10.7rem']}
-              left={['unset', 'unset', 'unset', '-1.5625rem']}
+              top={['-.625rem', '-.625rem', '-0.4%', '-13rem']}
+              left={['unset', 'unset', 'unset', '-2.5625rem']}
               transition={{ duration: 1.5, rotate: { duration: 0.9 } }}
               whileInView={{ x: 0, rotate: [0, 5, -5, 5, -5, 5, -5, 0] }}
             >
@@ -69,8 +73,8 @@ const TokenomicsSection: FC = () => {
             <Motion
               position="absolute"
               initial={isMobile ? { x: '50%' } : { x: '90%' }}
-              left={['50%', '50%', '50%', '']}
-              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-11.25rem']}
+              left={['50%', '50%', '50%', '55%']}
+              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-13.25rem']}
               whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
               transition={{
                 type: 'spring',
@@ -84,7 +88,7 @@ const TokenomicsSection: FC = () => {
                 color="white"
                 variant="displayLarge"
                 textTransform="uppercase"
-                fontSize={['3.125rem', '3.125rem', '3.125rem', '4.5rem']}
+                fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
               >
                 Tokenomics
               </Typography>
@@ -94,18 +98,22 @@ const TokenomicsSection: FC = () => {
               bg="white"
               position="relative"
               borderRadius="2rem"
+              border="4px solid"
             >
-              <Box p="2rem" display="flex" justifyContent="center">
+              <Box display="flex" justifyContent="center">
                 <Typography
-                  as="span"
                   ref={countUpRef}
-                  fontSize={['1.875rem', '1.875rem', '1.875rem', '5rem']}
+                  fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
+                  lineHeight="2rem"
                   variant="medium"
-                  fontWeight="bold"
-                />
+                  fontWeight="600"
+                  my={['1rem', '1rem', '1rem', '3.5rem']}
+                >
+                  420000000000000
+                </Typography>
               </Box>
               <Motion
-                right="2rem"
+                right="1rem"
                 bottom="-2rem"
                 position="absolute"
                 initial={{ x: 300, opacity: 0 }}
@@ -115,29 +123,48 @@ const TokenomicsSection: FC = () => {
                 <Frame
                   display={['none', 'none', 'none', 'block']}
                   bg="white"
-                  p="1rem 1.5rem"
                   width="max-content"
                   borderRadius="2rem"
+                  border="4px solid"
+                  py="0.5rem"
                 >
-                  <Typography as="span" fontSize="1.5rem" variant="medium">
+                  <Typography
+                    as="span"
+                    fontWeight="600"
+                    fontSize="2.25rem"
+                    variant="medium"
+                    p="0rem 1.5rem"
+                  >
                     weeds
                   </Typography>
                 </Frame>
               </Motion>
             </Frame>
           </Box>
-          <Box mt="6.25rem" position="relative" mb="6rem">
+          <Box
+            mt={['4rem', '4rem', '4rem', '6.25rem']}
+            position="relative"
+            mb="6rem"
+          >
             <Box
               color="white"
               fontSize={['1rem', '1rem', '1rem', '2.25rem']}
               textAlign="center"
             >
-              <Typography variant="medium">
+              <Typography
+                variant="medium"
+                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
+                fontWeight="400"
+              >
                 90% of the tokens will be added to the liquidity pool, with LP
                 tokens being burned and the contract renounced to ensure
                 transparency and security.
               </Typography>
-              <Typography variant="medium">
+              <Typography
+                variant="medium"
+                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
+                fontWeight="400"
+              >
                 10% of the supply will be held in a multi-sig wallet as
                 treasury, used exclusively for operations, such as cex listings,
                 bridges, liquidity pools, audits, management costs, marketing
@@ -149,18 +176,19 @@ const TokenomicsSection: FC = () => {
             left="50%"
             height="auto"
             position="absolute"
-            initial={{ rotate: 0, x: '-50%' }}
-            bottom={['-5rem', '-5rem', '-5rem', '-4rem']}
+            initial={{ rotate: 0, x: '-52%' }}
+            bottom={['-5rem', '-5rem', '-5rem', '-4.5rem']}
             whileInView={{ rotate: 11.04 }}
           >
             <Frame
-              p="2rem"
+              p="1rem 2rem"
               display="flex"
               width="max-content"
               borderRadius="2rem"
               flexDirection="column"
               bg={theme.theme.colors.septenary}
-              fontSize={['1.875rem', '1.875rem', '1.875rem', '5.5rem']}
+              border="4px solid"
+              fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
             >
               <Typography as="span" fontWeight="700" variant="displayLarge">
                 No Taxes,

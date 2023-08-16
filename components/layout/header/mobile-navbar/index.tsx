@@ -11,7 +11,7 @@ const MobileNavbar: FC = () => {
   };
 
   return (
-    <Box as="nav" display={['unset', 'unset', 'unset', 'none']}>
+    <Box as="nav" display={['block', 'block', 'block', 'none']}>
       <Button
         zIndex="3"
         display="flex"
@@ -26,9 +26,10 @@ const MobileNavbar: FC = () => {
         onClick={toggleMenu}
         justifyContent="center"
         background="transparent"
-        border="0.50px #45464F solid"
+        border="1px solid"
+        borderColor="#45464F"
       >
-        <MenuSVG maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
+        <MenuSVG maxHeight="1.5rem" maxWidth="1.5rem" width="1.5rem" />
       </Button>
       {toggle && (
         <Box
@@ -56,7 +57,7 @@ const MobileNavbar: FC = () => {
           </Box>
           <Box as="li">
             <Typography as="a" variant="medium">
-              Takeonomics
+              Tokenomics
             </Typography>
           </Box>
           <Box as="li">

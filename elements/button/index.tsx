@@ -16,16 +16,25 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
   return (
     <Motion
       as="button"
-      color="inherit"
+      color="#00174B"
       cursor="pointer"
-      fontSize="1.5rem"
+      fontSize="1.75rem"
       onClick={onClick}
       borderRadius="1rem"
       textDecoration="none"
       whileHover={{ scale: 1.05 }}
-      border={hasBorder ? '1px solid #1B1B1F' : '0'}
+      border={hasBorder ? '2px solid #1B1B1F' : '0'}
       fontWeight={size === 'small' ? 'normal' : 'bold'}
-      p={size === 'small' ? '.5rem 1.5rem' : '1.5rem 2.5rem'}
+      p={
+        size === 'small'
+          ? '0.5rem 1.5rem'
+          : [
+              '0.625rem 1.125rem',
+              '0.625rem 1.125rem',
+              '0.625rem 1.125rem',
+              '1.5rem 2.5rem',
+            ]
+      }
       textTransform={size === 'small' ? 'none' : 'uppercase'}
       backgroundColor={variant === 'primary' ? theme.theme.colors.senary : ''}
     >

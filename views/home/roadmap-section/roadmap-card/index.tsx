@@ -32,7 +32,7 @@ const RoadmapCard: FC<RoadmapCardProps> = ({
   return (
     <Frame
       flex="1"
-      py="1rem"
+      p="1rem"
       mb="9.375rem"
       position="relative"
       borderRadius=".625rem"
@@ -89,7 +89,13 @@ const RoadmapCard: FC<RoadmapCardProps> = ({
       </Typography>
       <Box as="ul" color="white">
         {items.map((item) => (
-          <Box as="li" pb=".875rem" fontSize="1.5rem" key={v4()}>
+          <Box
+            as="li"
+            lineHeight="2.125rem"
+            fontSize="1.5rem"
+            fontWeight="400"
+            key={v4()}
+          >
             {item}
           </Box>
         ))}

@@ -22,12 +22,16 @@ const HeroSection: FC = () => {
     >
       <Box
         width="100%"
+        gap={['3rem', '3rem', '3rem', '2.5rem']}
         display="flex"
-        gap="2.4063rem"
         gridColumn="1/-1"
         minHeight="fit-content"
         justifyContent="space-around"
+        alignItems="center"
         flexDirection={['column', 'column', 'column', 'row']}
+        maxWidth="64rem"
+        mx="auto"
+        mb={['6rem', '6rem', '6rem', 'unset']}
       >
         <Box>
           <Typography
@@ -35,15 +39,20 @@ const HeroSection: FC = () => {
             color="white"
             variant="displayLarge"
             fontSize={['2.5rem', '2.5rem', '2.5rem', '3.75rem']}
+            my="0"
+            mb="2rem"
           >
             The cutest but most savage meme coin. The shitcoin slayer.
           </Typography>
-          <Button variant="primary">Buy now</Button>
+          <Button variant="primary" hasBorder>
+            Buy now
+          </Button>
         </Box>
         <Box
+          pt={['0rem', '0rem', '0rem', '2rem']}
           width="100%"
           minWidth="18.75rem"
-          maxWidth="31.25rem"
+          maxWidth="37.5rem"
           margin={['0 auto', '0 auto', '0 auto', 'unset']}
           height={['23.75rem', '31.25rem', '37.5rem', '31.25rem']}
         >
