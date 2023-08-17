@@ -1,4 +1,11 @@
-import { InterestProtocolLogoSVG, SuipainsLogoSVG, SuishiLogoSVG } from '@/svg';
+import {
+  InterestProtocolLogoSVG,
+  OwlitSVG,
+  ReleapSVG,
+  SkoolNFTSVG,
+  SuipainsLogoSVG,
+  SuishiLogoSVG,
+} from '@/svg';
 
 export const foundingMembersSlick = {
   dots: false,
@@ -182,39 +189,33 @@ export const foundingMembersSlick = {
 
 export const FOUNDING_MEMBERS_LIST = [
   {
-    id: 1,
     url: 'https://twitter.com/interest_dinero',
     name: 'Interest Protocol',
     Icon: InterestProtocolLogoSVG,
   },
   {
-    id: 2,
     url: 'https://twitter.com/suishi_nft',
     name: 'Suishi',
     Icon: SuishiLogoSVG,
   },
   {
-    id: 3,
     url: 'https://twitter.com/suipiens',
     name: 'SUIPIENS',
     Icon: SuipainsLogoSVG,
   },
   {
-    id: 4,
     url: 'https://twitter.com/owlswap_finance',
     name: 'Owlit Finance',
-    Icon: null,
+    Icon: OwlitSVG,
   },
   {
-    id: 5,
     url: 'https://twitter.com/skool_nft',
     name: 'Skool NFT',
-    Icon: null,
+    Icon: SkoolNFTSVG,
   },
   {
-    id: 6,
     url: 'https://twitter.com/Releap_IO',
     name: 'Releap Protocol',
-    Icon: null,
+    Icon: ReleapSVG,
   },
 ];

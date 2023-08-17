@@ -61,14 +61,11 @@ const TokenomicsSection: FC = () => {
             <Motion
               zIndex="1"
               position="absolute"
-              initial={{ x: '-100%', rotate: 0 }}
               top={['1rem', '1rem', '1rem', '-13rem']}
               right={['0rem', '0rem', '0rem', 'unset']}
               left={['unset', 'unset', 'unset', '-2.5625rem']}
               maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
               width={['9.375rem', '9.375rem', '9.375rem', '23.563rem']}
-              transition={{ duration: 1.5, rotate: { duration: 0.9 } }}
-              whileInView={{ x: 0, rotate: [0, 5, -5, 5, -5, 5, -5, 0] }}
             >
               <SmokerBurrrdSVG
                 maxHeight="50rem"
@@ -114,9 +111,7 @@ const TokenomicsSection: FC = () => {
                   lineHeight="2rem"
                   my={['2.5rem', '2.5rem', '2.5rem', '3.5rem']}
                   fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
-                >
-                  {/* {weeds && weeds} */}
-                </Typography>
+                />
               </Box>
               <Motion
                 right="1rem"

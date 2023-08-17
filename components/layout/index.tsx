@@ -7,8 +7,8 @@ import Header from './header';
 const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
+      <Header />
       <Box variant="container">
-        <Header />
         {children}
         <Footer />
       </Box>
