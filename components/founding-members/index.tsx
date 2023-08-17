@@ -19,27 +19,26 @@ const FoundingMembers: FC = () => {
     >
       <Box>
         <Slider {...foundingMembersSlick}>
-          {FOUNDING_MEMBERS_LIST.map(({ Icon, url }) => (
-            <>
-              {Icon && (
-                <a key={v4()} href={url} target="_blank" rel="noreferrer">
-                  <Box
-                    display="flex"
-                    justifyContent="center"
-                    alignItems="center"
-                    width="4rem"
-                    height="4rem"
-                  >
-                    <Icon maxHeight="4rem" maxWidth="4rem" width="2.813rem" />
-                  </Box>
-                </a>
-              )}
-            </>
+          {FOUNDING_MEMBERS_LIST.slice(0, 3).map(({ Icon, url }) => (
+            <a key={v4()} href={url} target="_blank" rel="noreferrer">
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                width="4rem"
+                height="4rem"
+              >
+                {Icon && (
+                  <Icon maxHeight="4rem" maxWidth="4rem" width="2.813rem" />
+                )}
+              </Box>
+            </a>
           ))}
           <Typography
             fontWeight="600"
             variant="medium"
             fontSize="1.25rem"
+            mx="3rem"
             color={defaultTheme.theme.colors.primary}
           >
             Our founding members

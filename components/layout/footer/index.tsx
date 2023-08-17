@@ -52,11 +52,12 @@ const Footer: FC = () => {
               x: '-8%',
               rotate: [0, 20, -20, 20, -20, 20, -20, 0],
             }}
+            width="100%"
             position="absolute"
             transition={{ duration: 1.5 }}
-            width="100%"
+            transform={['scale(1)', 'scale(1)', 'scale(1)', 'scale(0.8)']}
+            bottom={['-15.875rem', '-15.875rem', '-15.875rem', '-17rem']}
             height={['11.813rem', '11.813rem', '11.813rem', '21.875rem']}
-            bottom={['-15.875rem', '-15.875rem', '-15.875rem', '-72%']}
           >
             <BurrrdSVG
               maxHeight="21.875rem"
@@ -153,7 +154,7 @@ const Footer: FC = () => {
               ]}
               width="100%"
               mx={['auto', 'auto', 'auto', 'unset']}
-              flexWrap={['wrap', 'nowrap', 'nowrap', 'nowrap']}
+              flexWrap={['wrap', 'nowrap', 'nowrap', 'wrap']}
             >
               {SOCIALS.map(({ Icon, name, url }) => (
                 <Motion

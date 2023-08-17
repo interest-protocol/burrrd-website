@@ -30,6 +30,7 @@ const Header: FC = () => {
       <Box
         mx="auto"
         display="flex"
+        maxWidth="64rem"
         alignItems="center"
         justifyContent="space-between"
       >
@@ -41,31 +42,14 @@ const Header: FC = () => {
             position="relative"
             alignItems="center"
           >
-            <Motion
-              animate={{
-                x: [-60, -60, -100, 0],
-                rotate: [
-                  50, 50, 50, 50, 50, 50, 50, 50, 20, -20, 20, -20, 20, -20, 20,
-                  -20, 20, 0,
-                ],
-              }}
-              position="absolute"
-              initial={{ x: -60, rotate: 50 }}
-              transition={{ duration: 3.5 }}
-            >
+            <Motion>
               <BurrrdSVG
                 width="100%"
                 maxWidth="12.625rem"
                 maxHeight="3.5625rem"
               />
             </Motion>
-            <Motion
-              right="0"
-              animate={{ x: 0 }}
-              position="absolute"
-              initial={{ x: -300 }}
-              transition={{ duration: 2 }}
-            >
+            <Motion>
               <Typography
                 margin="0"
                 color="white"
@@ -87,28 +71,14 @@ const Header: FC = () => {
             position="relative"
             alignItems="center"
           >
-            <Motion
-              animate={{
-                x: [-60, -60, -100, 0],
-                rotate: [
-                  50, 50, 50, 50, 50, 50, 50, 50, 20, -20, 20, -20, 20, -20, 20,
-                  -20, 20, 0,
-                ],
-              }}
-              initial={{ x: -60, rotate: 50 }}
-              transition={{ duration: 3.5 }}
-            >
+            <Motion>
               <BurrrdSVG
                 width="1.75rem"
                 maxWidth="12.625rem"
                 maxHeight="3.5625rem"
               />
             </Motion>
-            <Motion
-              initial={{ x: -300 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 2 }}
-            >
+            <Motion>
               <Typography
                 color="white"
                 variant="medium"

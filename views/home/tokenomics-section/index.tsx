@@ -1,5 +1,5 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
-import { FC, useCallback, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
@@ -21,14 +21,19 @@ const TokenomicsSection: FC = () => {
   const countUpRef = useRef(null);
   const weeds = 420000000000000;
 
-  useCountUp({
+  const countup = useCountUp({
     ref: countUpRef,
     start: 0,
     duration: 4,
     end: weeds,
+    useGrouping: true,
     scrollSpyOnce: true,
     enableScrollSpy: true,
   });
+
+  useEffect(() => {
+    countup.start();
+  }, [countup]);
 
   return (
     <Box variant="container" borderBottom="2px solid black" id="tokenomics">
@@ -110,7 +115,7 @@ const TokenomicsSection: FC = () => {
                   my={['2.5rem', '2.5rem', '2.5rem', '3.5rem']}
                   fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
                 >
-                  {weeds}
+                  {/* {weeds && weeds} */}
                 </Typography>
               </Box>
               <Motion

@@ -182,31 +182,37 @@ export const foundingMembersSlick = {
 
 export const FOUNDING_MEMBERS_LIST = [
   {
+    id: 1,
     url: 'https://twitter.com/interest_dinero',
     name: 'Interest Protocol',
     Icon: InterestProtocolLogoSVG,
   },
   {
+    id: 2,
     url: 'https://twitter.com/suishi_nft',
     name: 'Suishi',
     Icon: SuishiLogoSVG,
   },
   {
+    id: 3,
     url: 'https://twitter.com/suipiens',
     name: 'SUIPIENS',
     Icon: SuipainsLogoSVG,
   },
   {
+    id: 4,
     url: 'https://twitter.com/owlswap_finance',
     name: 'Owlit Finance',
     Icon: null,
   },
   {
+    id: 5,
     url: 'https://twitter.com/skool_nft',
     name: 'Skool NFT',
     Icon: null,
   },
   {
+    id: 6,
     url: 'https://twitter.com/Releap_IO',
     name: 'Releap Protocol',
     Icon: null,
