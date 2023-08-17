@@ -22,5 +22,6 @@ export { default as StabbedPepeSVG } from './stabbed-pepe';
 export { default as SuipainsLogoSVG } from './suipains-logo';
 export { default as SuishiLogoSVG } from './suishi-logo';
 export { default as TelegramSVG } from './telegram';
+export { default as TimesSVG } from './times';
 export { default as TwitterSVG } from './twitter';
 export { default as XSVG } from './x';

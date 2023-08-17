@@ -1,6 +1,9 @@
 import { css } from '@emotion/react';
 
 export const GlobalStyles = css`
+  html {
+    scroll-behavior: smooth;
+  }
   html,
   body {
     padding: 0;
@@ -8,12 +11,10 @@ export const GlobalStyles = css`
     overflow-x: hidden;
     font-family: 'Asap', sans-serif;
   }
-
   a {
     color: inherit;
     text-decoration: none;
   }
-
   * {
     box-sizing: border-box;
   }
