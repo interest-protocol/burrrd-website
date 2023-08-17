@@ -1,5 +1,4 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
-import Link from 'next/link';
 import { FC, useCallback, useState } from 'react';
 import { v4 } from 'uuid';
 
@@ -52,6 +51,7 @@ const Footer: FC = () => {
               x: '-8%',
               rotate: [0, 20, -20, 20, -20, 20, -20, 0],
             }}
+            viewport={{ once: true }}
             width="100%"
             position="absolute"
             transition={{ duration: 1.5 }}
@@ -70,6 +70,7 @@ const Footer: FC = () => {
             position="absolute"
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
             transition={{ delay: 1.5 }}
             ml={['55%', '9.75rem', '9.75rem', '14.375rem']}
             bottom={['-12rem', '-12rem', '-12rem', '-30%']}
@@ -106,6 +107,7 @@ const Footer: FC = () => {
             <Motion
               initial={{ x: '50%', opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 1.5, type: 'spring', stiffness: 100 }}
             >
               <Typography
@@ -123,6 +125,7 @@ const Footer: FC = () => {
             <Motion
               initial={{ x: '-100%', opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
               transition={{
                 duration: 1.8,
                 type: 'spring',
@@ -163,31 +166,31 @@ const Footer: FC = () => {
                   initial={{ y: 0 }}
                   whileHover={{ y: -10 }}
                 >
-                  <Frame
-                    bg="white"
-                    display="flex"
-                    boxSize="small"
-                    borderRadius="50%"
-                    alignItems="center"
-                    flexDirection="column"
-                    justifyContent="center"
-                    width={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
-                    height={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
-                    border="4px solid"
-                  >
-                    <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
-                    <Typography
-                      m="0"
-                      variant="medium"
-                      fontFamily="Roboto Mono"
-                      textDecoration="underline"
-                      fontSize={['.75rem', '.75rem', '.75rem', '1rem']}
+                  <a href={url} target="_blank" rel="noreferrer">
+                    <Frame
+                      bg="white"
+                      display="flex"
+                      boxSize="small"
+                      borderRadius="50%"
+                      alignItems="center"
+                      flexDirection="column"
+                      justifyContent="center"
+                      width={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
+                      height={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
+                      border="4px solid"
                     >
-                      <Link href={url} target="_blank">
+                      <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
+                      <Typography
+                        m="0"
+                        variant="medium"
+                        fontFamily="Roboto Mono"
+                        textDecoration="underline"
+                        fontSize={['.75rem', '.75rem', '.75rem', '1rem']}
+                      >
                         {name}
-                      </Link>
-                    </Typography>
-                  </Frame>
+                      </Typography>
+                    </Frame>
+                  </a>
                 </Motion>
               ))}
             </Box>

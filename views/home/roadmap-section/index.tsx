@@ -13,7 +13,6 @@ const RoadmapSection: FC = () => {
       id="roadmap"
       variant="container"
       p={['3.375rem 1rem', '3.375rem 1rem', '3.375rem 1rem', '6rem 6.5625rem']}
-      borderBottom="2px solid black"
       minHeight={['100vh', '100vh', '100vh', 'unset']}
       mx="auto"
       maxWidth="80rem"

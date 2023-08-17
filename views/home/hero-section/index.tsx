@@ -17,7 +17,7 @@ const HeroSection: FC = () => {
         '3.375rem 1.25rem',
         '7.5rem 9.375rem',
       ]}
-      borderBottom="2px solid black"
+      borderBottom="2px solid"
       bg={theme.theme.colors.primary}
     >
       <Box

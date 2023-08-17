@@ -30,7 +30,6 @@ const AboutSection: FC = () => {
         width="100%"
         display="flex"
         position="relative"
-        borderBottom="2px solid black"
         flexDirection={['column', 'column', 'column', 'row']}
       >
         <Box
@@ -59,6 +58,7 @@ const AboutSection: FC = () => {
         >
           <Motion
             whileInView={{ x: 0 }}
+            viewport={{ once: true }}
             initial={{ x: '-100%' }}
             transition={{
               type: 'spring',
@@ -88,6 +88,17 @@ const AboutSection: FC = () => {
           width="100%"
           borderLeft={['none', 'none', 'none', '2px solid black']}
           bg={theme.theme.colors.secondary}
+          nAfter={{
+            top: '0',
+            right: '0',
+            zIndex: '-1',
+            content: '""',
+            height: '100%',
+            width: '100vw',
+            position: 'absolute',
+            transform: 'translate(100%, 0)',
+            background: `${theme.theme.colors.secondary}`,
+          }}
         >
           <Frame
             zIndex="1"

@@ -15,7 +15,8 @@ const FoundingMembers: FC = () => {
   return (
     <Box
       py="1.25rem"
-      borderBottom=".125rem solid black"
+      borderTop="2px solid black"
+      borderBottom="2px solid black"
       bg={theme.theme.colors.septenary}
     >
       <Box>

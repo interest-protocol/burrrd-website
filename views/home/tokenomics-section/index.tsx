@@ -41,8 +41,9 @@ const TokenomicsSection: FC = () => {
         width="100%"
         display="flex"
         gridColumn="1/-1"
-        pb={['10.625rem', '10.625rem', '10.625rem', '0']}
+        borderTop="2px solid"
         bg={theme.theme.colors.primary}
+        pb={['10.625rem', '10.625rem', '10.625rem', '0']}
       >
         <Box
           width="100%"
@@ -75,6 +76,7 @@ const TokenomicsSection: FC = () => {
             </Motion>
             <Motion
               position="absolute"
+              viewport={{ once: true }}
               left={['50%', '50%', '50%', '55%']}
               initial={isMobile ? { x: '50%' } : { x: '90%' }}
               whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
@@ -117,6 +119,7 @@ const TokenomicsSection: FC = () => {
                 right="1rem"
                 bottom="-2rem"
                 position="absolute"
+                viewport={{ once: true }}
                 initial={{ x: 300, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 2, opacity: { delay: 2 } }}
@@ -177,6 +180,7 @@ const TokenomicsSection: FC = () => {
             left="50%"
             height="auto"
             position="absolute"
+            viewport={{ once: true }}
             whileInView={{ rotate: 11.04 }}
             initial={{ rotate: 0, x: '-52%' }}
             bottom={['-5rem', '-5rem', '-5rem', '-4.5rem']}

@@ -49,7 +49,7 @@ const MobileNavbar: FC = () => {
           <Motion
             top="0"
             left="0"
-            zIndex="2"
+            zIndex="998"
             width="100%"
             color="white"
             exit="closed"
