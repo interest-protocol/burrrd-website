@@ -39,9 +39,9 @@ const MobileNavbar: FC = () => {
         borderColor="#45464F"
       >
         {!toggle ? (
-          <MenuSVG maxHeight="1.5rem" maxWidth="1.5rem" width="1.5rem" />
+          <MenuSVG maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
         ) : (
-          <TimesSVG maxHeight="1.5rem" maxWidth="1.5rem" width="1.5rem" />
+          <TimesSVG maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
         )}
       </Button>
       <AnimatePresence>

@@ -30,7 +30,7 @@ const FoundingMembers: FC = () => {
                 width="4rem"
                 height="4rem"
               >
-                <Icon maxHeight="4rem" maxWidth="4rem" width="2.813rem" />
+                <Icon maxHeight="2.813rem" maxWidth="2.813rem" width="100%" />
               </Box>
             </a>
           ))}

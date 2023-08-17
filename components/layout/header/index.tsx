@@ -52,6 +52,7 @@ const Header: FC = () => {
               position="absolute"
               initial={{ x: -60, rotate: 50 }}
               transition={{ duration: 3.5 }}
+              width="3.5rem"
             >
               <BurrrdSVG
                 width="100%"
