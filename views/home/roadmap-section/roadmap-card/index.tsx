@@ -33,12 +33,15 @@ const RoadmapCard: FC<RoadmapCardProps> = ({
     <Frame
       flex="1"
       p="1rem"
-      mb="9.375rem"
+      mb={['unset', 'unset', 'unset', '9.375rem']}
       position="relative"
       borderRadius=".625rem"
       bg={
         index === 1 ? theme.theme.colors.primary : theme.theme.colors.secondary
       }
+      width={['70vw', '70vw', '39vw', 'unset']}
+      mx="auto"
+      minHeight={['30rem', '30rem', '30rem', 'unset']}
     >
       <Motion
         top="-1.875rem"
@@ -58,8 +61,8 @@ const RoadmapCard: FC<RoadmapCardProps> = ({
           bg="white"
           display="flex"
           boxSize="small"
-          width="4.75rem"
-          height="4.75rem"
+          width={['2.5rem', '2.5rem', '2.5rem', '4.75rem']}
+          height={['2.5rem', '2.5rem', '2.5rem', '4.75rem']}
           borderRadius="50%"
           alignItems="center"
           justifyContent="center"
@@ -68,7 +71,7 @@ const RoadmapCard: FC<RoadmapCardProps> = ({
             as="span"
             fontWeight="700"
             variant="medium"
-            fontSize="2.25rem"
+            fontSize={['1.5rem', '1.5rem', '1.5rem', '2.25rem']}
           >
             {index + 1}
           </Typography>
@@ -100,7 +103,10 @@ const RoadmapCard: FC<RoadmapCardProps> = ({
           </Box>
         ))}
       </Box>
-      <Box onMouseEnter={handleMouseEnter}>
+      <Box
+        onMouseEnter={handleMouseEnter}
+        display={['none', 'none', 'none', 'block']}
+      >
         {index === 0 ? (
           <>
             <Box
