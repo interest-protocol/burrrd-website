@@ -1,3 +1,5 @@
+export { default as ArrowLeftSVG } from './arrow-left';
+export { default as ArrowRightSVG } from './arrow-right';
 export { default as BodyBagSVG } from './body-bag';
 export { default as BurrrdSVG } from './burrrd';
 export { default as BurrrdCleaningSVG } from './burrrd-cleaning';

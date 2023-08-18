@@ -18,4 +18,8 @@ export const GlobalStyles = css`
   * {
     box-sizing: border-box;
   }
+  .slick-next:before,
+  .slick-prev:before {
+    color: #000;
+  }
 `;

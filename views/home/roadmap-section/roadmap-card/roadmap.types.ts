@@ -4,3 +4,8 @@ export interface RoadmapCardProps {
   index: number;
   isHovered: boolean;
 }
+
+export interface CustomArrowProps {
+  onClick?: () => void;
+  isLeft?: boolean;
+}

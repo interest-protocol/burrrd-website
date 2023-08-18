@@ -5,8 +5,9 @@ import { v4 } from 'uuid';
 
 import useEventListener from '@/hooks/use-event-listener';
 
+import CustomArrow from './custom-arrow';
 import RoadmapCard from './roadmap-card';
-import { ROADMAP_DATA, settingsRoadmap } from './roadmap-card/roadmap.data';
+import { ROADMAP_DATA } from './roadmap-card/roadmap.data';
 
 const RoadmapSection: FC = () => {
   const [isFrameHovered, setIsFrameHovered] = useState(false);
@@ -18,6 +19,38 @@ const RoadmapSection: FC = () => {
   }, []);
 
   useEventListener('resize', handleSetDesktop, true);
+  const settingsRoadmap = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: <CustomArrow isLeft />,
+    nextArrow: <CustomArrow />,
+    responsive: [
+      {
+        breakpoint: 983,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 790,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 715,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <Box
       mt="0"
@@ -55,13 +88,19 @@ const RoadmapSection: FC = () => {
           ))}
         </Box>
       ) : (
-        <Slider {...settingsRoadmap}>
-          {ROADMAP_DATA.map((item, index) => (
-            <Box key={v4()} py="2rem">
-              <RoadmapCard {...item} index={index} isHovered={isFrameHovered} />
-            </Box>
-          ))}
-        </Slider>
+        <Box px="1rem">
+          <Slider {...settingsRoadmap}>
+            {ROADMAP_DATA.map((item, index) => (
+              <Box key={v4()} py="2rem">
+                <RoadmapCard
+                  {...item}
+                  index={index}
+                  isHovered={isFrameHovered}
+                />
+              </Box>
+            ))}
+          </Slider>
+        </Box>
       )}
     </Box>
   );
