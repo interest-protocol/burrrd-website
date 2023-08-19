@@ -3,7 +3,7 @@ import { FC } from 'react';
 import Slider from 'react-slick';
 import { v4 } from 'uuid';
 
-import { defaultTheme } from '@/design-system/theme/default-theme';
+import { useTheme } from '@/context/theme-context';
 
 import {
   FOUNDING_MEMBERS_LIST,
@@ -11,11 +11,13 @@ import {
 } from './founding-members.data';
 
 const FoundingMembers: FC = () => {
+  const { theme } = useTheme();
   return (
     <Box
       py="1.25rem"
-      borderBottom=".125rem solid black"
-      bg={defaultTheme.theme.colors.septenary}
+      borderTop="2px solid black"
+      borderBottom="2px solid black"
+      bg={theme.theme.colors.septenary}
     >
       <Box>
         <Slider {...foundingMembersSlick}>
@@ -28,7 +30,7 @@ const FoundingMembers: FC = () => {
                 width="4rem"
                 height="4rem"
               >
-                <Icon maxHeight="4rem" maxWidth="4rem" width="2.813rem" />
+                <Icon maxHeight="2.813rem" maxWidth="2.813rem" width="100%" />
               </Box>
             </a>
           ))}
@@ -36,7 +38,8 @@ const FoundingMembers: FC = () => {
             fontWeight="600"
             variant="medium"
             fontSize="1.25rem"
-            color={defaultTheme.theme.colors.primary}
+            mx="3rem"
+            color={theme.theme.colors.primary}
           >
             Our founding members
           </Typography>

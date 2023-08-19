@@ -1,5 +1,4 @@
 import { Box, Motion } from '@interest-protocol/ui-kit';
-import Link from 'next/link';
 import { FC } from 'react';
 import { v4 } from 'uuid';
 
@@ -20,7 +19,7 @@ const Navbar: FC = () => {
       >
         {MENU_ITEMS.map(({ title, url }) => (
           <Motion as="li" key={v4()} initial={{ y: 0 }} whileHover={{ y: -5 }}>
-            <Link href={url}>{title}</Link>
+            <a href={url}>{title}</a>
           </Motion>
         ))}
       </Box>

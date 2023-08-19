@@ -22,26 +22,24 @@ const Header: FC = () => {
   return (
     <Box
       width="100%"
-      gridColumn="1/-1"
       p="0.625rem 1.25rem"
-      bg={theme.theme.colors.primary}
-      borderBottom="2px solid"
       borderColor="#1B1B1F"
+      borderBottom="2px solid"
+      bg={theme.theme.colors.primary}
     >
       <Box
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-        maxWidth="64rem"
         mx="auto"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
       >
         {!isMobile ? (
           <Box
             gap="1rem"
+            display="flex"
             width="14.375rem"
             position="relative"
             alignItems="center"
-            display="flex"
           >
             <Motion
               animate={{
@@ -54,6 +52,7 @@ const Header: FC = () => {
               position="absolute"
               initial={{ x: -60, rotate: 50 }}
               transition={{ duration: 3.5 }}
+              width="3.5rem"
             >
               <BurrrdSVG
                 width="100%"
@@ -62,10 +61,10 @@ const Header: FC = () => {
               />
             </Motion>
             <Motion
-              position="absolute"
               right="0"
-              initial={{ x: -300 }}
               animate={{ x: 0 }}
+              position="absolute"
+              initial={{ x: -300 }}
               transition={{ duration: 2 }}
             >
               <Typography
@@ -83,11 +82,11 @@ const Header: FC = () => {
           </Box>
         ) : (
           <Box
-            position="relative"
-            alignItems="center"
+            gap="1.25rem"
             display="flex"
             height="0.625rem"
-            gap="1.25rem"
+            position="relative"
+            alignItems="center"
           >
             <Motion
               animate={{

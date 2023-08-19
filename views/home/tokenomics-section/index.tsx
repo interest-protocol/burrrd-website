@@ -1,5 +1,5 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
-import { FC, useCallback, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
@@ -19,15 +19,21 @@ const TokenomicsSection: FC = () => {
   useEventListener('resize', handleSetDesktop, true);
 
   const countUpRef = useRef(null);
+  const weeds = 420000000000000;
 
-  useCountUp({
+  const countup = useCountUp({
     ref: countUpRef,
     start: 0,
-    duration: 1,
-    end: 420000000000000,
+    duration: 4,
+    end: weeds,
+    useGrouping: true,
     scrollSpyOnce: true,
     enableScrollSpy: true,
   });
+
+  useEffect(() => {
+    countup.start();
+  }, [countup]);
 
   return (
     <Box variant="container" borderBottom="2px solid black" id="tokenomics">
@@ -35,8 +41,9 @@ const TokenomicsSection: FC = () => {
         width="100%"
         display="flex"
         gridColumn="1/-1"
-        pb={['10.625rem', '10.625rem', '10.625rem', '0']}
+        borderTop="2px solid"
         bg={theme.theme.colors.primary}
+        pb={['10.625rem', '10.625rem', '10.625rem', '0']}
       >
         <Box
           width="100%"
@@ -55,14 +62,11 @@ const TokenomicsSection: FC = () => {
             <Motion
               zIndex="1"
               position="absolute"
-              initial={{ x: '-100%', rotate: 0 }}
+              top={['1rem', '1rem', '1rem', '-13rem']}
               right={['0rem', '0rem', '0rem', 'unset']}
-              width={['9.375rem', '9.375rem', '9.375rem', '23.563rem']}
-              maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
-              top={['-.625rem', '-.625rem', '-0.4%', '-13rem']}
               left={['unset', 'unset', 'unset', '-2.5625rem']}
-              transition={{ duration: 1.5, rotate: { duration: 0.9 } }}
-              whileInView={{ x: 0, rotate: [0, 5, -5, 5, -5, 5, -5, 0] }}
+              maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
+              width={['9.375rem', '9.375rem', '9.375rem', '23.563rem']}
             >
               <SmokerBurrrdSVG
                 maxHeight="50rem"
@@ -72,10 +76,11 @@ const TokenomicsSection: FC = () => {
             </Motion>
             <Motion
               position="absolute"
-              initial={isMobile ? { x: '50%' } : { x: '90%' }}
+              viewport={{ once: true }}
               left={['50%', '50%', '50%', '55%']}
-              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-13.25rem']}
+              initial={isMobile ? { x: '50%' } : { x: '90%' }}
               whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
+              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-13.25rem']}
               transition={{
                 type: 'spring',
                 stiffness: 300,
@@ -103,37 +108,36 @@ const TokenomicsSection: FC = () => {
               <Box display="flex" justifyContent="center">
                 <Typography
                   ref={countUpRef}
-                  fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
-                  lineHeight="2rem"
-                  variant="medium"
                   fontWeight="600"
-                  my={['1rem', '1rem', '1rem', '3.5rem']}
-                >
-                  420000000000000
-                </Typography>
+                  variant="medium"
+                  lineHeight="2rem"
+                  my={['2.5rem', '2.5rem', '2.5rem', '3.5rem']}
+                  fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
+                />
               </Box>
               <Motion
                 right="1rem"
                 bottom="-2rem"
                 position="absolute"
+                viewport={{ once: true }}
                 initial={{ x: 300, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 5, opacity: { delay: 5 } }}
+                transition={{ duration: 1, delay: 2, opacity: { delay: 2 } }}
               >
                 <Frame
-                  display={['none', 'none', 'none', 'block']}
                   bg="white"
-                  width="max-content"
-                  borderRadius="2rem"
-                  border="4px solid"
                   py="0.5rem"
+                  border="4px solid"
+                  borderRadius="2rem"
+                  width="max-content"
+                  display={['none', 'none', 'none', 'block']}
                 >
                   <Typography
                     as="span"
-                    fontWeight="600"
-                    fontSize="2.25rem"
-                    variant="medium"
                     p="0rem 1.5rem"
+                    fontWeight="600"
+                    variant="medium"
+                    fontSize="2.25rem"
                   >
                     weeds
                   </Typography>
@@ -142,19 +146,19 @@ const TokenomicsSection: FC = () => {
             </Frame>
           </Box>
           <Box
-            mt={['4rem', '4rem', '4rem', '6.25rem']}
-            position="relative"
             mb="6rem"
+            position="relative"
+            mt={['4rem', '4rem', '4rem', '6.25rem']}
           >
             <Box
               color="white"
-              fontSize={['1rem', '1rem', '1rem', '2.25rem']}
               textAlign="center"
+              fontSize={['1rem', '1rem', '1rem', '2.25rem']}
             >
               <Typography
                 variant="medium"
-                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
                 fontWeight="400"
+                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
               >
                 90% of the tokens will be added to the liquidity pool, with LP
                 tokens being burned and the contract renounced to ensure
@@ -162,8 +166,8 @@ const TokenomicsSection: FC = () => {
               </Typography>
               <Typography
                 variant="medium"
-                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
                 fontWeight="400"
+                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
               >
                 10% of the supply will be held in a multi-sig wallet as
                 treasury, used exclusively for operations, such as cex listings,
@@ -176,18 +180,19 @@ const TokenomicsSection: FC = () => {
             left="50%"
             height="auto"
             position="absolute"
+            viewport={{ once: true }}
+            whileInView={{ rotate: 11.04 }}
             initial={{ rotate: 0, x: '-52%' }}
             bottom={['-5rem', '-5rem', '-5rem', '-4.5rem']}
-            whileInView={{ rotate: 11.04 }}
           >
             <Frame
               p="1rem 2rem"
               display="flex"
+              border="4px solid"
               width="max-content"
               borderRadius="2rem"
               flexDirection="column"
               bg={theme.theme.colors.septenary}
-              border="4px solid"
               fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
             >
               <Typography as="span" fontWeight="700" variant="displayLarge">

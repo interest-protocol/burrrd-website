@@ -25,6 +25,7 @@ const BridgeSection: FC = () => {
         <Motion
           initial={{ y: '-100%' }}
           whileInView={{ y: 0 }}
+          viewport={{ once: true }}
           transition={{
             type: 'spring',
             stiffness: 300,

@@ -5,30 +5,43 @@ import { capitalize } from '@/utils';
 
 const SEO: FC<{ pageTitle: string }> = ({ pageTitle }) => {
   const title = `${pageTitle ? `${capitalize(pageTitle)} | ` : ''}BURRRD`;
+
   return (
     <Head>
       <meta name="theme-color" content="#282828" />
       <meta charSet="utf-8" />
       <meta name="title" content="BURRRD" />
-      <meta name="description" content="Description" />
+      <meta
+        name="description"
+        content="The cutest but most dangerous #memecoin"
+      />
       <meta property="og:locale" content="en_US" />
       <meta property="og:title" content="BURRRD" />
       <meta property="og:site_name" content="BURRRD" />
-      <meta property="og:description" content="Description" />
-      <meta property="og:image" content="/android-chrome-256x256.png" />
+      <meta
+        property="og:description"
+        content="The cutest but most dangerous #memecoin"
+      />
+      <meta property="og:image" content="/android-chrome-512x512.png" />
       <meta
         property="og:image:secure_url"
-        content="/android-chrome-256x256.png"
+        content="/android-chrome-512x512.png"
       />
       <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="256" />
-      <meta property="og:image:height" content="256" />
+      <meta property="og:image:width" content="512" />
+      <meta property="og:image:height" content="512" />
       <meta property="og:image:alt" content="BURRRD" />
-      <meta name="twitter:card" content="summary" />
+      <meta
+        name="twitter:card"
+        content="The cutest but most dangerous #memecoin"
+      />
       <meta name="twitter:title" content="BURRRD" />
       <meta name="twitter:site" content="https://interestprotocol.com" />
-      <meta name="twitter:image" content="/android-chrome-256x256.png" />
-      <meta name="twitter:description" content="Description" />
+      <meta name="twitter:image" content="/android-chrome-512x512.png" />
+      <meta
+        name="twitter:description"
+        content="The cutest but most dangerous #memecoin"
+      />
       <link rel="icon" href="/favicon.ico" />
       <link
         rel="apple-touch-icon"
