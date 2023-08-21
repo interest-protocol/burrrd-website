@@ -1,18 +1,18 @@
+import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { FC } from 'react';
+
 import Frame from '@/components/frame';
 import { useTheme } from '@/context/theme-context';
 import Button from '@/elements/button';
 import { KillingSpreeSVG, QuestionSVG } from '@/svg';
-import { Box, Typography } from '@interest-protocol/ui-kit';
-import { FC } from 'react';
 
 const BridgeSection: FC = () => {
   const { theme } = useTheme();
   return (
-    <Box variant="container" borderBottom="2px solid black">
+    <Box variant="container" borderBottom="2px solid black" id="bridge">
       <Box
         py="7.5rem"
         width="100%"
-        px="10.75rem"
         display="flex"
         pb="18.125rem"
         gridColumn="1/-1"
@@ -20,33 +20,47 @@ const BridgeSection: FC = () => {
         flexDirection="column"
         justifyContent="center"
         bg={theme.theme.colors.secondary}
+        px={['1.25rem', '1.25rem', '1.25rem', '10.75rem']}
       >
-        <Typography
-          as="span"
+        <Motion
+          initial={{ y: '-100%' }}
+          whileInView={{ y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: 'spring',
+            stiffness: 300,
+            bounce: 0.5,
+            duration: 1,
+          }}
           mb="5.75rem"
-          color="white"
-          variant="small"
-          fontSize="6rem"
-          fontWeight="700"
-          textTransform="uppercase"
         >
-          Bridge
-        </Typography>
+          <Typography
+            as="span"
+            color="white"
+            variant="small"
+            fontWeight="700"
+            textTransform="uppercase"
+            fontSize={['3.125rem', '3.125rem', '3.125rem', '6rem']}
+          >
+            Bridge
+          </Typography>
+        </Motion>
         <Frame
-          p="2rem"
           bg="white"
           display="flex"
           position="relative"
           borderRadius="2rem"
           flexDirection="column"
           justifyContent="center"
+          p={['1.5rem', '1.5rem', '1.5rem', '2rem']}
         >
           <Typography
             m="0"
             pb="2rem"
             variant={'small'}
             textAlign="center"
-            fontSize="1.875rem"
+            fontWeight={['600', '600', '600', '400']}
+            fontSize={['1.25rem', '1.25rem', '1.25rem', '1.875rem']}
           >
             Bridge your assets to Sui Network and assist <br />
             BURRRD on the stabbing spree
@@ -58,18 +72,31 @@ const BridgeSection: FC = () => {
               </Typography>
             </Button>
           </Box>
-          <Box position="absolute" bottom="-2.5rem" left="-3.9375rem">
+          <Motion
+            position="absolute"
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.04 }}
+            transition={{ repeat: Infinity }}
+            bottom={['-40%', '-2.5rem', '-2.5rem', '-2.5rem']}
+            left={['0%', '-3.9375rem', '-3.9375rem', '-3.9375rem']}
+            transform={['scale(0.8)', 'scale(0.8)', 'scale(0.8)', 'scale(1)']}
+          >
             <QuestionSVG
               maxHeight="9.375rem"
               maxWidth="9.375rem"
               width="100%"
             />
-          </Box>
-          <Box position="absolute" bottom="-11.875rem" right="-11.25rem">
+          </Motion>
+          <Box
+            position="absolute"
+            right={['-16%', '-16%', '-16%', '-11.25rem']}
+            bottom={['-144%', '-148%', '-148%', '-11.875rem']}
+            transform={['scale(1.1)', 'scale(1.1)', 'scale(1.1)', 'scale(1.3)']}
+          >
             <KillingSpreeSVG
-              maxHeight="35.625rem"
+              width="100%"
               maxWidth="35.625rem"
-              width="130%"
+              maxHeight="35.625rem"
             />
           </Box>
         </Frame>

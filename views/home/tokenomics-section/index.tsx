@@ -1,84 +1,174 @@
+import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { useCountUp } from 'react-countup';
+
 import Frame from '@/components/frame';
 import { useTheme } from '@/context/theme-context';
-import { HeadToPrizeSVG, SmokerBurrrdSVG } from '@/svg';
-import { Box, Typography } from '@interest-protocol/ui-kit';
-import { FC } from 'react';
+import useEventListener from '@/hooks/use-event-listener';
+import { SmokerBurrrdSVG } from '@/svg';
 
 const TokenomicsSection: FC = () => {
   const { theme } = useTheme();
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleSetDesktop = useCallback(() => {
+    const mediaIsMobile = !window.matchMedia('(min-width: 62em)').matches;
+    setIsMobile(mediaIsMobile);
+  }, []);
+
+  useEventListener('resize', handleSetDesktop, true);
+
+  const countUpRef = useRef(null);
+  const weeds = 420000000000000;
+
+  const countup = useCountUp({
+    ref: countUpRef,
+    start: 0,
+    duration: 4,
+    end: weeds,
+    useGrouping: true,
+    scrollSpyOnce: true,
+    enableScrollSpy: true,
+  });
+
+  useEffect(() => {
+    countup.start();
+  }, [countup]);
+
   return (
-    <Box variant="container" borderBottom="2px solid black">
-      <Box width="100%" display="flex" gridColumn="1/-1">
+    <Box variant="container" borderBottom="2px solid black" id="tokenomics">
+      <Box
+        width="100%"
+        display="flex"
+        gridColumn="1/-1"
+        borderTop="2px solid"
+        bg={theme.theme.colors.primary}
+        pb={['10.625rem', '10.625rem', '10.625rem', '0']}
+      >
         <Box
-          position="relative"
           width="100%"
-          p="16.5625rem"
           minHeight="100%"
-          bg={theme.theme.colors.primary}
+          position="relative"
+          px={['2.313rem', '2.313rem', '2.313rem', '3.6875rem']}
+          py={['2.313rem', '2.313rem', '2.313rem', '14.6875rem']}
+          maxWidth="64rem"
+          mx="auto"
         >
-          <Box position="relative" mt="5rem">
-            <Box
+          <Box
+            mt="5rem"
+            position="relative"
+            pt={['6.25rem', '6.25rem', '6.25rem', '0']}
+          >
+            <Motion
               zIndex="1"
-              top="-13.375rem"
-              left="-1.5625rem"
               position="absolute"
+              top={['1rem', '1rem', '1rem', '-13rem']}
+              right={['0rem', '0rem', '0rem', 'unset']}
+              left={['unset', 'unset', 'unset', '-2.5625rem']}
+              maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
+              width={['9.375rem', '9.375rem', '9.375rem', '23.563rem']}
             >
               <SmokerBurrrdSVG
                 maxHeight="50rem"
                 maxWidth="31.25rem"
-                width="125%"
+                width="100%"
               />
-            </Box>
-            <Box position="absolute" top="-13.125rem" right="2.5rem">
+            </Motion>
+            <Motion
+              position="absolute"
+              viewport={{ once: true }}
+              left={['50%', '50%', '50%', '55%']}
+              initial={isMobile ? { x: '50%' } : { x: '90%' }}
+              whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
+              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-13.25rem']}
+              transition={{
+                type: 'spring',
+                stiffness: 300,
+                bounce: 0.5,
+                duration: 2,
+              }}
+            >
               <Typography
                 as="h2"
                 color="white"
-                fontSize="5.5rem"
                 variant="displayLarge"
                 textTransform="uppercase"
+                fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
               >
                 Tokenomics
               </Typography>
-            </Box>
+            </Motion>
             <Frame
               zIndex="2"
               bg="white"
               position="relative"
               borderRadius="2rem"
+              border="4px solid"
             >
-              <Box p="2rem" display="flex" justifyContent="center">
+              <Box display="flex" justifyContent="center">
                 <Typography
-                  as="span"
-                  fontSize="5rem"
+                  ref={countUpRef}
+                  fontWeight="600"
                   variant="medium"
-                  fontWeight="bold"
-                >
-                  420,000,000,000,000
-                </Typography>
+                  lineHeight="2rem"
+                  my={['2.5rem', '2.5rem', '2.5rem', '3.5rem']}
+                  fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
+                />
               </Box>
-              <Frame
-                bg="white"
-                bottom="-2rem"
+              <Motion
                 right="1rem"
-                p="1rem 1.5rem"
-                width="max-content"
+                bottom="-2rem"
                 position="absolute"
-                borderRadius="2rem"
+                viewport={{ once: true }}
+                initial={{ x: 300, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1, delay: 2, opacity: { delay: 2 } }}
               >
-                <Typography as="span" fontSize="1.5rem" variant="medium">
-                  weeds
-                </Typography>
-              </Frame>
+                <Frame
+                  bg="white"
+                  py="0.5rem"
+                  border="4px solid"
+                  borderRadius="2rem"
+                  width="max-content"
+                  display={['none', 'none', 'none', 'block']}
+                >
+                  <Typography
+                    as="span"
+                    p="0rem 1.5rem"
+                    fontWeight="600"
+                    variant="medium"
+                    fontSize="2.25rem"
+                  >
+                    weeds
+                  </Typography>
+                </Frame>
+              </Motion>
             </Frame>
           </Box>
-          <Box mt="6.25rem" position="relative" mb="6rem">
-            <Box color="white" fontSize="2.25rem" textAlign="center">
-              <Typography variant="medium">
+          <Box
+            mb="6rem"
+            position="relative"
+            mt={['4rem', '4rem', '4rem', '6.25rem']}
+          >
+            <Box
+              color="white"
+              textAlign="center"
+              fontSize={['1rem', '1rem', '1rem', '2.25rem']}
+            >
+              <Typography
+                variant="medium"
+                fontWeight="400"
+                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
+              >
                 90% of the tokens will be added to the liquidity pool, with LP
                 tokens being burned and the contract renounced to ensure
                 transparency and security.
               </Typography>
-              <Typography variant="medium">
+              <Typography
+                variant="medium"
+                fontWeight="400"
+                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
+              >
                 10% of the supply will be held in a multi-sig wallet as
                 treasury, used exclusively for operations, such as cex listings,
                 bridges, liquidity pools, audits, management costs, marketing
@@ -86,35 +176,33 @@ const TokenomicsSection: FC = () => {
               </Typography>
             </Box>
           </Box>
-          <Frame
-            p="2rem"
+          <Motion
             left="50%"
-            width="max-content"
-            transform="translateX(-50%) rotate(11.04deg)"
-            bottom="-4rem"
-            display="flex"
+            height="auto"
             position="absolute"
-            borderRadius="2rem"
-            flexDirection="column"
-            bg={theme.theme.colors.septenary}
+            viewport={{ once: true }}
+            whileInView={{ rotate: 11.04 }}
+            initial={{ rotate: 0, x: '-52%' }}
+            bottom={['-5rem', '-5rem', '-5rem', '-4.5rem']}
           >
-            <Typography
-              as="span"
-              fontWeight="700"
-              fontSize="5.5rem"
-              variant="displayLarge"
+            <Frame
+              p="1rem 2rem"
+              display="flex"
+              border="4px solid"
+              width="max-content"
+              borderRadius="2rem"
+              flexDirection="column"
+              bg={theme.theme.colors.septenary}
+              fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
             >
-              No Taxes,
-            </Typography>
-            <Typography
-              as="span"
-              fontWeight="700"
-              fontSize="5.5rem"
-              variant="displayLarge"
-            >
-              No Sh¡tcoin Bullsh¡t
-            </Typography>
-          </Frame>
+              <Typography as="span" fontWeight="700" variant="displayLarge">
+                No Taxes,
+              </Typography>
+              <Typography as="span" fontWeight="700" variant="displayLarge">
+                No Sh¡tcoin Bullsh¡t
+              </Typography>
+            </Frame>
+          </Motion>
         </Box>
       </Box>
     </Box>

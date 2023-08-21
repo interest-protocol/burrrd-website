@@ -1,24 +1,19 @@
-import { DiscordSVG, MediumSVG, TelegramSVG, TwitterSVG } from '@/svg';
+import { DiscordSVG, TelegramSVG, XSVG } from '@/svg';
 
 export const SOCIALS = [
   {
     name: 'Telegram',
-    url: 'https://t.me/burrrdtoken',
+    url: 'https://t.me/burrrd',
     Icon: TelegramSVG,
   },
   {
     name: 'Discord',
-    url: 'https://discord.gg/3QXZq3qZ',
+    url: 'https://discord.gg/Cmz6S4EMuF',
     Icon: DiscordSVG,
   },
   {
-    name: 'Twitter',
-    url: 'https://twitter.com/burrrdtoken',
-    Icon: TwitterSVG,
-  },
-  {
-    name: 'Medium',
-    url: 'https://medium.com/@burrrdtoken',
-    Icon: MediumSVG,
+    name: 'X',
+    url: 'https://twitter.com/BURRRD',
+    Icon: XSVG,
   },
 ];

@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
 import { SVGProps } from './svg.types';
-import { css } from '@emotion/react';
 
 const Hero: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
   <svg
@@ -14,29 +13,29 @@ const Hero: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
       <circle cx="300" cy="299.5" r="299.5" fill="#9590E2" />
       <circle cx="300" cy="299.493" r="267.037" fill="#6353DE" />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M523.379 152.798C474.593 88.8349 397.578 47.5593 310.923 47.5593C163.442 47.5593 43.8857 167.116 43.8857 314.597C43.8857 368.643 59.9416 418.939 87.5437 460.975C53.2993 416.078 32.9629 360.002 32.9629 299.177C32.9629 151.696 152.52 32.1396 300 32.1396C393.435 32.1396 475.661 80.126 523.379 152.798Z"
         fill="#4F50C5"
       />
-      <circle cx="300" cy="299.5" r="297.5" stroke="black" stroke-width="4" />
+      <circle cx="300" cy="299.5" r="297.5" stroke="black" strokeWidth="4" />
       <circle
         cx="300"
         cy="299.493"
         r="265.037"
         stroke="black"
-        stroke-width="4"
+        strokeWidth="4"
       />
       <mask id="path-6-inside-1_139_2452" fill="white">
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M97.6348 473.733C146.605 416.91 219.101 380.936 300 380.936C380.898 380.936 453.394 416.91 502.365 473.733C453.394 530.556 380.898 566.53 300 566.53C219.101 566.53 146.605 530.556 97.6348 473.733Z"
         />
       </mask>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M97.6348 473.733C146.605 416.91 219.101 380.936 300 380.936C380.898 380.936 453.394 416.91 502.365 473.733C453.394 530.556 380.898 566.53 300 566.53C219.101 566.53 146.605 530.556 97.6348 473.733Z"
         fill="#DE5396"
       />
@@ -53,7 +52,7 @@ const Hero: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
         fill="#D9D9D9"
         style={{ mixBlendMode: 'multiply' }}
       />
-      <g clip-path="url(#clip0_139_2452)">
+      <g clipPath="url(#clip0_139_2452)">
         <path
           d="M167.21 65.4199H5.41992V168.4H167.21V65.4199Z"
           fill="#F24E1E"
@@ -126,9 +125,9 @@ const Hero: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
         width="609"
         height="609"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"

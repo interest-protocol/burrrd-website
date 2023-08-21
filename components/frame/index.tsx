@@ -1,6 +1,6 @@
-import { useTheme } from '@/context/theme-context';
-import { Box, BoxProps, Typography } from '@interest-protocol/ui-kit';
+import { Box, BoxProps } from '@interest-protocol/ui-kit';
 import { FC, PropsWithChildren } from 'react';
+
 import { FrameProps } from './frame.types';
 
 const Frame: FC<PropsWithChildren<FrameProps & BoxProps>> = ({

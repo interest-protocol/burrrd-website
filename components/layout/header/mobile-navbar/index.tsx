@@ -1,80 +1,119 @@
-import { MenuSVG } from '@/svg';
-import { Box, Button, Typography } from '@interest-protocol/ui-kit';
+import { Box, Button, Motion } from '@interest-protocol/ui-kit';
+import { AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import { FC, useState } from 'react';
+import { v4 } from 'uuid';
+
+import { useTheme } from '@/context/theme-context';
+import { BurrrdSVG, MenuSVG, TimesSVG } from '@/svg';
+
+import { MENU_ITEMS } from '../navbar/menu-items';
+import { menuVariants } from './menuVariants';
 
 const MobileNavbar: FC = () => {
-  const [toggle, setToggle] = useState<Boolean>(false);
+  const [toggle, setToggle] = useState<boolean>(false);
+  const { theme } = useTheme();
 
   const toggleMenu = () => {
     setToggle(!toggle);
   };
 
   return (
-    <Box as="nav" display={['unset', 'unset', 'unset', 'none']}>
+    <Box as="nav" display={['block', 'block', 'block', 'none']}>
       <Button
-        zIndex="3"
+        zIndex="999"
         display="flex"
+        right={!toggle ? 'unest' : '1rem'}
         variant="icon"
         width="2.5rem"
         height="2.5rem"
         color="#C7C6CA"
         cursor="pointer"
         borderRadius="50%"
-        position="relative"
+        position={!toggle ? 'relative' : 'fixed'}
         alignItems="center"
         onClick={toggleMenu}
         justifyContent="center"
         background="transparent"
-        border="0.50px #45464F solid"
+        border="1px solid"
+        borderColor="#45464F"
       >
-        <MenuSVG maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
+        {!toggle ? (
+          <MenuSVG maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
+        ) : (
+          <TimesSVG maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
+        )}
       </Button>
-      {toggle && (
-        <Box
-          as="ul"
-          top="0"
-          left="0"
-          zIndex="2"
-          width="100%"
-          bg="#1B1B1F"
-          display="flex"
-          color="white"
-          gap="4.25rem"
-          height="100vh"
-          listStyle="none"
-          fontWeight="500"
-          fontSize="1.125rem"
-          position="absolute"
-          flexDirection="column"
-          textTransform="uppercase"
-        >
-          <Box as="li">
-            <Typography as="a" variant="medium">
-              About
-            </Typography>
-          </Box>
-          <Box as="li">
-            <Typography as="a" variant="medium">
-              Takeonomics
-            </Typography>
-          </Box>
-          <Box as="li">
-            <Typography as="a" variant="medium">
-              Roadmap
-            </Typography>
-          </Box>
-          <Box as="li">
-            <Typography as="a" variant="medium">
-              How to buy
-            </Typography>
-          </Box>
-          <Box as="li">
-            <Typography as="a" variant="medium">
-              Bridge
-            </Typography>
-          </Box>
-        </Box>
-      )}
+      <AnimatePresence>
+        {toggle && (
+          <Motion
+            top="0"
+            left="0"
+            zIndex="998"
+            width="100%"
+            color="white"
+            exit="closed"
+            height="100vh"
+            position="fixed"
+            initial="closed"
+            fontWeight="500"
+            fontSize="1.125rem"
+            flexDirection="column"
+            variants={menuVariants}
+            textTransform="uppercase"
+            bg={theme.theme.colors.tertiary}
+            animate={toggle ? 'open' : 'closed'}
+          >
+            <Box
+              p="0"
+              as="ul"
+              mt="8rem"
+              mx="auto"
+              gap="5rem"
+              display="flex"
+              fontWeight="900"
+              listStyle="none"
+              textAlign="center"
+              flexDirection="column"
+            >
+              {MENU_ITEMS.map(({ title, url }) => (
+                <Motion
+                  as="li"
+                  key={v4()}
+                  initial={{ y: 0 }}
+                  whileHover={{ y: -5 }}
+                >
+                  <Link href={url}>{title}</Link>
+                </Motion>
+              ))}
+            </Box>
+
+            <Motion
+              animate={{
+                y: ['-95%', '-98%', '-100%'],
+              }}
+              position="absolute"
+              height="100%"
+              top="0"
+              left="3rem"
+              initial={{ y: '95%', rotate: 180 }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                repeatType: 'reverse',
+                repeatDelay: 7,
+                ease: 'easeInOut',
+              }}
+            >
+              <BurrrdSVG
+                width="100%"
+                maxWidth="12.625rem"
+                maxHeight="3.5625rem"
+              />
+            </Motion>
+          </Motion>
+        )}
+      </AnimatePresence>
     </Box>
   );
 };
