@@ -47,7 +47,7 @@ const Footer: FC = () => {
           position="relative"
           width="max-content"
           marginTop={['0', '0', '0', '5rem', '0']}
-          left={['unset', '20%', '23%', '33%', 'unset']}
+          left={['5%', '20%', '23%', '33%', 'unset']}
           minWidth={['100%', '100%', '100%', '100%', '32rem']}
         >
           <Motion
@@ -60,13 +60,7 @@ const Footer: FC = () => {
             width="100%"
             position="absolute"
             transition={{ duration: 1.5 }}
-            transform={[
-              'scale(1)',
-              'scale(1)',
-              'scale(1)',
-              'scale(0.8)',
-              'scale(0.8)',
-            ]}
+            transform={['scale(1)', 'scale(1)', 'scale(1)', 'scale(0.8)']}
             bottom={[
               '-15.875rem',
               '-15.875rem',
@@ -95,7 +89,7 @@ const Footer: FC = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 1.5 }}
-            ml={['55%', '9.75rem', '9.75rem', '8.375rem', '13.375rem']}
+            ml={['12rem', '10.75rem', '9.75rem', '8.375rem', '13.375rem']}
             bottom={['-11rem', '-11rem', '-11rem', '-8rem', '-40%']}
           >
             <Typography
@@ -139,7 +133,7 @@ const Footer: FC = () => {
                 variant="small"
                 fontWeight="700"
                 textTransform="uppercase"
-                textAlign={['unset', 'center', 'center', 'center', 'unset']}
+                textAlign={['center', 'center', 'center', 'center', 'unset']}
                 fontSize={[
                   '3.125rem',
                   '3.125rem',
@@ -168,7 +162,7 @@ const Footer: FC = () => {
                 color="white"
                 variant="small"
                 fontSize="1.125rem"
-                textAlign={['unset', 'center', 'center', 'center', 'unset']}
+                textAlign={['center', 'center', 'center', 'center', 'unset']}
               >
                 Stay tuned for our latest updates and announcements. Follow us
                 on socials.
