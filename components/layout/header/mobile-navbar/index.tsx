@@ -27,7 +27,7 @@ const MobileNavbar: FC = () => {
         variant="icon"
         width="2.5rem"
         height="2.5rem"
-        color="#C7C6CA"
+        color="#FFF"
         cursor="pointer"
         borderRadius="50%"
         position={!toggle ? 'relative' : 'fixed'}
