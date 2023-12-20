@@ -20,13 +20,7 @@ const Header: FC = () => {
   useEventListener('resize', handleSetDesktop, true);
 
   return (
-    <Box
-      width="100%"
-      p="0.625rem 1.25rem"
-      borderColor="#1B1B1F"
-      borderBottom="2px solid"
-      bg={theme.theme.colors.primary}
-    >
+    <Box width="100%" p="1.625rem 3.75rem" bg={theme.theme.colors.primary}>
       <Box
         mx="auto"
         display="flex"
