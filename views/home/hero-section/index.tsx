@@ -42,17 +42,15 @@ const HeroSection: FC = () => {
             backgroundColor="#FFF"
             fontSize={['0.5rem', '1rem']}
             fontWeight="500"
-            mb="3rem"
-            py="1rem"
-            px="0.5rem"
+            mb="2.5rem"
+            p="1rem"
             width={['11rem', '15rem']}
             lineHeight="1.25rem"
             letterSpacing="0.8px"
+            gap="0.5rem"
           >
             Built on solana
-            <Box ml="0.5rem">
-              <SolanaLogo maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
-            </Box>
+            <SolanaLogo maxHeight="1.5rem" maxWidth="1.5rem" />
           </Button>
           <Typography
             as="h2"
@@ -69,7 +67,7 @@ const HeroSection: FC = () => {
             px="2.5rem"
             border="3px solid #000"
             boxShadow="4px 4px 0px 0px #000"
-            borderRadius="1rem"
+            borderRadius="1.25rem"
             backgroundColor={theme.theme.colors.septenary}
             fontWeight="700"
           >
