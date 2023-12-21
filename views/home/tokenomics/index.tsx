@@ -17,7 +17,7 @@ const TokenomicsSection: FC = () => {
   useEventListener('resize', handleSetDesktop, true);
 
   const countUpRef = useRef(null);
-  const weeds = 420000000000000;
+  const weeds = 69_420_000_000_000;
 
   const stats = [
     {
