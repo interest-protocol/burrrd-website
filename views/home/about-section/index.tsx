@@ -175,9 +175,13 @@ const AboutSection: FC = () => {
               borderTop="1px #1B1B1F solid"
             >
               <Button
-                hasBorder
+                py="0.5rem"
+                px="1.5rem"
                 size="small"
-                variant="secondary"
+                border="none"
+                color="#00174B"
+                fontSize="1.5rem"
+                borderRadius="1rem"
                 onClick={toggleText}
               >
                 {toggle ? 'View Less' : 'View More'}

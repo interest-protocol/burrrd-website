@@ -36,13 +36,12 @@ const TokenomicsSection: FC = () => {
   }, [countup]);
 
   return (
-    <Box variant="container" borderBottom="2px solid black" id="tokenomics">
+    <Box variant="container" id="tokenomics">
       <Box
         width="100%"
         display="flex"
         gridColumn="1/-1"
         borderTop="2px solid"
-        bg={theme.theme.colors.primary}
         pb={['10.625rem', '10.625rem', '10.625rem', '0']}
       >
         <Box
