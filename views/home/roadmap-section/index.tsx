@@ -1,109 +1,44 @@
-import { Box, Typography } from '@interest-protocol/ui-kit';
-import { FC, useCallback, useState } from 'react';
-import Slider from 'react-slick';
+import { Box } from '@interest-protocol/ui-kit';
+import { FC } from 'react';
 import { v4 } from 'uuid';
 
-import useEventListener from '@/hooks/use-event-listener';
+import { CleaningDogeSVG, RoadmapPathSVG } from '@/svg';
 
-import CustomArrow from './custom-arrow';
 import RoadmapCard from './roadmap-card';
 import { ROADMAP_DATA } from './roadmap-card/roadmap.data';
 
-const RoadmapSection: FC = () => {
-  const [isFrameHovered, setIsFrameHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  const handleSetDesktop = useCallback(() => {
-    const mediaIsMobile = !window.matchMedia('(min-width: 62em)').matches;
-    setIsMobile(mediaIsMobile);
-  }, []);
-
-  useEventListener('resize', handleSetDesktop, true);
-  const settingsRoadmap = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    prevArrow: <CustomArrow isLeft />,
-    nextArrow: <CustomArrow />,
-    responsive: [
-      {
-        breakpoint: 983,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 790,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 715,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  return (
+const RoadmapSection: FC = () => (
+  <Box
+    mx="auto"
+    pb="5rem"
+    mt="20rem"
+    position="relative"
+    px={['1rem', '1rem', '1rem', '5rem']}
+    width={['20rem', '33rem', '45rem', '60rem', '80rem']}
+  >
     <Box
-      mt="0"
-      id="roadmap"
-      variant="container"
-      p={['3.375rem 1rem', '3.375rem 1rem', '3.375rem 1rem', '6rem 6.5625rem']}
-      mx="auto"
-      maxWidth="80rem"
+      top="10rem"
+      width="55rem"
+      right="5.5rem"
+      height="200rem"
+      position="absolute"
+      display={['none', 'none', 'none', 'none', 'block']}
     >
-      <Typography
-        as="h2"
-        fontWeight="700"
-        textAlign="center"
-        fontSize={['3.125rem', '3.125rem', '3.125rem', '6rem']}
-        variant="displayLarge"
-        textTransform="uppercase"
-        my={['0', '0', '0', '5rem']}
-      >
-        Roadmap
-      </Typography>
-      {!isMobile ? (
-        <Box
-          gap="4rem"
-          display={['none', 'none', 'none', 'flex']}
-          height={['37.5rem', '37.5rem', '37.5rem', 'unset']}
-          onMouseEnter={() => setIsFrameHovered(true)}
-        >
-          {ROADMAP_DATA.map((item, index) => (
-            <RoadmapCard
-              key={v4()}
-              {...item}
-              index={index}
-              isHovered={isFrameHovered}
-            />
-          ))}
-        </Box>
-      ) : (
-        <Box px="1rem">
-          <Slider {...settingsRoadmap}>
-            {ROADMAP_DATA.map((item, index) => (
-              <Box key={v4()} py="2rem">
-                <RoadmapCard
-                  {...item}
-                  index={index}
-                  isHovered={isFrameHovered}
-                />
-              </Box>
-            ))}
-          </Slider>
-        </Box>
-      )}
+      <RoadmapPathSVG maxHeight="100%" maxWidth="100%" width="100%" />
     </Box>
-  );
-};
+    <Box display="flex" flexDirection="column" gap="6rem">
+      {ROADMAP_DATA.map((item, index) => (
+        <RoadmapCard key={v4()} {...item} index={index} />
+      ))}
+    </Box>
+    <Box
+      ml="-3rem"
+      maxWidth="40rem"
+      mt={['2rem', '2rem', '2rem', '2rem', '-13rem']}
+    >
+      <CleaningDogeSVG maxWidth="58.75rem" maxHeight="31.25rem" width="100%" />
+    </Box>
+  </Box>
+);
 
 export default RoadmapSection;
