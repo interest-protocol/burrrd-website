@@ -3,13 +3,17 @@ import { ThemeProps } from './theme.types';
 export const defaultTheme: ThemeProps = {
   theme: {
     colors: {
-      primary: '#8C4FE8',
-      secondary: '#DE5396',
-      tertiary: '#6353DE',
+      primary: '#DC77F7',
+      secondary: '#3B1259',
+      tertiary: '#1B1622',
       quaternary: '#9590E2',
       quinary: '#F24E1E',
       senary: '#FEEC85',
-      septenary: '#F5BF4B',
+      septenary: '#FFC701',
+    },
+    gradient: {
+      radialGradientViolet:
+        'radial-gradient(92.08% 92.08% at 48.75% 100%, #3C1171 0%, #DC77F7 100%);',
     },
   },
 };
