@@ -109,9 +109,7 @@ const AboutSection: FC = () => {
             zIndex="1"
             bg="#1B1622"
             position="relative"
-            border="1px solid"
             borderRadius="2rem"
-            borderColor="white"
             boxShadow="4px 4px 0px 0px #FFF"
           >
             <Box
@@ -119,7 +117,6 @@ const AboutSection: FC = () => {
               pt="1rem"
               px="2rem"
               color="white"
-              borderBottom="2px solid white"
               fontSize={['1rem', '1rem', '1rem', '1.5rem']}
               lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
             >
@@ -172,7 +169,7 @@ const AboutSection: FC = () => {
               width="100%"
               display="flex"
               justifyContent="center"
-              borderTop="1px #1B1B1F solid"
+              borderTop="2px solid white"
             >
               <Button
                 py="0.5rem"
