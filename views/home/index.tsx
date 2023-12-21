@@ -1,3 +1,4 @@
+import { Box } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 
 import FoundingMembers from '@/components/founding-members';
@@ -13,9 +14,11 @@ const Home: FC = () => {
     <Layout>
       <HeroSection />
       <AboutSection />
-      <TokenomicsSection />
-      <RoadmapSection />
-      <FoundingMembers />
+      <Box bg="linear-gradient(180deg, #000000 8.06%, #3B1259 100%)">
+        <TokenomicsSection />
+        <RoadmapSection />
+        <FoundingMembers />
+      </Box>
     </Layout>
   );
 };
