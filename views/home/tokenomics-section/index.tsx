@@ -28,7 +28,7 @@ const TokenomicsSection: FC = () => {
     },
     {
       percentage: '5%',
-      title: 'Marketinf',
+      title: 'Marketing',
       grad1: '#1FCFF1',
       grad2: '#1D3F99',
     },
@@ -64,7 +64,6 @@ const TokenomicsSection: FC = () => {
     <Box variant="container" id="tokenomics">
       <Box
         width="100%"
-        bg="#000000"
         display="flex"
         gridColumn="1/-1"
         borderTop="2px solid"
@@ -193,7 +192,9 @@ const TokenomicsSection: FC = () => {
                 {stats.map((el, index) => (
                   <Box key={index} display="flex" flexDirection="column">
                     <Typography
+                      fontFamily="Inter"
                       variant="title1"
+                      fontWeight="500"
                       margin="0"
                       fontSize={['5rem', '5rem', '5rem', '6rem']}
                       background={`linear-gradient(90deg, ${el.grad1} -0.41%, ${el.grad2} 99.59%)`}
@@ -204,8 +205,11 @@ const TokenomicsSection: FC = () => {
                     </Typography>
                     <Typography
                       variant="small"
-                      alignSelf={['center', 'center', 'center', 'flex-start']}
+                      fontWeight="400"
+                      fontFamily="Inter"
+                      fontStyle="normal"
                       fontSize="1.375rem"
+                      alignSelf={['center', 'center', 'center', 'flex-start']}
                     >
                       {el.title}
                     </Typography>
