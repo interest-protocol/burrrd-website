@@ -61,7 +61,7 @@ const TokenomicsSection: FC = () => {
   }, [countup]);
 
   return (
-    <Box borderBottom="2px solid black" id="tokenomics">
+    <Box variant="container" id="tokenomics">
       <Box
         width="100%"
         bg="#000000"

@@ -4,10 +4,10 @@ import { SVGProps } from './svg.types';
 
 const Burrrd: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
   <svg style={{ maxWidth, maxHeight }} viewBox="0 0 28 28" {...props}>
-    <rect width="28" height="28" fill="url(#pattern0)" />
+    <rect width="28" height="28" fill="url(#patternBurrrd)" />
     <defs>
       <pattern
-        id="pattern0"
+        id="patternBurrrd"
         patternContentUnits="objectBoundingBox"
         width="1"
         height="1"
