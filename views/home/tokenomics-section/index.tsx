@@ -3,12 +3,10 @@ import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
-import { useTheme } from '@/context/theme-context';
 import useEventListener from '@/hooks/use-event-listener';
 import { SmokerBurrrdSVG } from '@/svg';
 
 const TokenomicsSection: FC = () => {
-  const { theme } = useTheme();
   const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
@@ -36,26 +34,32 @@ const TokenomicsSection: FC = () => {
   }, [countup]);
 
   return (
-    <Box variant="container" borderBottom="2px solid black" id="tokenomics">
+    <Box borderBottom="2px solid black" id="tokenomics">
       <Box
         width="100%"
+        bg="#000000"
         display="flex"
         gridColumn="1/-1"
         borderTop="2px solid"
-        bg={theme.theme.colors.primary}
         pb={['10.625rem', '10.625rem', '10.625rem', '0']}
       >
         <Box
-          width="100%"
-          minHeight="100%"
-          position="relative"
-          px={['2.313rem', '2.313rem', '2.313rem', '3.6875rem']}
-          py={['2.313rem', '2.313rem', '2.313rem', '14.6875rem']}
-          maxWidth="64rem"
           mx="auto"
+          width="100%"
+          display="flex"
+          maxWidth="100%"
+          minHeight="100%"
+          alignItems="center"
+          position="relative"
+          flexDirection="column"
+          justifyContent="center"
+          px={['2.313rem', '2.313rem', '2.313rem', '1rem']}
+          py={['2.313rem', '2.313rem', '2.313rem', '14.6875rem']}
         >
           <Box
             mt="5rem"
+            width="100%"
+            maxWidth="64rem"
             position="relative"
             pt={['6.25rem', '6.25rem', '6.25rem', '0']}
           >
@@ -127,10 +131,8 @@ const TokenomicsSection: FC = () => {
                 <Frame
                   bg="white"
                   py="0.5rem"
-                  border="4px solid"
                   borderRadius="2rem"
                   width="max-content"
-                  display={['none', 'none', 'none', 'block']}
                 >
                   <Typography
                     as="span"
@@ -139,7 +141,7 @@ const TokenomicsSection: FC = () => {
                     variant="medium"
                     fontSize="2.25rem"
                   >
-                    weeds
+                    Joints
                   </Typography>
                 </Frame>
               </Motion>
@@ -147,6 +149,9 @@ const TokenomicsSection: FC = () => {
           </Box>
           <Box
             mb="6rem"
+            px="0.75rem"
+            width="100%"
+            maxWidth="82.5rem"
             position="relative"
             mt={['4rem', '4rem', '4rem', '6.25rem']}
           >
@@ -155,25 +160,89 @@ const TokenomicsSection: FC = () => {
               textAlign="center"
               fontSize={['1rem', '1rem', '1rem', '2.25rem']}
             >
-              <Typography
-                variant="medium"
-                fontWeight="400"
-                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
+              <Box
+                display="flex"
+                width="100%"
+                flexDirection={['column', 'column', 'column', 'row']}
+                justifyContent="space-between"
               >
-                90% of the tokens will be added to the liquidity pool, with LP
-                tokens being burned and the contract renounced to ensure
-                transparency and security.
-              </Typography>
-              <Typography
-                variant="medium"
-                fontWeight="400"
-                lineHeight={['1.5rem', '1.5rem', '1.5rem', '3.5rem']}
-              >
-                10% of the supply will be held in a multi-sig wallet as
-                treasury, used exclusively for operations, such as cex listings,
-                bridges, liquidity pools, audits, management costs, marketing
-                and airdrop
-              </Typography>
+                <Box display="flex" flexDirection="column">
+                  <Typography
+                    variant="title1"
+                    margin="0"
+                    fontSize="6rem"
+                    background="linear-gradient(90deg, #F087FF -0.41%, #601BB3 99.59%)"
+                    WebkitTextFillColor="transparent"
+                    WebkitBackgroundClip="text"
+                  >
+                    20%
+                  </Typography>
+                  <Typography
+                    variant="small"
+                    alignSelf={['center', 'center', 'center', 'flex-start']}
+                    fontSize="1.375rem"
+                  >
+                    Airdrop
+                  </Typography>
+                </Box>
+                <Box display="flex" flexDirection="column">
+                  <Typography
+                    variant="title1"
+                    margin="0"
+                    fontSize="6rem"
+                    background="linear-gradient(90deg, #1FCFF1 -0.41%, #1D3F99 99.59%)"
+                    WebkitTextFillColor="transparent"
+                    WebkitBackgroundClip="text"
+                  >
+                    5%
+                  </Typography>
+                  <Typography
+                    variant="small"
+                    fontSize="1.375rem"
+                    alignSelf={['center', 'center', 'center', 'flex-start']}
+                  >
+                    Marketing
+                  </Typography>
+                </Box>
+                <Box display="flex" flexDirection="column">
+                  <Typography
+                    variant="title1"
+                    margin="0"
+                    fontSize="6rem"
+                    background="linear-gradient(90deg, #19FB9B -0.41%, #0D7D76 99.59%)"
+                    WebkitTextFillColor="transparent"
+                    WebkitBackgroundClip="text"
+                  >
+                    10%
+                  </Typography>
+                  <Typography
+                    variant="small"
+                    fontSize="1.375rem"
+                    alignSelf={['center', 'center', 'center', 'flex-start']}
+                  >
+                    Early Contributors
+                  </Typography>
+                </Box>
+                <Box display="flex" flexDirection="column">
+                  <Typography
+                    fontSize="6rem"
+                    variant="title1"
+                    margin="0"
+                    background="linear-gradient(90deg, #F087FF -0.41%, #601BB3 99.59%)"
+                    WebkitTextFillColor="transparent"
+                    WebkitBackgroundClip="text"
+                  >
+                    65%
+                  </Typography>
+                  <Typography
+                    variant="small"
+                    fontSize="1.375rem"
+                    alignSelf={['center', 'center', 'center', 'flex-start']}
+                  >
+                    Initial Liquidity
+                  </Typography>
+                </Box>
+              </Box>
             </Box>
           </Box>
           <Motion
@@ -188,11 +257,13 @@ const TokenomicsSection: FC = () => {
             <Frame
               p="1rem 2rem"
               display="flex"
-              border="4px solid"
+              color="white"
+              boxShadow="10px 10px 0px 0px white"
+              border="4px solid white"
               width="max-content"
               borderRadius="2rem"
               flexDirection="column"
-              bg={theme.theme.colors.septenary}
+              bg="black"
               fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
             >
               <Typography as="span" fontWeight="700" variant="displayLarge">
