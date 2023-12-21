@@ -28,6 +28,10 @@ const Document = (): ReactNode => (
         type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+      ></link>
     </Head>
     <body id="body">
       <Main />

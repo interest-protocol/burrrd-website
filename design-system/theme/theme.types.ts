@@ -9,5 +9,8 @@ export interface ThemeProps {
       senary: string;
       septenary: string;
     };
+    gradient: {
+      radialGradientViolet: string;
+    };
   };
 }
