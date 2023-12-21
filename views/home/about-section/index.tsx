@@ -25,7 +25,7 @@ const AboutSection: FC = () => {
     setToggle(!toggle);
   };
   return (
-    <Box gridColumn="1/-1" mx="auto" maxWidth="80rem" id="about">
+    <Box gridColumn="1/-1" mx="auto" bg="#000000" id="about">
       <Box
         width="100%"
         display="flex"
@@ -34,21 +34,26 @@ const AboutSection: FC = () => {
       >
         <Box
           position="absolute"
-          left={['60%', '60%', '60%', '15.125rem']}
+          top={['-1%', '-1%', '-1%', '-2rem']}
           width={['7rem', '9rem', '10rem', 'unset']}
-          top={['15.6%', '15.6%', '15.6%', '-0.8rem']}
+          left={['15.6%', '15.6%', '15.6%', '17.125rem']}
           transform={[
-            'rotate(45.01deg) scale(1.7)',
-            'rotate(45.01deg) scale(1.7)',
-            'rotate(45.01deg) scale(1.7)',
+            'rotate(0.75deg) scale(1.7)',
+            'rotate(0.75deg) scale(1.3)',
+            'rotate(0.75deg) scale(1.3)',
+            'rotate(0deg) scale(1.5)',
             'rotate(0.75deg) scale(1.7)',
           ]}
         >
-          <HeadToPrizeSVG maxHeight="50rem" maxWidth="31.25rem" width="100%" />
+          <HeadToPrizeSVG
+            width="100%"
+            maxWidth="18.87444rem"
+            maxHeight="18.87444rem"
+          />
         </Box>
         <Box
+          marginTop={['8rem', '8rem', '8rem', '15rem', '17rem']}
           p={['2.5rem 1.25rem', '2.5rem 1.25rem', '2.5rem 1.25rem', '6rem']}
-          marginTop="auto"
           borderBottom={[
             '2px solid black',
             '2px solid black',
@@ -58,8 +63,8 @@ const AboutSection: FC = () => {
         >
           <Motion
             whileInView={{ x: 0 }}
-            viewport={{ once: true }}
             initial={{ x: '-100%' }}
+            viewport={{ once: true }}
             transition={{
               type: 'spring',
               stiffness: 300,
@@ -70,24 +75,24 @@ const AboutSection: FC = () => {
             <Typography
               as="h2"
               margin="0"
-              color="black"
-              fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
+              color="white"
+              fontWeight="700"
               textAlign="center"
               variant="displayLarge"
               textTransform="uppercase"
               mb={['0', '0', '0', '1em']}
-              fontWeight="700"
+              fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
             >
               About
             </Typography>
           </Motion>
         </Box>
         <Box
-          p={['1.5625rem', '1.5625rem', '1.5625rem', '8%']}
-          py={['10.0625rem', '12.0625rem', '18.0625rem', '10rem']}
           width="100%"
+          p={['1.5625rem', '1.5625rem', '1.5625rem', '10%']}
+          py={['3.0625rem', '3.0625rem', '3.0625rem', '14rem']}
           borderLeft={['none', 'none', 'none', '2px solid black']}
-          bg={theme.theme.colors.secondary}
+          bg="#000000"
           nAfter={{
             top: '0',
             right: '0',
@@ -102,17 +107,21 @@ const AboutSection: FC = () => {
         >
           <Frame
             zIndex="1"
+            bg="#1B1622"
             position="relative"
+            border="1px solid"
             borderRadius="2rem"
-            border="4px solid"
-            bg={theme.theme.colors.septenary}
+            borderColor="white"
+            boxShadow="4px 4px 0px 0px #FFF"
           >
             <Box
+              pb="0"
+              pt="1rem"
+              px="2rem"
+              color="white"
+              borderBottom="2px solid white"
               fontSize={['1rem', '1rem', '1rem', '1.5rem']}
               lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
-              px="2rem"
-              pt="1rem"
-              pb="0"
             >
               <Typography variant="medium" fontWeight="400">
                 BURRRD had enough of the never-ending sh¡tcoin circus, with all
@@ -165,7 +174,16 @@ const AboutSection: FC = () => {
               justifyContent="center"
               borderTop="1px #1B1B1F solid"
             >
-              <Button hasBorder size="small" onClick={toggleText}>
+              <Button
+                py="0.5rem"
+                px="1.5rem"
+                size="small"
+                border="none"
+                color="#00174B"
+                fontSize="1.5rem"
+                borderRadius="1rem"
+                onClick={toggleText}
+              >
                 {toggle ? 'View Less' : 'View More'}
               </Button>
             </Box>
