@@ -4,7 +4,7 @@ import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
 import useEventListener from '@/hooks/use-event-listener';
-import { SmokerBurrrdSVG } from '@/svg';
+import { FireLeftSVG, FireRightSVG, SmokerBurrrdSVG } from '@/svg';
 
 const TokenomicsSection: FC = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,6 +18,33 @@ const TokenomicsSection: FC = () => {
 
   const countUpRef = useRef(null);
   const weeds = 420000000000000;
+
+  const stats = [
+    {
+      percentage: '20%',
+      title: 'Airdrop',
+      grad1: '#F087FF',
+      grad2: '#601BB3',
+    },
+    {
+      percentage: '5%',
+      title: 'Marketinf',
+      grad1: '#1FCFF1',
+      grad2: '#1D3F99',
+    },
+    {
+      percentage: '10%',
+      title: 'Early Contributors',
+      grad1: '#19FB9B',
+      grad2: '#0D7D76',
+    },
+    {
+      percentage: '65%',
+      title: 'Initial Liquidity',
+      grad1: '#F087FF',
+      grad2: '#601BB3',
+    },
+  ];
 
   const countup = useCountUp({
     ref: countUpRef,
@@ -155,92 +182,97 @@ const TokenomicsSection: FC = () => {
             position="relative"
             mt={['4rem', '4rem', '4rem', '6.25rem']}
           >
-            <Box
-              color="white"
-              textAlign="center"
-              fontSize={['1rem', '1rem', '1rem', '2.25rem']}
-            >
+            <Box color="white" textAlign="center">
               <Box
                 display="flex"
                 width="100%"
                 flexDirection={['column', 'column', 'column', 'row']}
                 justifyContent="space-between"
+                mb="4rem"
               >
-                <Box display="flex" flexDirection="column">
+                {stats.map((el, index) => (
+                  <Box key={index} display="flex" flexDirection="column">
+                    <Typography
+                      variant="title1"
+                      margin="0"
+                      fontSize={['5rem', '5rem', '5rem', '6rem']}
+                      background={`linear-gradient(90deg, ${el.grad1} -0.41%, ${el.grad2} 99.59%)`}
+                      WebkitTextFillColor="transparent"
+                      WebkitBackgroundClip="text"
+                    >
+                      {el.percentage}
+                    </Typography>
+                    <Typography
+                      variant="small"
+                      alignSelf={['center', 'center', 'center', 'flex-start']}
+                      fontSize="1.375rem"
+                    >
+                      {el.title}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+              <Box
+                px="auto"
+                width="100%"
+                display="flex"
+                maxWidth="82.5rem"
+                justifyContent="center"
+                mb="4rem"
+              >
+                <Box
+                  px="3rem"
+                  bg="white"
+                  py="1.5rem"
+                  display="flex"
+                  color="#FFC701"
+                  alignItems="center"
+                  position="relative"
+                  borderRadius="2rem"
+                  justifyContent="center"
+                >
                   <Typography
-                    variant="title1"
                     margin="0"
-                    fontSize="6rem"
-                    background="linear-gradient(90deg, #F087FF -0.41%, #601BB3 99.59%)"
-                    WebkitTextFillColor="transparent"
-                    WebkitBackgroundClip="text"
-                  >
-                    20%
-                  </Typography>
-                  <Typography
-                    variant="small"
-                    alignSelf={['center', 'center', 'center', 'flex-start']}
-                    fontSize="1.375rem"
-                  >
-                    Airdrop
-                  </Typography>
-                </Box>
-                <Box display="flex" flexDirection="column">
-                  <Typography
                     variant="title1"
-                    margin="0"
-                    fontSize="6rem"
-                    background="linear-gradient(90deg, #1FCFF1 -0.41%, #1D3F99 99.59%)"
-                    WebkitTextFillColor="transparent"
-                    WebkitBackgroundClip="text"
+                    letterSpacing="0.6rem"
+                    fontSize={['1.5rem', '3rem', '3rem', '5.25rem']}
+                    textShadow={[
+                      '2px 2px 0px #000',
+                      '3px 3px 0px #000',
+                      '3px 3px 0px #000',
+                      '4px 4px 0px #000',
+                    ]}
                   >
-                    5%
+                    LP Burned
                   </Typography>
-                  <Typography
-                    variant="small"
-                    fontSize="1.375rem"
-                    alignSelf={['center', 'center', 'center', 'flex-start']}
+                  <Box
+                    position="absolute"
+                    transform="rotate(45deg)"
+                    maxWidth={['4rem', '5rem', '5rem', '7rem']}
+                    maxHeight={['6rem', '7rem', '7rem', '9rem']}
+                    right={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
+                    bottom={['-1.5rem', '-1.5rem', '-1.5rem', '-2rem']}
                   >
-                    Marketing
-                  </Typography>
-                </Box>
-                <Box display="flex" flexDirection="column">
-                  <Typography
-                    variant="title1"
-                    margin="0"
-                    fontSize="6rem"
-                    background="linear-gradient(90deg, #19FB9B -0.41%, #0D7D76 99.59%)"
-                    WebkitTextFillColor="transparent"
-                    WebkitBackgroundClip="text"
+                    <FireRightSVG
+                      width="100%"
+                      maxWidth="inherit"
+                      maxHeight="inherit"
+                    />
+                  </Box>
+                  <Box
+                    position="absolute"
+                    transform="rotate(-40deg)"
+                    maxWidth={['4rem', '5rem', '5rem', '7rem']}
+                    maxHeight={['6rem', '7rem', '7rem', '9rem']}
+                    left={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
+                    bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
                   >
-                    10%
-                  </Typography>
-                  <Typography
-                    variant="small"
-                    fontSize="1.375rem"
-                    alignSelf={['center', 'center', 'center', 'flex-start']}
-                  >
-                    Early Contributors
-                  </Typography>
-                </Box>
-                <Box display="flex" flexDirection="column">
-                  <Typography
-                    fontSize="6rem"
-                    variant="title1"
-                    margin="0"
-                    background="linear-gradient(90deg, #F087FF -0.41%, #601BB3 99.59%)"
-                    WebkitTextFillColor="transparent"
-                    WebkitBackgroundClip="text"
-                  >
-                    65%
-                  </Typography>
-                  <Typography
-                    variant="small"
-                    fontSize="1.375rem"
-                    alignSelf={['center', 'center', 'center', 'flex-start']}
-                  >
-                    Initial Liquidity
-                  </Typography>
+                    <FireLeftSVG
+                      width="100%"
+                      maxWidth="inherit"
+                      maxHeight="inherit"
+                    />
+                  </Box>
                 </Box>
               </Box>
             </Box>

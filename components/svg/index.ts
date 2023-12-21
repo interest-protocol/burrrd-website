@@ -8,6 +8,8 @@ export { default as ConverstionBalloonSVG } from './conversation-balloon';
 export { default as DeadDogeSVG } from './dead-doge';
 export { default as DiscordSVG } from './discord';
 export { default as DogeBloodSVG } from './doge-blood';
+export { default as FireRightSVG } from './fire-left';
+export { default as FireLeftSVG } from './fire-right';
 export { default as HeadToPrizeSVG } from './head-to-prize';
 export { default as HeroSVG } from './hero';
 export { default as InterestProtocolLogoSVG } from './interest-protocol-logo';
