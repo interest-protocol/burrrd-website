@@ -4,6 +4,7 @@ export { default as BodyBagSVG } from './body-bag';
 export { default as BurrrdSVG } from './burrrd';
 export { default as BurrrdCleaningSVG } from './burrrd-cleaning';
 export * from './burrrd-on-the-moon';
+export { default as BurrrdRunningWithKnifeSVG } from './burrrd-running-knife';
 export { default as ConverstionBalloonSVG } from './conversation-balloon';
 export { default as DeadDogeSVG } from './dead-doge';
 export { default as DiscordSVG } from './discord';
