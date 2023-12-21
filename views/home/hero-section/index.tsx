@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import { useTheme } from '@/context/theme-context';
 import Button from '@/elements/button';
+import { SolanaLogo } from '@/svg';
 
 import HeroIllustration from './hero-animation';
 
@@ -18,7 +19,7 @@ const HeroSection: FC = () => {
         '7.5rem 9.375rem',
       ]}
       borderBottom="2px solid"
-      bg={theme.theme.colors.primary}
+      bg={theme.theme.gradient.radialGradientViolet}
     >
       <Box
         width="100%"
@@ -34,6 +35,23 @@ const HeroSection: FC = () => {
         mb={['6rem', '6rem', '6rem', 'unset']}
       >
         <Box>
+          <Button
+            borderTop="3px solid #000"
+            borderLeft="3px solid #000"
+            borderRight="8px solid #000"
+            borderBottom="8px solid #000"
+            borderRadius="9999rem"
+            backgroundColor="#FFF"
+            fontSize={['0.5rem', '1rem']}
+            fontWeight="300"
+            mb="3rem"
+            py="1rem"
+            px="0.5rem"
+            whiteSpace="nowrap"
+            width={['11rem', '15rem']}
+          >
+            Built on solana <SolanaLogo maxHeight="1.5rem" maxWidth="1.5rem" />
+          </Button>
           <Typography
             as="h2"
             color="white"
@@ -42,9 +60,18 @@ const HeroSection: FC = () => {
             my="0"
             mb="2rem"
           >
-            The cutest but most savage meme coin. The shitcoin slayer.
+            The cutest but most savage meme coin. The sh&iexcl;tcoin slayer.
           </Typography>
-          <Button variant="primary" hasBorder>
+          <Button
+            py="1.5rem"
+            px="2.5rem"
+            borderTop="3px solid #000"
+            borderLeft="3px solid #000"
+            borderRight="8px solid #000"
+            borderBottom="8px solid #000"
+            borderRadius="1rem"
+            backgroundColor={theme.theme.colors.septenary}
+          >
             Buy now
           </Button>
         </Box>

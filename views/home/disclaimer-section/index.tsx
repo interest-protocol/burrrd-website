@@ -6,11 +6,7 @@ import Illustration from './illustration';
 
 const DisclaimerSection: FC = () => {
   return (
-    <Box
-      pb="8rem"
-      px="3.75rem"
-      background="linear-gradient(180deg, #000 8.06%, #3B1259 100%)"
-    >
+    <Box pb="8rem" px="3.75rem">
       <Box
         mx="auto"
         py="5.75rem"

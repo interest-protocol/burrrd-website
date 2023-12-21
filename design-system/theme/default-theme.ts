@@ -11,6 +11,10 @@ export const defaultTheme: ThemeProps = {
       senary: '#FEEC85',
       septenary: '#FFC701',
     },
+    gradient: {
+      radialGradientViolet:
+        'radial-gradient(92.08% 92.08% at 48.75% 100%, #3C1171 0%, #DC77F7 100%);',
+    },
   },
 };
 

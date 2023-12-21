@@ -4,12 +4,11 @@ import { v4 } from 'uuid';
 
 import Frame from '@/components/frame';
 import { SOCIALS } from '@/constants';
-import { useTheme } from '@/context/theme-context';
 import useEventListener from '@/hooks/use-event-listener';
 import { BurrrdSVG, ConverstionBalloonSVG } from '@/svg';
+import HowToBuySection from '@/views/home/how-to-buy-section';
 
 const Footer: FC = () => {
-  const { colors } = useTheme();
   const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
@@ -19,31 +18,37 @@ const Footer: FC = () => {
 
   useEventListener('resize', handleSetDesktop, true);
   return (
-    <Box bg={colors.primary} width="100%">
+    <Box
+      width="100%"
+      background="linear-gradient(180deg, #DC77F7 19.58%, #7B2FC4 149.72%)"
+    >
+      <HowToBuySection />
       <Box
         mx="auto"
+        pt="6rem"
         zIndex={3}
         as="footer"
         width="100%"
         display="flex"
-        pt="6.688rem"
-        maxWidth="80rem"
+        overflowY="hidden"
         gridColumn="1/-1"
-        pb={['18rem', '18rem', '18rem', '22rem']}
-        px={['1.25rem', '1.25rem', '1.25rem', '7.5rem']}
+        pb={['14rem', '14rem', '14rem', '12rem']}
+        px={['1.25rem', '1.25rem', '1.25rem', '1.25rem', '4.5rem']}
         flexDirection={[
+          'column-reverse',
           'column-reverse',
           'column-reverse',
           'column-reverse',
           'row',
         ]}
-        justifyContent="space-between"
+        justifyContent="space-evenly"
       >
         <Box
           position="relative"
           width="max-content"
-          left={['unset', '20%', '23%', 'unset']}
-          minWidth={['100%', '100%', '100%', '32rem']}
+          marginTop={['0', '0', '0', '5rem', '0']}
+          left={['5%', '20%', '23%', '33%', 'unset']}
+          minWidth={['100%', '100%', '100%', '100%', '32rem']}
         >
           <Motion
             initial={{ x: isMobile ? '-100%' : '-90%', rotate: 0 }}
@@ -56,8 +61,20 @@ const Footer: FC = () => {
             position="absolute"
             transition={{ duration: 1.5 }}
             transform={['scale(1)', 'scale(1)', 'scale(1)', 'scale(0.8)']}
-            bottom={['-15.875rem', '-15.875rem', '-15.875rem', '-17rem']}
-            height={['11.813rem', '11.813rem', '11.813rem', '21.875rem']}
+            bottom={[
+              '-15.875rem',
+              '-15.875rem',
+              '-15.875rem',
+              '-12.875rem',
+              '-17rem',
+            ]}
+            height={[
+              '11.813rem',
+              '11.813rem',
+              '11.813rem',
+              '11.813rem',
+              '21.875rem',
+            ]}
           >
             <BurrrdSVG
               maxHeight="21.875rem"
@@ -72,11 +89,11 @@ const Footer: FC = () => {
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 1.5 }}
-            ml={['55%', '9.75rem', '9.75rem', '14.375rem']}
-            bottom={['-12rem', '-12rem', '-12rem', '-30%']}
+            ml={['12rem', '10.75rem', '9.75rem', '8.375rem', '13.375rem']}
+            bottom={['-11rem', '-11rem', '-11rem', '-8rem', '-40%']}
           >
             <Typography
-              top="25%"
+              top="20%"
               left="40%"
               color="white"
               variant="small"
@@ -84,11 +101,11 @@ const Footer: FC = () => {
               position="absolute"
               textTransform="uppercase"
               transform="translate(-50%, -50%)"
-              fontSize={['0.75rem', '0.75rem', '0.75rem', '1.5rem']}
+              fontSize={['0.75rem', '0.75rem', '0.75rem', '0.75rem', '1.5rem']}
             >
               Follow me
             </Typography>
-            <Box width={['9.75rem', '9.75rem', '9.75rem', '100%']}>
+            <Box width={['9.75rem', '9.75rem', '9.75rem', '9.75rem', '100%']}>
               <ConverstionBalloonSVG
                 width="100%"
                 maxWidth="21.25rem"
@@ -101,7 +118,7 @@ const Footer: FC = () => {
           display="flex"
           alignItems="flex-end"
           flexDirection="column"
-          width={['100%', '100%', '100%', 'max-content']}
+          width={['100%', '100%', '100%', '100%', 'max-content']}
         >
           <Box width="100%">
             <Motion
@@ -116,8 +133,14 @@ const Footer: FC = () => {
                 variant="small"
                 fontWeight="700"
                 textTransform="uppercase"
-                textAlign={['unset', 'center', 'center', 'unset']}
-                fontSize={['3.125rem', '3.125rem', '3.125rem', '6rem']}
+                textAlign={['center', 'center', 'center', 'center', 'unset']}
+                fontSize={[
+                  '3.125rem',
+                  '3.125rem',
+                  '3.125rem',
+                  '3.125rem',
+                  '6rem',
+                ]}
               >
                 Follow Us
               </Typography>
@@ -139,7 +162,7 @@ const Footer: FC = () => {
                 color="white"
                 variant="small"
                 fontSize="1.125rem"
-                textAlign={['unset', 'center', 'center', 'unset']}
+                textAlign={['center', 'center', 'center', 'center', 'unset']}
               >
                 Stay tuned for our latest updates and announcements. Follow us
                 on socials.
@@ -153,11 +176,12 @@ const Footer: FC = () => {
                 'flex-start',
                 'space-between',
                 'space-between',
+                'space-between',
                 'unset',
               ]}
               width="100%"
-              mx={['auto', 'auto', 'auto', 'unset']}
-              flexWrap={['wrap', 'nowrap', 'nowrap', 'wrap']}
+              mx={['auto', 'auto', 'auto', 'auto', 'unset']}
+              flexWrap={['wrap', 'nowrap', 'nowrap', 'nowrap', 'wrap']}
             >
               {SOCIALS.map(({ Icon, name, url }) => (
                 <Motion
@@ -175,8 +199,20 @@ const Footer: FC = () => {
                       alignItems="center"
                       flexDirection="column"
                       justifyContent="center"
-                      width={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
-                      height={['5.3125rem', '5.625rem', '5.625rem', '7.5rem']}
+                      width={[
+                        '5.3125rem',
+                        '5.625rem',
+                        '5.625rem',
+                        '5.625rem',
+                        '7.5rem',
+                      ]}
+                      height={[
+                        '5.3125rem',
+                        '5.625rem',
+                        '5.625rem',
+                        '5.625rem',
+                        '7.5rem',
+                      ]}
                       border="4px solid"
                     >
                       <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
@@ -185,7 +221,13 @@ const Footer: FC = () => {
                         variant="medium"
                         fontFamily="Roboto Mono"
                         textDecoration="underline"
-                        fontSize={['.75rem', '.75rem', '.75rem', '1rem']}
+                        fontSize={[
+                          '.75rem',
+                          '.75rem',
+                          '.75rem',
+                          '.75rem',
+                          '1rem',
+                        ]}
                       >
                         {name}
                       </Typography>
