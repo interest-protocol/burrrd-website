@@ -36,21 +36,23 @@ const HeroSection: FC = () => {
       >
         <Box>
           <Button
-            borderTop="3px solid #000"
-            borderLeft="3px solid #000"
-            borderRight="8px solid #000"
-            borderBottom="8px solid #000"
+            border="3px solid #000"
             borderRadius="9999rem"
+            boxShadow="4px 4px 0px 0px #000"
             backgroundColor="#FFF"
             fontSize={['0.5rem', '1rem']}
-            fontWeight="300"
+            fontWeight="500"
             mb="3rem"
             py="1rem"
             px="0.5rem"
-            whiteSpace="nowrap"
             width={['11rem', '15rem']}
+            lineHeight="1.25rem"
+            letterSpacing="0.8px"
           >
-            Built on solana <SolanaLogo maxHeight="1.5rem" maxWidth="1.5rem" />
+            Built on solana
+            <Box ml="0.5rem">
+              <SolanaLogo maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
+            </Box>
           </Button>
           <Typography
             as="h2"
@@ -65,12 +67,11 @@ const HeroSection: FC = () => {
           <Button
             py="1.5rem"
             px="2.5rem"
-            borderTop="3px solid #000"
-            borderLeft="3px solid #000"
-            borderRight="8px solid #000"
-            borderBottom="8px solid #000"
+            border="3px solid #000"
+            boxShadow="4px 4px 0px 0px #000"
             borderRadius="1rem"
             backgroundColor={theme.theme.colors.septenary}
+            fontWeight="700"
           >
             Buy now
           </Button>
