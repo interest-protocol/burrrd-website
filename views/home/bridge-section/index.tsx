@@ -66,7 +66,7 @@ const BridgeSection: FC = () => {
             BURRRD on the stabbing spree
           </Typography>
           <Box m="0 auto">
-            <Button variant="primary" size="small" hasBorder>
+            <Button size="small" hasBorder>
               <Typography m="0" variant="medium" fontSize="1.5rem">
                 Bridge
               </Typography>
