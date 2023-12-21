@@ -5,6 +5,7 @@ export { default as BurrrdCleaningSVG } from './burrrd-cleaning';
 export { default as BurrrdKnifeSVG } from './burrrd-knife';
 export * from './burrrd-on-the-moon';
 export { default as BurrrdRockSVG } from './burrrd-rock';
+export { default as BurrrdRunningWithKnifeSVG } from './burrrd-running-knife';
 export { default as CleaningDogeSVG } from './cleaning-doge';
 export { default as ConverstionBalloonSVG } from './conversation-balloon';
 export { default as DeadDogeSVG } from './dead-doge';
