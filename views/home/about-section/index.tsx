@@ -109,7 +109,9 @@ const AboutSection: FC = () => {
             zIndex="1"
             bg="#1B1622"
             position="relative"
+            border="1px solid"
             borderRadius="2rem"
+            borderColor="white"
             boxShadow="4px 4px 0px 0px #FFF"
           >
             <Box
