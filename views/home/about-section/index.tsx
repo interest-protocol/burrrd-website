@@ -165,12 +165,7 @@ const AboutSection: FC = () => {
               justifyContent="center"
               borderTop="1px #1B1B1F solid"
             >
-              <Button
-                hasBorder
-                size="small"
-                variant="primary"
-                onClick={toggleText}
-              >
+              <Button hasBorder size="small" onClick={toggleText}>
                 {toggle ? 'View Less' : 'View More'}
               </Button>
             </Box>
