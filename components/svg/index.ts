@@ -20,6 +20,7 @@ export { default as QuestionSVG } from './question';
 export { default as ReleapSVG } from './releap';
 export { default as SkoolNFTSVG } from './skool-nft';
 export { default as SmokerBurrrdSVG } from './smoker-burrrd';
+export { default as SolanaLogo } from './solana-logo';
 export { default as StabbedPepeSVG } from './stabbed-pepe';
 export { default as SuipainsLogoSVG } from './suipains-logo';
 export { default as SuishiLogoSVG } from './suishi-logo';
