@@ -3,11 +3,11 @@ import { FC } from 'react';
 
 import Layout from '@/components/layout';
 
-import AboutSection from './about-section';
-import DisclaimerSection from './disclaimer-section';
-import HeroSection from './hero-section';
-import RoadmapSection from './roadmap-section';
-import TokenomicsSection from './tokenomics-section';
+import AboutSection from './about';
+import DisclaimerSection from './disclaimer';
+import HeroSection from './hero';
+import RoadmapSection from './roadmap';
+import TokenomicsSection from './tokenomics';
 
 const Home: FC = () => {
   return (
