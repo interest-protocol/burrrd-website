@@ -71,7 +71,7 @@ const HeroSection: FC = () => {
             backgroundColor={theme.theme.colors.septenary}
             fontWeight="700"
           >
-            Buy now
+            Coming Soon
           </Button>
         </Box>
         <Box
