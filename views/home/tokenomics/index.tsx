@@ -185,7 +185,7 @@ const TokenomicsSection: FC = () => {
               <Box
                 display="flex"
                 width="100%"
-                flexDirection={['column', 'column', 'row']}
+                flexDirection={['column', 'column', 'column', 'row']}
                 justifyContent="space-between"
                 mb="4rem"
               >
