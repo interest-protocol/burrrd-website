@@ -6,7 +6,7 @@ import Frame from '@/components/frame';
 import { SOCIALS } from '@/constants';
 import useEventListener from '@/hooks/use-event-listener';
 import { BurrrdSVG, ConverstionBalloonSVG } from '@/svg';
-// import HowToBuySection from '@/views/home/how-to-buy-section';
+import HowToBuySection from '@/views/home/how-to-buy';
 
 const Footer: FC = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -22,7 +22,7 @@ const Footer: FC = () => {
       width="100%"
       background="linear-gradient(180deg, #DC77F7 19.58%, #7B2FC4 149.72%)"
     >
-      {/* <HowToBuySection /> */}
+      <HowToBuySection />
       <Box
         mx="auto"
         pt="6rem"
