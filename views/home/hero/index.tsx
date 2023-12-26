@@ -62,17 +62,23 @@ const HeroSection: FC = () => {
           >
             The cutest but most savage meme coin. The sh&iexcl;tcoin slayer.
           </Typography>
-          <Button
-            py="1.5rem"
-            px="2.5rem"
-            border="3px solid #000"
-            boxShadow="4px 4px 0px 0px #000"
-            borderRadius="1.25rem"
-            backgroundColor={theme.theme.colors.septenary}
-            fontWeight="700"
+          <a
+            href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs&inputAmount=10&fixed=out"
+            target="_blank"
+            rel="noreferrer"
           >
-            Coming Soon
-          </Button>
+            <Button
+              py="1.5rem"
+              px="2.5rem"
+              border="3px solid #000"
+              boxShadow="4px 4px 0px 0px #000"
+              borderRadius="1.25rem"
+              backgroundColor={theme.theme.colors.septenary}
+              fontWeight="700"
+            >
+              BUY NOW
+            </Button>
+          </a>
         </Box>
         <Box
           pt={['0rem', '0rem', '0rem', '2rem']}
