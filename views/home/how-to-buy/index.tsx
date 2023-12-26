@@ -29,9 +29,21 @@ const HowToBuySection: FC = () => (
       <Frame
         bg="white"
         width="100%"
-        height={['25rem', '25rem', '25rem', '38.5625rem']}
+        overflow="hidden"
         borderRadius="2rem"
-      ></Frame>
+        height={['25rem', '25rem', '25rem', '38.5625rem']}
+      >
+        <Box
+          as="iframe"
+          width="100%"
+          height="100%"
+          border="none"
+          title="How to buy"
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
+          src="https://www.youtube.com/embed/ObvKskjsI5k?si=pq8N6tjkYEidsJfr"
+        />
+      </Frame>
     </Box>
   </Box>
 );
