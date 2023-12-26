@@ -14,18 +14,19 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
   };
 
   return (
-    <Box as="main" position="relative" pt="3rem">
+    <Box as="main" pt="3rem">
       <Box
         top="0"
+        zIndex="10"
         bg="#7B2FC4"
         width="100%"
         height="3rem"
         color="white"
         display="flex"
-        cursor="pointe"
+        position="fixed"
+        cursor="pointer"
         fontFamily="ASAP"
         textAlign="center"
-        position="absolute"
         alignItems="center"
         onClick={copyAddress}
         justifyContent="center"
