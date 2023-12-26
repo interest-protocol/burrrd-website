@@ -31,7 +31,7 @@ const HowToBuySection: FC = () => (
         width="100%"
         overflow="hidden"
         borderRadius="2rem"
-        height={['25rem', '25rem', '25rem', '38.5625rem']}
+        height={['15rem', '15rem', '25rem', '38.5625rem']}
       >
         <Box
           as="iframe"
