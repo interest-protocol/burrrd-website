@@ -63,7 +63,7 @@ const HeroSection: FC = () => {
             The cutest but most savage meme coin. The sh&iexcl;tcoin slayer.
           </Typography>
           <a
-            href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs&inputAmount=77.087506&fixed=out"
+            href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs&inputAmount=10&fixed=out"
             target="_blank"
             rel="noreferrer"
           >
