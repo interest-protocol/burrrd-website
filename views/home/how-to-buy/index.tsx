@@ -41,7 +41,7 @@ const HowToBuySection: FC = () => (
           title="How to buy"
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
-          src="https://www.youtube.com/embed/ObvKskjsI5k?si=pq8N6tjkYEidsJfr"
+          src="https://www.youtube.com/embed/uBKevYnUTOg?si=Iqy6zoQytsc8Fm6U"
         />
       </Frame>
     </Box>
