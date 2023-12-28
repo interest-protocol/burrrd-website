@@ -1,4 +1,5 @@
 import { Box, Typography } from '@interest-protocol/ui-kit';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import { useTheme } from '@/context/theme-context';
@@ -62,23 +63,19 @@ const HeroSection: FC = () => {
           >
             The cutest but most savage meme coin. The sh&iexcl;tcoin slayer.
           </Typography>
-          <a
-            href="https://raydium.io/swap/?inputCurrency=sol&outputCurrency=F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs&inputAmount=10&fixed=out"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <Link href="/buy">
             <Button
               py="1.5rem"
               px="2.5rem"
-              border="3px solid #000"
-              boxShadow="4px 4px 0px 0px #000"
-              borderRadius="1.25rem"
-              backgroundColor={theme.theme.colors.septenary}
               fontWeight="700"
+              border="3px solid #000"
+              borderRadius="1.25rem"
+              boxShadow="4px 4px 0px 0px #000"
+              backgroundColor={theme.theme.colors.septenary}
             >
               BUY NOW
             </Button>
-          </a>
+          </Link>
         </Box>
         <Box
           pt={['0rem', '0rem', '0rem', '2rem']}
