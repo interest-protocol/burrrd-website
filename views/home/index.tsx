@@ -9,18 +9,16 @@ import HeroSection from './hero';
 import RoadmapSection from './roadmap';
 import TokenomicsSection from './tokenomics';
 
-const Home: FC = () => {
-  return (
-    <Layout>
-      <HeroSection />
-      <AboutSection />
-      <Box bg="linear-gradient(180deg, #000000 8.06%, #3B1259 100%)">
-        <TokenomicsSection />
-        <RoadmapSection />
-        <DisclaimerSection />
-      </Box>
-    </Layout>
-  );
-};
+const Home: FC = () => (
+  <Layout>
+    <HeroSection />
+    <AboutSection />
+    <Box bg="linear-gradient(180deg, #000000 8.06%, #3B1259 100%)">
+      <TokenomicsSection />
+      <RoadmapSection />
+      <DisclaimerSection />
+    </Box>
+  </Layout>
+);
 
 export default Home;

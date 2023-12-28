@@ -6,8 +6,8 @@ export const GlobalStyles = css`
   }
   html,
   body {
-    padding: 0;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
     font-family: 'Asap', sans-serif;
   }
