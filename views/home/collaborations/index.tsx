@@ -61,17 +61,19 @@ const Collaborators: FC = () => (
               <img src={img} alt={name} width="100%" />
             </Box>
           </a>
-          <a href={post} target="_blank" rel="noreferrer">
-            <Button
-              p="1rem"
-              fontWeight="700"
-              borderRadius="1.25rem"
-              border="3px solid #000"
-              boxShadow="4px 4px 0px 0px #000"
-            >
-              Check Post
-            </Button>
-          </a>
+          {post && (
+            <a href={post} target="_blank" rel="noreferrer">
+              <Button
+                p="1rem"
+                fontWeight="700"
+                borderRadius="1.25rem"
+                border="3px solid #000"
+                boxShadow="4px 4px 0px 0px #000"
+              >
+                Check Post
+              </Button>
+            </a>
+          )}
         </Box>
       ))}
     </Box>
