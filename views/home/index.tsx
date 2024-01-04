@@ -19,8 +19,8 @@ const Home: FC = () => (
       <TokenomicsSection />
       <RoadmapSection />
       <DisclaimerSection />
-      <Collaborators />
       <Partners />
+      <Collaborators />
     </Box>
   </Layout>
 );
