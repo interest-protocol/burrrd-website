@@ -8,7 +8,7 @@ import { useTheme } from '@/context/theme-context';
 import { BurrrdSVG, MenuSVG, TimesSVG } from '@/svg';
 
 import { MENU_ITEMS } from '../navbar/menu-items';
-import { menuVariants } from './menuVariants';
+import { menuVariants } from './menu-variants';
 
 const MobileNavbar: FC = () => {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -83,11 +83,14 @@ const MobileNavbar: FC = () => {
                   initial={{ y: 0 }}
                   whileHover={{ y: -5 }}
                 >
-                  <Link href={url}>{title}</Link>
+                  {url.startsWith('/#') ? (
+                    <a href={url}>{title}</a>
+                  ) : (
+                    <Link href={url}>{title}</Link>
+                  )}
                 </Motion>
               ))}
             </Box>
-
             <Motion
               animate={{
                 y: ['-95%', '-98%', '-100%'],
