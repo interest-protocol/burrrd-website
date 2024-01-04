@@ -7,7 +7,7 @@ export const COLLABORATORS = [
   },
   {
     name: 'Namaste',
-    link: 'https://twitter.com/SolanaSensei',
+    link: 'https://twitter.com/SenseiGifts',
     img: '/collabs/namaste.jpeg',
     post: 'https://twitter.com/SenseiGifts/status/1740090942898811246',
   },
