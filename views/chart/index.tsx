@@ -1,10 +1,9 @@
-import { Box } from '@interest-protocol/ui-kit';
+import { Box, Typography } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 
 import Layout from '@/components/layout';
 
 import ChartGraph from './chart-graph';
-import ChartIllustration from './chart-illustration';
 
 const Chart: FC = () => (
   <Layout withoutRoadmap>
@@ -15,8 +14,16 @@ const Chart: FC = () => (
       alignItems="center"
       flexDirection="column"
     >
+      <Typography
+        as="h2"
+        color="white"
+        fontSize="3.125rem"
+        variant="displayLarge"
+        textTransform="uppercase"
+      >
+        Market Cap Killing Chart
+      </Typography>
       <ChartGraph />
-      <ChartIllustration />
     </Box>
   </Layout>
 );

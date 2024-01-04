@@ -7,6 +7,7 @@ import useEventListener from '@/hooks/use-event-listener';
 import { FireLeftSVG, FireRightSVG, SmokerBurrrdSVG } from '@/svg';
 
 import { DISTRIBUTION, WEEDS } from './tokenomics.data';
+
 const TokenomicsSection: FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
