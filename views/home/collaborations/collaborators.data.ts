@@ -15,6 +15,5 @@ export const COLLABORATORS = [
     name: 'Tombstones',
     link: 'https://www.tombstoned.app/',
     img: '/collabs/tombstones.jpeg',
-    post: 'https://twitter.com/TombStonedHS',
   },
 ];

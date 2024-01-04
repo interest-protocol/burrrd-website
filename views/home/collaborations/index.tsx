@@ -30,7 +30,7 @@ const Collaborators: FC = () => (
         mb={['0', '0', '0', '1em']}
         fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
       >
-        Collaborators
+        Collaborations
       </Typography>
     </Motion>
     <Box
