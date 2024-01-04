@@ -7,7 +7,7 @@ import Button from '@/elements/button';
 import { COLLABORATORS } from './collaborators.data';
 
 const Collaborators: FC = () => (
-  <Box p="5rem">
+  <Box p="5rem" display="flex" flexDirection="column" alignItems="center">
     <Motion
       whileInView={{ x: 0 }}
       initial={{ x: '-100%' }}
@@ -22,13 +22,12 @@ const Collaborators: FC = () => (
       <Typography
         m="0"
         as="h2"
+        mb="1rem"
         color="white"
         fontWeight="700"
-        textAlign="center"
         variant="displayLarge"
         textTransform="uppercase"
-        mb={['0', '0', '0', '1em']}
-        fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
+        fontSize={['2.5rem', '3.125rem', '3.125rem', '5.5rem']}
       >
         Collaborations
       </Typography>
@@ -49,8 +48,8 @@ const Collaborators: FC = () => (
         >
           <a href={link} target="_blank" rel="noreferrer">
             <Box
-              width="20rem"
-              height="20rem"
+              width="15rem"
+              height="15rem"
               cursor="pointer"
               overflow="hidden"
               borderRadius="50%"

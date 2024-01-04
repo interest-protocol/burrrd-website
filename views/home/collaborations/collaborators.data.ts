@@ -12,6 +12,12 @@ export const COLLABORATORS = [
     post: 'https://twitter.com/SenseiGifts/status/1740090942898811246',
   },
   {
+    name: 'Stoned Ape Crew',
+    link: 'https://www.stonedapecrew.com/',
+    img: '/collabs/stoned-ape-crew.png',
+    post: 'https://twitter.com/StonedApeCrew/status/1741135499215908897',
+  },
+  {
     name: 'Tombstones',
     link: 'https://www.tombstoned.app/',
     img: '/collabs/tombstones.jpeg',
