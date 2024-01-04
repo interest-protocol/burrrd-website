@@ -46,7 +46,7 @@ const ChartGraph: FC = () => {
       return result ?? [];
     },
     {
-      refreshInterval: 60000,
+      refreshInterval: 20000,
     }
   );
 

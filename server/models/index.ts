@@ -59,6 +59,6 @@ const updatePrices = async () => {
 
 updatePrices();
 
-setInterval(updatePrices, 60000);
+setInterval(updatePrices, 20000);
 
 export default Price;
