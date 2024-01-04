@@ -22,13 +22,13 @@ const Partners: FC = () => (
       <Typography
         m="0"
         as="h2"
+        mb="1em"
         color="white"
         fontWeight="700"
         textAlign="center"
         variant="displayLarge"
         textTransform="uppercase"
-        mb={['0', '0', '0', '1em']}
-        fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
+        fontSize={['2.5rem', '3.125rem', '3.125rem', '5.5rem']}
       >
         Partners
       </Typography>
