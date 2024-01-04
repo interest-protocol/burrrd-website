@@ -4,8 +4,10 @@ import { FC } from 'react';
 import Layout from '@/components/layout';
 
 import AboutSection from './about';
+import Collaborators from './collaborations';
 import DisclaimerSection from './disclaimer';
 import HeroSection from './hero';
+import Partners from './partners';
 import RoadmapSection from './roadmap';
 import TokenomicsSection from './tokenomics';
 
@@ -17,6 +19,8 @@ const Home: FC = () => (
       <TokenomicsSection />
       <RoadmapSection />
       <DisclaimerSection />
+      <Partners />
+      <Collaborators />
     </Box>
   </Layout>
 );
