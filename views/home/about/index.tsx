@@ -125,7 +125,7 @@ const AboutSection: FC = () => {
               <Typography variant="medium" fontWeight="400">
                 BURRRD had enough of the never-ending sh¡tcoin circus, with all
                 those ridiculous dog derivatives and even that green thing. They
-                had their moment to shine, but now it is BURRRD&apos;s turn to
+                had their moment to shine, but now it is BURRRD&rsquo;s turn to
                 spread his wings!
               </Typography>
 
@@ -151,10 +151,10 @@ const AboutSection: FC = () => {
                   lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
                 >
                   <Typography variant="medium" color="white">
-                    But BURRRD inst just on a mission to eliminate the rubbish;
-                    he has a bigger plan in mind. As he soars through the crypto
-                    skies, the feathered hero is on a mission to take everyone
-                    to the moon with his memetic power.
+                    But BURRRD ins&rsquo;t just on a mission to eliminate the
+                    rubbish; he has a bigger plan in mind. As he soars through
+                    the crypto skies, the feathered hero is on a mission to take
+                    everyone to the moon with his memetic power.
                   </Typography>
                   <Typography variant="medium" color="white">
                     So, watch out, world! BURRRD is armed and ready to bring a
