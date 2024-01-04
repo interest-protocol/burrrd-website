@@ -33,6 +33,7 @@ const ChartGraph: FC = () => {
         await getUSDPrices();
 
       const result = prices
+        .filter(({ address }) => ADDRESSES_TO_NAME[address])
         .map(
           ({ address, price }) => ({
             address,
@@ -109,6 +110,7 @@ const ChartGraph: FC = () => {
       </Box>
       <Box
         zIndex="1"
+        mt="7.5rem"
         display="flex"
         position="relative"
         flexDirection={['column', 'column', 'row']}
@@ -251,8 +253,10 @@ const ChartGraph: FC = () => {
                   />
                 </Motion>
                 <Motion
-                  maxHeight="20rem"
-                  maxWidth="20rem"
+                  maxWidth="15rem"
+                  maxHeight="15rem"
+                  overflow="hidden"
+                  borderRadius="50%"
                   animate={{ translateY: ['1rem', '-1rem', '1rem'] }}
                   transition={{
                     duration: 1,
