@@ -172,15 +172,6 @@ const ChartGraph: FC = () => {
                 />
               </Box>
             )}
-            {deadMemes?.includes(NAMES_TO_ADDRESS.GECKO) && (
-              <Box position="absolute" bottom="4rem" right="0">
-                <img
-                  src="/images/dead-coins/GECKO-min.webp"
-                  alt="Dead GECKO"
-                  width="100"
-                />
-              </Box>
-            )}
             {deadMemes?.includes(NAMES_TO_ADDRESS.DOGE) && (
               <Box position="absolute" bottom="2rem">
                 <img

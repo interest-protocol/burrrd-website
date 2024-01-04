@@ -8,5 +8,4 @@ export const COINS_IMAGE_MAP: Record<string, string> = {
   '0xbA2aE424d960c26247Dd6c32edC70B295c744C43': 'DOGE',
   '0x1151CB3d861920e07a38e03eEAd12C32178567F6': '/images/coins/bonk.png',
   '0x6982508145454Ce325dDbE47a25d4ec3d2311933': '/images/coins/pepe.webp',
-  '0xE8385CECb013561b69bEb63FF59f4d10734881f3': '/images/coins/gecko.webp',
 };
