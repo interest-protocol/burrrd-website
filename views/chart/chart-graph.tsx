@@ -1,4 +1,4 @@
-import { Box } from '@interest-protocol/ui-kit';
+import { Box, Motion } from '@interest-protocol/ui-kit';
 import { FC, useEffect, useRef } from 'react';
 import {
   Bar,
@@ -19,7 +19,7 @@ import {
   NAMES_TO_ADDRESS,
   SOL_COIN_ADDRESSES_MAP,
 } from '@/constants/coins';
-import { BurrrdSVG, RunningBurrrdSVG } from '@/svg';
+import { BurrrdSVG, RunningBurrrdSVG, ThoughtBalloonSVG } from '@/svg';
 import { formatNumber } from '@/utils';
 
 import { COINS_IMAGE_MAP } from './chart.data';
@@ -108,12 +108,13 @@ const ChartGraph: FC = () => {
         </ResponsiveContainer>
       </Box>
       <Box
+        zIndex="1"
         display="flex"
+        position="relative"
         flexDirection={['column', 'column', 'row']}
         alignItems={['center', 'center', 'flex-end']}
       >
-        {console.log({ deadMemes })}
-        {deadMemes?.length && (
+        {!!deadMemes?.length && (
           <Box
             width="15rem"
             height="18rem"
@@ -121,12 +122,35 @@ const ChartGraph: FC = () => {
             position="relative"
             onClick={() => audioRef.current?.play()}
           >
+            <Box
+              top="4rem"
+              left="-2rem"
+              right="-2rem"
+              bottom="-4rem"
+              position="absolute"
+            >
+              <ThoughtBalloonSVG
+                width="100%"
+                maxWidth="30rem"
+                maxHeight="30rem"
+              />
+            </Box>
+            <Box
+              bg="white"
+              width="1.5rem"
+              height="1.5rem"
+              borderRadius="50%"
+              position="absolute"
+              top={['19rem', '19rem', '8rem']}
+              left={['1rem', '1rem', 'unset']}
+              right={['unset', 'unset', '-3rem']}
+            />
             {deadMemes?.includes(NAMES_TO_ADDRESS.USEDCAR) && (
-              <Box position="absolute" top="0">
+              <Box position="absolute" top="2rem" left="2rem">
                 <img
                   src="/images/dead-coins/USEDCAR-min.webp"
                   alt="Dead USEDCAR"
-                  width="250"
+                  width="180"
                 />
               </Box>
             )}
@@ -166,7 +190,7 @@ const ChartGraph: FC = () => {
                 />
               </Box>
             )}
-            {deadMemes?.includes(NAMES_TO_ADDRESS.MYRO) && (
+            {deadMemes?.includes(NAMES_TO_ADDRESS.DOGWIFTHAT) && (
               <Box position="absolute" bottom="2rem" left="4.5rem">
                 <img
                   src="/images/dead-coins/DOGWITHAT-min.webp"
@@ -175,7 +199,7 @@ const ChartGraph: FC = () => {
                 />
               </Box>
             )}
-            {deadMemes?.includes(NAMES_TO_ADDRESS.BONK) && (
+            {deadMemes?.includes(NAMES_TO_ADDRESS.MYRO) && (
               <Box position="absolute" bottom="2rem" right="0">
                 <img
                   src="/images/dead-coins/MYRO-min.webp"
@@ -213,35 +237,49 @@ const ChartGraph: FC = () => {
             )}
           </Box>
         )}
-        <Box display="flex" alignItems="flex-end">
-          {burrrdNextMemeAddress ? (
-            <>
-              <Box
-                maxWidth="20rem"
-                maxHeight="20rem"
-                onClick={() => audioRef.current?.play()}
-              >
-                <RunningBurrrdSVG
-                  width="100%"
-                  maxWidth="100%"
-                  maxHeight="100%"
-                />
-              </Box>
-              <Box maxHeight="20rem" maxWidth="20rem">
-                <img
-                  width="100%"
-                  alt="Next stab meme logo"
-                  src={COINS_IMAGE_MAP[burrrdNextMemeAddress]}
-                />
-              </Box>
-            </>
-          ) : (
-            <BurrrdSVG
-              width="100%"
-              maxWidth="12.625rem"
-              maxHeight="3.5625rem"
-            />
-          )}
+        <Box>
+          <Box display="flex" alignItems="flex-end" ml="3rem">
+            {burrrdNextMemeAddress ? (
+              <>
+                <Motion
+                  maxWidth="12rem"
+                  maxHeight="12rem"
+                  initial={{ rotate: '0deg' }}
+                  onClick={() => audioRef.current?.play()}
+                  animate={{ rotate: ['30deg', '0deg', '30deg'] }}
+                  transition={{
+                    duration: 0.3,
+                    ease: 'linear',
+                    repeat: Infinity,
+                  }}
+                >
+                  <RunningBurrrdSVG
+                    width="100%"
+                    maxWidth="100%"
+                    maxHeight="100%"
+                  />
+                </Motion>
+                <Motion
+                  maxHeight="20rem"
+                  maxWidth="20rem"
+                  animate={{ translateY: ['1rem', '-1rem', '1rem'] }}
+                  transition={{
+                    duration: 1,
+                    ease: 'linear',
+                    repeat: Infinity,
+                  }}
+                >
+                  <img
+                    width="100%"
+                    alt="Next stab meme logo"
+                    src={COINS_IMAGE_MAP[burrrdNextMemeAddress]}
+                  />
+                </Motion>
+              </>
+            ) : (
+              <BurrrdSVG width="100%" maxHeight="20rem" maxWidth="20rem" />
+            )}
+          </Box>
         </Box>
       </Box>
     </>
