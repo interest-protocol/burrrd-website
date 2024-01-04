@@ -165,6 +165,15 @@ const ChartGraph: FC = () => {
                 />
               </Box>
             )}
+            {deadMemes?.includes(NAMES_TO_ADDRESS.SAMO) && (
+              <Box position="absolute" bottom="3.5rem" right="0">
+                <img
+                  src="/images/dead-coins/SHIBA-min.webp"
+                  alt="Dead SAMO"
+                  width="130"
+                />
+              </Box>
+            )}
             {deadMemes?.includes(NAMES_TO_ADDRESS.CHONKY) && (
               <Box position="absolute" left="4rem" bottom="4rem">
                 <img

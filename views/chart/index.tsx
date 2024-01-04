@@ -9,12 +9,12 @@ import ChartGraph from './chart-graph';
 const Chart: FC = () => (
   <Layout withoutRoadmap>
     <Box
-      pb="0rem"
       bg="black"
       display="flex"
       alignItems="center"
       flexDirection="column"
       p={['1rem', '2rem', '8rem']}
+      pb={['0rem', '0rem', '0rem']}
     >
       <Typography
         as="h2"
