@@ -9,12 +9,12 @@ import ChartGraph from './chart-graph';
 const Chart: FC = () => (
   <Layout withoutRoadmap>
     <Box
-      p="8rem"
       pb="0rem"
       bg="black"
       display="flex"
       alignItems="center"
       flexDirection="column"
+      p={['1rem', '2rem', '8rem']}
     >
       <Typography
         as="h2"
@@ -25,7 +25,6 @@ const Chart: FC = () => (
       >
         Market Cap Killing Chart
       </Typography>
-
       <ChartGraph />
       <Box
         bg="#111"
