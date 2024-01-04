@@ -151,7 +151,7 @@ const AboutSection: FC = () => {
                   lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
                 >
                   <Typography variant="medium" color="white">
-                    But BURRRD inst just on a mission to eliminate the rubbish;
+                    But BURRRD isn't just on a mission to eliminate the rubbish;
                     he has a bigger plan in mind. As he soars through the crypto
                     skies, the feathered hero is on a mission to take everyone
                     to the moon with his memetic power.
