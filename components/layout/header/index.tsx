@@ -1,4 +1,5 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { useRouter } from 'next/router';
 import { FC, useCallback, useState } from 'react';
 
 import { useTheme } from '@/context/theme-context';
@@ -9,8 +10,9 @@ import MobileNavbar from './mobile-navbar';
 import Navbar from './navbar';
 
 const Header: FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const { theme } = useTheme();
+  const { push } = useRouter();
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
     const mediaIsMobile = !window.matchMedia('(min-width: 62em)').matches;
@@ -31,9 +33,11 @@ const Header: FC = () => {
           <Box
             gap="1rem"
             display="flex"
+            cursor="pointer"
             width="14.375rem"
             position="relative"
             alignItems="center"
+            onClick={() => push('/')}
           >
             <Motion
               animate={{
@@ -78,9 +82,11 @@ const Header: FC = () => {
           <Box
             gap="1.25rem"
             display="flex"
+            cursor="pointer"
             height="0.625rem"
             position="relative"
             alignItems="center"
+            onClick={() => push('/')}
           >
             <Motion
               animate={{
