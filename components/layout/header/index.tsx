@@ -33,6 +33,7 @@ const Header: FC = () => {
           <Box
             gap="1rem"
             display="flex"
+            cursor="pointer"
             width="14.375rem"
             position="relative"
             alignItems="center"
@@ -81,6 +82,7 @@ const Header: FC = () => {
           <Box
             gap="1.25rem"
             display="flex"
+            cursor="pointer"
             height="0.625rem"
             position="relative"
             alignItems="center"
