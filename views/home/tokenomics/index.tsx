@@ -6,6 +6,8 @@ import Frame from '@/components/frame';
 import useEventListener from '@/hooks/use-event-listener';
 import { FireLeftSVG, FireRightSVG, SmokerBurrrdSVG } from '@/svg';
 
+import { DISTRIBUTION, WEEDS } from './tokenomics.data';
+
 const TokenomicsSection: FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -17,40 +19,12 @@ const TokenomicsSection: FC = () => {
   useEventListener('resize', handleSetDesktop, true);
 
   const countUpRef = useRef(null);
-  const weeds = 69_420_000_000_000;
-
-  const stats = [
-    {
-      percentage: '10%',
-      title: 'Airdrop',
-      grad1: '#F087FF',
-      grad2: '#601BB3',
-    },
-    {
-      percentage: '5%',
-      title: 'DAO',
-      grad1: '#1FCFF1',
-      grad2: '#1D3F99',
-    },
-    {
-      percentage: '10%',
-      title: 'Early Contributors',
-      grad1: '#19FB9B',
-      grad2: '#0D7D76',
-    },
-    {
-      percentage: '75%',
-      title: 'Initial Liquidity',
-      grad1: '#F087FF',
-      grad2: '#601BB3',
-    },
-  ];
 
   const countup = useCountUp({
     ref: countUpRef,
     start: 0,
     duration: 4,
-    end: weeds,
+    end: WEEDS,
     useGrouping: true,
     scrollSpyOnce: true,
     enableScrollSpy: true,
@@ -189,7 +163,7 @@ const TokenomicsSection: FC = () => {
                 justifyContent="space-between"
                 mb="4rem"
               >
-                {stats.map((el, index) => (
+                {DISTRIBUTION.map((el, index) => (
                   <Box key={index} display="flex" flexDirection="column">
                     <Typography
                       fontFamily="Inter"
