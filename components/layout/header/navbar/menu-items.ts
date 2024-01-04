@@ -1,14 +1,18 @@
 export const MENU_ITEMS = [
   {
     title: 'About',
-    url: '#about',
+    url: '/#about',
   },
   {
     title: 'Tokenomics',
-    url: '#tokenomics',
+    url: '/#tokenomics',
   },
   {
     title: 'Roadmap',
-    url: '#roadmap',
+    url: '/#roadmap',
+  },
+  {
+    title: 'Chart',
+    url: '/chart',
   },
 ];

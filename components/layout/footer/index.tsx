@@ -8,7 +8,9 @@ import useEventListener from '@/hooks/use-event-listener';
 import { BurrrdSVG, ConverstionBalloonSVG } from '@/svg';
 import HowToBuySection from '@/views/home/how-to-buy';
 
-const Footer: FC = () => {
+import { LayoutProps } from '../layout.types';
+
+const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
@@ -22,7 +24,7 @@ const Footer: FC = () => {
       width="100%"
       background="linear-gradient(180deg, #DC77F7 19.58%, #7B2FC4 149.72%)"
     >
-      <HowToBuySection />
+      {!withoutRoadmap && <HowToBuySection />}
       <Box
         mx="auto"
         pt="6rem"

@@ -4,8 +4,12 @@ import toast from 'react-hot-toast';
 
 import Footer from './footer';
 import Header from './header';
+import { LayoutProps } from './layout.types';
 
-const Layout: FC<PropsWithChildren> = ({ children }) => {
+const Layout: FC<PropsWithChildren<LayoutProps>> = ({
+  children,
+  withoutRoadmap,
+}) => {
   const copyAddress = () => {
     window.navigator.clipboard.writeText(
       'F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs'
@@ -36,7 +40,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
       <Header />
       <Box variant="container">
         {children}
-        <Footer />
+        <Footer withoutRoadmap={withoutRoadmap} />
       </Box>
     </Box>
   );
