@@ -4,7 +4,13 @@ import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
 import useEventListener from '@/hooks/use-event-listener';
-import { FireLeftSVG, FireRightSVG, SmokerBurrrdSVG } from '@/svg';
+import {
+  ArrowTopRightSVG,
+  FireLeftSVG,
+  FireRightSVG,
+  RugSVG,
+  SmokerBurrrdSVG,
+} from '@/svg';
 
 import { DISTRIBUTION, WEEDS } from './tokenomics.data';
 
@@ -190,69 +196,159 @@ const TokenomicsSection: FC = () => {
                   </Box>
                 ))}
               </Box>
-              <Box
-                px="auto"
-                width="100%"
-                display="flex"
-                maxWidth="82.5rem"
-                justifyContent="center"
-                mb="4rem"
+              <a
+                href="https://solscan.io/tx/TBZwGEihsKB7bybky4cVouG8A7nwnnLHJGS4ysKPncL8Bup9xY3crGDSD5vnVWewJrPaTXfmKv5ytpCrKLy2LNN"
+                target="_blank"
+                rel="noreferrer"
               >
                 <Box
-                  px="3rem"
-                  bg="white"
-                  py="1.5rem"
+                  mb="6rem"
+                  px="auto"
+                  width="100%"
                   display="flex"
-                  color="#FFC701"
-                  alignItems="center"
-                  position="relative"
-                  borderRadius="2rem"
+                  maxWidth="82.5rem"
                   justifyContent="center"
                 >
-                  <Typography
-                    margin="0"
-                    variant="title1"
-                    letterSpacing="0.6rem"
-                    fontSize={['1.5rem', '3rem', '3rem', '5.25rem']}
-                    textShadow={[
-                      '2px 2px 0px #000',
-                      '3px 3px 0px #000',
-                      '3px 3px 0px #000',
-                      '4px 4px 0px #000',
-                    ]}
-                  >
-                    LP Burned
-                  </Typography>
                   <Box
-                    position="absolute"
-                    transform="rotate(45deg)"
-                    maxWidth={['4rem', '5rem', '5rem', '7rem']}
-                    maxHeight={['6rem', '7rem', '7rem', '9rem']}
-                    right={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
-                    bottom={['-1.5rem', '-1.5rem', '-1.5rem', '-2rem']}
+                    bg="white"
+                    display="flex"
+                    color="#FFC701"
+                    alignItems="center"
+                    position="relative"
+                    px={['1.5rem', '3rem']}
+                    py={['1rem', '1.5rem']}
+                    justifyContent="center"
+                    borderRadius={['1rem', '2rem']}
                   >
-                    <FireRightSVG
-                      width="100%"
-                      maxWidth="inherit"
-                      maxHeight="inherit"
-                    />
-                  </Box>
-                  <Box
-                    position="absolute"
-                    transform="rotate(-40deg)"
-                    maxWidth={['4rem', '5rem', '5rem', '7rem']}
-                    maxHeight={['6rem', '7rem', '7rem', '9rem']}
-                    left={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
-                    bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
-                  >
-                    <FireLeftSVG
-                      width="100%"
-                      maxWidth="inherit"
-                      maxHeight="inherit"
-                    />
+                    <Typography
+                      margin="0"
+                      variant="title1"
+                      letterSpacing="0.6rem"
+                      textTransform="uppercase"
+                      fontSize={['1.5rem', '3rem', '3rem', '5.25rem']}
+                      textShadow={[
+                        '2px 2px 0px #000',
+                        '3px 3px 0px #000',
+                        '3px 3px 0px #000',
+                        '4px 4px 0px #000',
+                      ]}
+                    >
+                      LP Burned
+                      <Box
+                        as="span"
+                        display="inline-block"
+                        ml={['0.5rem', '2rem', '2rem', '3rem']}
+                        maxWidth={['1.2rem', '2rem', '2rem', '3.5rem']}
+                        maxHeight={['1.2rem', '2rem', '2rem', '3.5rem']}
+                      >
+                        <ArrowTopRightSVG
+                          width="100%"
+                          maxWidth="inherit"
+                          maxHeight="inherit"
+                        />
+                      </Box>
+                    </Typography>
+                    <Box
+                      position="absolute"
+                      transform="rotate(45deg)"
+                      maxWidth={['4rem', '5rem', '5rem', '7rem']}
+                      maxHeight={['6rem', '7rem', '7rem', '9rem']}
+                      right={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
+                      bottom={['-1.5rem', '-1.5rem', '-1.5rem', '-2rem']}
+                    >
+                      <FireRightSVG
+                        width="100%"
+                        maxWidth="inherit"
+                        maxHeight="inherit"
+                      />
+                    </Box>
+                    <Box
+                      position="absolute"
+                      transform="rotate(-40deg)"
+                      maxWidth={['4rem', '5rem', '5rem', '7rem']}
+                      maxHeight={['6rem', '7rem', '7rem', '9rem']}
+                      left={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
+                      bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
+                    >
+                      <FireLeftSVG
+                        width="100%"
+                        maxWidth="inherit"
+                        maxHeight="inherit"
+                      />
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
+              </a>
+              <a
+                href="https://rugcheck.xyz/tokens/F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Box
+                  mb="6rem"
+                  px="auto"
+                  width="100%"
+                  display="flex"
+                  maxWidth="82.5rem"
+                  justifyContent="center"
+                >
+                  <Box
+                    pl="3rem"
+                    bg="white"
+                    display="flex"
+                    color="#FFC701"
+                    alignItems="center"
+                    position="relative"
+                    pr={['1.5rem', '3rem']}
+                    py={['1rem', '1.5rem']}
+                    justifyContent="center"
+                    borderRadius={['1rem', '2rem']}
+                  >
+                    <Typography
+                      margin="0"
+                      variant="title1"
+                      letterSpacing="0.6rem"
+                      textTransform="uppercase"
+                      fontSize={['1.5rem', '3rem', '3rem', '5.25rem']}
+                      textShadow={[
+                        '2px 2px 0px #000',
+                        '3px 3px 0px #000',
+                        '3px 3px 0px #000',
+                        '4px 4px 0px #000',
+                      ]}
+                    >
+                      Rugcheck
+                      <Box
+                        as="span"
+                        display="inline-block"
+                        ml={['0.5rem', '2rem', '2rem', '3rem']}
+                        maxWidth={['1.2rem', '2rem', '2rem', '3.5rem']}
+                        maxHeight={['1.2rem', '2rem', '2rem', '3.5rem']}
+                      >
+                        <ArrowTopRightSVG
+                          width="100%"
+                          maxWidth="inherit"
+                          maxHeight="inherit"
+                        />
+                      </Box>
+                    </Typography>
+                    <Box
+                      position="absolute"
+                      transform="rotate(-40deg)"
+                      maxWidth={['4rem', '5rem', '5rem', '7rem']}
+                      maxHeight={['6rem', '7rem', '7rem', '9rem']}
+                      left={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
+                      bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
+                    >
+                      <RugSVG
+                        width="100%"
+                        maxWidth="inherit"
+                        maxHeight="inherit"
+                      />
+                    </Box>
+                  </Box>
+                </Box>
+              </a>
             </Box>
           </Box>
           <Motion

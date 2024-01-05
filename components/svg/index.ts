@@ -1,5 +1,6 @@
 export { default as ArrowLeftSVG } from './arrow-left';
 export { default as ArrowRightSVG } from './arrow-right';
+export { default as ArrowTopRightSVG } from './arrow-top-right';
 export { default as BurrrdSVG } from './burrrd';
 export { default as BurrrdCleaningSVG } from './burrrd-cleaning';
 export { default as BurrrdKnifeSVG } from './burrrd-knife';
@@ -25,6 +26,7 @@ export { default as OwlitSVG } from './owlit';
 export { default as QuestionSVG } from './question';
 export { default as ReleapSVG } from './releap';
 export { default as RoadmapPathSVG } from './roadmap-path';
+export { default as RugSVG } from './rug';
 export { default as RunningBurrrdSVG } from './running-burrrd';
 export { default as ScenarioSVG } from './scenario';
 export { default as SkoolNFTSVG } from './skool-nft';
