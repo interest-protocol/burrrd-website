@@ -8,7 +8,7 @@ export const PARTNERS = [
   {
     name: 'Zebec',
     link: 'https://card.zebec.io/burrrd',
-    img: '/partners/zebec.jpeg',
+    img: '/images/partners/zebec.jpeg',
     post: 'https://twitter.com/BURRRD/status/1743316601443668042',
   },
 ];
