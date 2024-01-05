@@ -1,8 +1,8 @@
-export const WEEDS = 69_420_000_000_000;
+export const WEEDS = 65_274_943_826_001;
 
 export const DISTRIBUTION = [
   {
-    percentage: '10%',
+    percentage: '20%',
     title: 'Airdrop',
     grad1: '#F087FF',
     grad2: '#601BB3',
@@ -20,7 +20,7 @@ export const DISTRIBUTION = [
     grad2: '#0D7D76',
   },
   {
-    percentage: '75%',
+    percentage: '65%',
     title: 'Initial Liquidity',
     grad1: '#F087FF',
     grad2: '#601BB3',

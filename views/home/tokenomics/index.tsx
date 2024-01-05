@@ -10,6 +10,7 @@ import {
   FireRightSVG,
   RugSVG,
   SmokerBurrrdSVG,
+  StabLineSVG,
 } from '@/svg';
 
 import { DISTRIBUTION, WEEDS } from './tokenomics.data';
@@ -109,19 +110,49 @@ const TokenomicsSection: FC = () => {
               </Typography>
             </Motion>
             <Frame
-              zIndex="2"
               bg="white"
+              zIndex="2"
+              border="4px solid"
               position="relative"
               borderRadius="2rem"
-              border="4px solid"
             >
-              <Box display="flex" justifyContent="center">
+              <Box
+                py="1rem"
+                display="flex"
+                position="relative"
+                alignItems="center"
+                flexDirection="column"
+              >
                 <Typography
+                  m="0"
+                  py="0"
+                  fontWeight="600"
+                  variant="medium"
+                  position="relative"
+                  fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
+                >
+                  69,420,000,000,000
+                  <Box
+                    left="0"
+                    as="span"
+                    right="0"
+                    bottom="0"
+                    width="100%"
+                    position="absolute"
+                  >
+                    <StabLineSVG
+                      maxWidth="100%"
+                      maxHeight="100%"
+                      width="100%"
+                    />
+                  </Box>
+                </Typography>
+                <Typography
+                  m="0"
+                  py="0"
                   ref={countUpRef}
                   fontWeight="600"
                   variant="medium"
-                  lineHeight="2rem"
-                  my={['2.5rem', '2.5rem', '2.5rem', '3.5rem']}
                   fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
                 />
               </Box>
