@@ -17,7 +17,7 @@ const DescriptionBox: FC = () => {
       position={['relative', 'relative', 'relative', 'relative', 'absolute']}
       p={['1rem 2rem', '1rem 2rem', '1rem 2rem', '1.5rem 2.5rem', '2rem 3rem']}
     >
-      We Are Going to Zero!
+      Expect the unexpected!
     </Box>
   );
 };
