@@ -5,6 +5,7 @@ import { v4 } from 'uuid';
 import Button from '@/elements/button';
 
 import { COLLABORATORS } from './collaborators.data';
+import { track } from '@vercel/analytics';
 
 const Collaborators: FC = () => (
   <Box p="5rem" display="flex" flexDirection="column" alignItems="center">
@@ -46,7 +47,15 @@ const Collaborators: FC = () => (
           alignItems="center"
           flexDirection="column"
         >
-          <a href={link} target="_blank" rel="noreferrer">
+          <Box
+            cursor="pointer"
+            onClick={() => {
+              if (window) {
+                track(name);
+                window.open(link, '_blank', 'noopener,noreferrer');
+              }
+            }}
+          >
             <Box
               width="15rem"
               height="15rem"
@@ -59,9 +68,17 @@ const Collaborators: FC = () => (
             >
               <img src={img} alt={name} width="100%" />
             </Box>
-          </a>
+          </Box>
           {post && (
-            <a href={post} target="_blank" rel="noreferrer">
+            <Box
+              cursor="pointer"
+              onClick={() => {
+                if (window) {
+                  track(`${name} post`);
+                  window.open(post, '_blank', 'noopener,noreferrer');
+                }
+              }}
+            >
               <Button
                 p="1rem"
                 fontWeight="700"
@@ -71,7 +88,7 @@ const Collaborators: FC = () => (
               >
                 Check Post
               </Button>
-            </a>
+            </Box>
           )}
         </Box>
       ))}

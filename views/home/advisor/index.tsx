@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { v4 } from 'uuid';
 
 import { ADVISORS } from './advisor.data';
+import { track } from '@vercel/analytics';
 
 const Advisor: FC = () => (
   <Box p="5rem">
@@ -45,7 +46,15 @@ const Advisor: FC = () => (
           alignItems="center"
           flexDirection="column"
         >
-          <a href={link} target="_blank" rel="noreferrer">
+          <Box
+            cursor="pointer"
+            onClick={() => {
+              if (window) {
+                track(name);
+                window.open(link, '_blank', 'noopener,noreferrer');
+              }
+            }}
+          >
             <Box
               width="20rem"
               height="20rem"
@@ -58,7 +67,7 @@ const Advisor: FC = () => (
             >
               <img src={img} alt={name} width="100%" />
             </Box>
-          </a>
+          </Box>
         </Box>
       ))}
     </Box>

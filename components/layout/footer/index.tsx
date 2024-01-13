@@ -9,6 +9,7 @@ import { BurrrdSVG, ConverstionBalloonSVG } from '@/svg';
 import HowToBuySection from '@/views/home/how-to-buy';
 
 import { LayoutProps } from '../layout.types';
+import { track } from '@vercel/analytics';
 
 const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -192,7 +193,15 @@ const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
                   initial={{ y: 0 }}
                   whileHover={{ y: -10 }}
                 >
-                  <a href={url} target="_blank" rel="noreferrer">
+                  <Box
+                    cursor="pointer"
+                    onClick={() => {
+                      if (window) {
+                        track(name);
+                        window.open(url, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                  >
                     <Frame
                       bg="white"
                       display="flex"
@@ -234,7 +243,7 @@ const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
                         {name}
                       </Typography>
                     </Frame>
-                  </a>
+                  </Box>
                 </Motion>
               ))}
             </Box>
