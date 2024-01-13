@@ -1,4 +1,5 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { track } from '@vercel/analytics';
 import { FC, useCallback, useState } from 'react';
 import { v4 } from 'uuid';
 
@@ -192,7 +193,15 @@ const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
                   initial={{ y: 0 }}
                   whileHover={{ y: -10 }}
                 >
-                  <a href={url} target="_blank" rel="noreferrer">
+                  <Box
+                    cursor="pointer"
+                    onClick={() => {
+                      if (window) {
+                        track(name);
+                        window.open(url, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                  >
                     <Frame
                       bg="white"
                       display="flex"
@@ -234,7 +243,7 @@ const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
                         {name}
                       </Typography>
                     </Frame>
-                  </a>
+                  </Box>
                 </Motion>
               ))}
             </Box>

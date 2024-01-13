@@ -1,4 +1,5 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { track } from '@vercel/analytics';
 import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { useCountUp } from 'react-countup';
 
@@ -227,10 +228,18 @@ const TokenomicsSection: FC = () => {
                   </Box>
                 ))}
               </Box>
-              <a
-                href="https://solscan.io/tx/TBZwGEihsKB7bybky4cVouG8A7nwnnLHJGS4ysKPncL8Bup9xY3crGDSD5vnVWewJrPaTXfmKv5ytpCrKLy2LNN"
-                target="_blank"
-                rel="noreferrer"
+              <Box
+                cursor="pointer"
+                onClick={() => {
+                  if (window) {
+                    track('Lp Burn Solscan Link');
+                    window.open(
+                      'https://solscan.io/tx/TBZwGEihsKB7bybky4cVouG8A7nwnnLHJGS4ysKPncL8Bup9xY3crGDSD5vnVWewJrPaTXfmKv5ytpCrKLy2LNN',
+                      '_blank',
+                      'noopener,noreferrer'
+                    );
+                  }
+                }}
               >
                 <Box
                   mb="6rem"
@@ -309,11 +318,19 @@ const TokenomicsSection: FC = () => {
                     </Box>
                   </Box>
                 </Box>
-              </a>
-              <a
-                href="https://rugcheck.xyz/tokens/F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs"
-                target="_blank"
-                rel="noreferrer"
+              </Box>
+              <Box
+                cursor="pointer"
+                onClick={() => {
+                  if (window) {
+                    track('Rugcheck');
+                    window.open(
+                      'https://rugcheck.xyz/tokens/F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs',
+                      '_blank',
+                      'noopener,noreferrer'
+                    );
+                  }
+                }}
               >
                 <Box
                   mb="6rem"
@@ -379,7 +396,7 @@ const TokenomicsSection: FC = () => {
                     </Box>
                   </Box>
                 </Box>
-              </a>
+              </Box>
             </Box>
           </Box>
           <Motion
