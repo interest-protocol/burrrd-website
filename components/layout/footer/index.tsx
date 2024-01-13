@@ -1,4 +1,5 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { track } from '@vercel/analytics';
 import { FC, useCallback, useState } from 'react';
 import { v4 } from 'uuid';
 
@@ -9,7 +10,6 @@ import { BurrrdSVG, ConverstionBalloonSVG } from '@/svg';
 import HowToBuySection from '@/views/home/how-to-buy';
 
 import { LayoutProps } from '../layout.types';
-import { track } from '@vercel/analytics';
 
 const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
   const [isMobile, setIsMobile] = useState(false);

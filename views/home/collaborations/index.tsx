@@ -1,11 +1,11 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { track } from '@vercel/analytics';
 import { FC } from 'react';
 import { v4 } from 'uuid';
 
 import Button from '@/elements/button';
 
 import { COLLABORATORS } from './collaborators.data';
-import { track } from '@vercel/analytics';
 
 const Collaborators: FC = () => (
   <Box p="5rem" display="flex" flexDirection="column" alignItems="center">

@@ -1,9 +1,9 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { track } from '@vercel/analytics';
 import { FC } from 'react';
 import { v4 } from 'uuid';
 
 import { ADVISORS } from './advisor.data';
-import { track } from '@vercel/analytics';
 
 const Advisor: FC = () => (
   <Box p="5rem">
