@@ -15,7 +15,7 @@
     "@emotion/styled": "^11.10.6",
     "@interest-protocol/ui-kit": "^0.1.26-beta",
     "@stylin.js/react": "^1.0.1",
-    "@vercel/analytics": "^0.1.5",
+    "@vercel/analytics": "^1.1.1",
     "framer-motion": "^10.12.2",
     "mongoose": "^8.0.3",
     "next": "12.3.4",
