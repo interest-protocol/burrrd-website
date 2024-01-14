@@ -220,6 +220,7 @@ const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
                       <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
                       <Typography
                         m="0"
+                        textAlign="center"
                         variant="medium"
                         fontFamily="Roboto Mono"
                         textDecoration="underline"
