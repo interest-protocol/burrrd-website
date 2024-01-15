@@ -226,23 +226,7 @@ const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
                       ]}
                       border="4px solid"
                     >
-                      <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
-                      <Typography
-                        m="0"
-                        textAlign="center"
-                        variant="medium"
-                        fontFamily="Roboto Mono"
-                        textDecoration="underline"
-                        fontSize={[
-                          '.75rem',
-                          '.75rem',
-                          '.75rem',
-                          '.75rem',
-                          '1rem',
-                        ]}
-                      >
-                        {name}
-                      </Typography>
+                      <Icon maxHeight="2.5rem" maxWidth="2.5rem" width="100%" />
                     </Frame>
                   </Box>
                 </Motion>
