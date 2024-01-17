@@ -10,6 +10,7 @@ export { default as BurrrdRunningWithKnifeSVG } from './burrrd-running-knife';
 export { default as CleaningDogeSVG } from './cleaning-doge';
 export { default as CoinGeckoSVG } from './coin-gecko';
 export { default as CoinMarketCapSVG } from './coin-market-cap';
+export { default as CoinTelegraphSVG } from './coin-telegraph';
 export { default as ConverstionBalloonSVG } from './conversation-balloon';
 export { default as COQSVG } from './coq';
 export { default as DeadDogeSVG } from './dead-doge';
