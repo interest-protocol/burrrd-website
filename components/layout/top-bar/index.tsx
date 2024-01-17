@@ -44,6 +44,7 @@ const TopBar: FC = () => {
             color="#fff"
             height="3rem"
             display="flex"
+            flexWrap="wrap"
             alignItems="center"
             onClick={copyAddress}
             justifyContent="center"
