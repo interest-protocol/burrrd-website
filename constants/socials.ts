@@ -1,6 +1,7 @@
 import {
   CoinGeckoSVG,
   CoinMarketCapSVG,
+  CoinTelegraphSVG,
   DiscordSVG,
   TelegramSVG,
   XSVG,
@@ -31,5 +32,10 @@ export const SOCIALS = [
     name: 'Coin Gecko',
     url: 'https://coingecko.com/en/coins/burrrd',
     Icon: CoinGeckoSVG,
+  },
+  {
+    name: 'Coin Telegraph',
+    url: 'https://br.cointelegraph.com/press-releases/burrrd-a-meme-cryptocurrency-conquering-the-solana-crypto-ecosystem',
+    Icon: CoinTelegraphSVG,
   },
 ];
