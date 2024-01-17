@@ -11,4 +11,10 @@ export const PARTNERS = [
     img: '/images/partners/zebec.jpeg',
     post: 'https://twitter.com/BURRRD/status/1743316601443668042',
   },
+  {
+    name: 'Gotbit',
+    link: 'https://gotbit.io/',
+    img: '/images/partners/gotbit.png',
+    post: 'https://x.com/BURRRD/status/1747680212861551092',
+  },
 ];
