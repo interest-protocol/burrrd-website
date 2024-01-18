@@ -8,6 +8,7 @@ import Advisor from './advisor';
 import Collaborators from './collaborations';
 import DisclaimerSection from './disclaimer';
 import HeroSection from './hero';
+import LotterySection from './lottery';
 import Partners from './partners';
 import RoadmapSection from './roadmap';
 import TokenomicsSection from './tokenomics';
@@ -20,6 +21,7 @@ const Home: FC = () => (
       <TokenomicsSection />
       <RoadmapSection />
       <DisclaimerSection />
+      <LotterySection />
       <Advisor />
       <Partners />
       <Collaborators />
