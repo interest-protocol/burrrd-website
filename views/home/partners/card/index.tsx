@@ -19,7 +19,7 @@ const Card: FC<CardProps> = ({ name, logo, link }) => (
   >
     <CardHeader name={name} link={link} />
     <Box mt="1.53rem" mx="auto" width="60%" height="60%">
-      <img alt="apes" width="100%" src={logo} />
+      <img alt={name} width="100%" src={logo} />
     </Box>
   </Box>
 );
