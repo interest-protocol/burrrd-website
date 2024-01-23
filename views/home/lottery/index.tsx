@@ -1,7 +1,6 @@
 import { Box, Typography } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 
-import Frame from '@/components/frame';
 import Button from '@/elements/button';
 
 import LeftIllustration from './illustraction/left-side';
@@ -9,7 +8,7 @@ import RightIllustration from './illustraction/right-side';
 
 const LotterySection: FC = () => {
   return (
-    <Box variant="container" mx="auto" id="lottery">
+    <Box variant="container" mx="auto" id="lottery" bg="#1B1622" py="3rem">
       <Box
         gap="1rem"
         width="100%"
@@ -18,12 +17,9 @@ const LotterySection: FC = () => {
         pb={['2rem', '2rem', '2rem', '7rem']}
       >
         <LeftIllustration />
-        <Frame
+        <Box
           zIndex="1"
-          bg="#1B1622"
-          borderRadius="2rem"
           borderColor="white"
-          boxShadow="unset"
           width={['80%', '60%', '70%', '100%']}
           mx="auto"
         >
@@ -76,7 +72,7 @@ const LotterySection: FC = () => {
               </Button>
             </a>
           </Box>
-        </Frame>
+        </Box>
         <RightIllustration />
       </Box>
     </Box>

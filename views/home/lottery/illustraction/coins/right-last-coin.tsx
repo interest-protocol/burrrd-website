@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { SVGProps } from '@/components/svg/svg.types';
 
-const SixCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
+const RightLastCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
   <svg
     style={{ maxWidth, maxHeight }}
     viewBox="0 0 88 113"
@@ -25,4 +25,4 @@ const SixCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
   </svg>
 );
 
-export default SixCoinSVG;
+export default RightLastCoinSVG;

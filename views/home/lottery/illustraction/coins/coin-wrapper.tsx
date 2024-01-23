@@ -2,7 +2,7 @@ import { Motion } from '@interest-protocol/ui-kit';
 import { easeInOut } from 'framer-motion';
 import { FC } from 'react';
 
-import { LotteryCoinWrapperProps } from '../lottery.types';
+import { LotteryCoinWrapperProps } from '../../lottery.types';
 
 export const CoinWrapper: FC<LotteryCoinWrapperProps> = ({
   Icon,

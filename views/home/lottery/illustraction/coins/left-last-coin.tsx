@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { SVGProps } from '@/components/svg/svg.types';
 
-const FourthCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
+const LeftLastCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
   <svg
     style={{ maxWidth, maxHeight }}
     viewBox="0 0 87 68"
@@ -15,7 +15,7 @@ const FourthCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
     />
     <path
       d="M62.7067 15.8289C42.4885 1.95156 18.6012 -3.36937 9.36507 3.94847C0.128968 11.2663 9.02341 28.4677 29.2416 42.3451C49.4598 56.2351 73.3472 61.556 82.596 54.2255C91.8321 46.9077 82.9376 29.7063 62.7193 15.8163L62.7067 15.8289Z"
-      fill="black"
+      fill="white"
       stroke="black"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -39,4 +39,4 @@ const FourthCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
   </svg>
 );
 
-export default FourthCoinSVG;
+export default LeftLastCoinSVG;

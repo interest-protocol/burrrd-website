@@ -2,7 +2,11 @@ import { FC } from 'react';
 
 import { SVGProps } from '@/components/svg/svg.types';
 
-const ThirdCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
+const RightSmallBlackCoin: FC<SVGProps> = ({
+  maxWidth,
+  maxHeight,
+  ...props
+}) => (
   <svg
     style={{ maxWidth, maxHeight }}
     viewBox="0 0 122 123"
@@ -42,4 +46,4 @@ const ThirdCoinSVG: FC<SVGProps> = ({ maxWidth, maxHeight, ...props }) => (
   </svg>
 );
 
-export default ThirdCoinSVG;
+export default RightSmallBlackCoin;
