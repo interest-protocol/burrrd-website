@@ -5,6 +5,7 @@ import Layout from '@/components/layout';
 
 import AboutSection from './about';
 import Advisor from './advisor';
+import AsSeenOn from './as-seen-on';
 import Collaborators from './collaborations';
 import DisclaimerSection from './disclaimer';
 import HeroSection from './hero';
@@ -23,6 +24,7 @@ const Home: FC = () => (
       <Advisor />
       <Partners />
       <Collaborators />
+      <AsSeenOn />
     </Box>
   </Layout>
 );

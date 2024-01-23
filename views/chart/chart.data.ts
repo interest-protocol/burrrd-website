@@ -1,7 +1,6 @@
 export const COINS_IMAGE_MAP: Record<string, string> = {
   '5z3EqYQo9HiCEs3R84RCDMu2n7anpDMxRhdK8PSWmrRC': '/images/coins/ponke.jpeg',
-  '9gwTegFJJErDpWJKjPfLr2g2zrE3nL1v5zpwbtsk3c6P':
-    '/images/coins/used-card.jpeg',
+  '9gwTegFJJErDpWJKjPfLr2g2zrE3nL1v5zpwbtsk3c6P': '/images/coins/used-car.jpeg',
   HhJpBhRRn4g56VsyLuT8DL5Bv31HkXqsrahTTUCZeZg4: '/images/coins/myro.jpeg',
   '7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU': '/images/coins/samo.jpeg',
   H7ed7UgcLp3ax4X1CQ5WuWDn6d1pprfMMYiv5ejwLWWU: '/images/coins/chonky.jpeg',
