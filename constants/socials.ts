@@ -1,7 +1,7 @@
 import {
   CoinGeckoSVG,
   CoinMarketCapSVG,
-  DiscordSVG,
+  // DiscordSVG,
   TelegramSVG,
   XSVG,
 } from '@/svg';
