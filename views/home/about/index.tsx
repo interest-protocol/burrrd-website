@@ -79,7 +79,7 @@ const AboutSection: FC = () => {
                 fontSize="2rem"
                 fontStyle="normal"
                 fontWeight="400"
-                lineHeight="2.5px"
+                lineHeight="0.156rem"
                 variant="medium"
                 textTransform="uppercase"
               >
