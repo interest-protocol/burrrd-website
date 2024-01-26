@@ -13,7 +13,7 @@ const HeroSection: FC = () => {
   return (
     <Box
       variant="container"
-      height="55rem"
+      minHeight="55rem"
       p={[
         '3.375rem 1.25rem',
         '3.375rem 1.25rem',
@@ -25,6 +25,7 @@ const HeroSection: FC = () => {
     >
       <Box
         width="100%"
+        maxWidth="64rem"
         gap={['3rem', '3rem', '3rem', '2.5rem']}
         display="flex"
         gridColumn="1/-1"
@@ -32,7 +33,6 @@ const HeroSection: FC = () => {
         justifyContent="space-around"
         alignItems="center"
         flexDirection={['column', 'column', 'column', 'row']}
-        maxWidth="64rem"
         mx="auto"
         mb={['6rem', '6rem', '6rem', 'unset']}
       >
@@ -92,7 +92,7 @@ const HeroSection: FC = () => {
         <Box
           pt={['0rem', '0rem', '0rem', '2rem']}
           width="100%"
-          minWidth="30rem"
+          minWidth="20rem"
           maxWidth="37.5rem"
           margin={['0 auto', '0 auto', '0 auto', 'unset']}
           height={['23.75rem', '31.25rem', '37.5rem', '31.25rem']}

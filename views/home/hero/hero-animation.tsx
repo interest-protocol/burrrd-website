@@ -49,12 +49,12 @@ const HeroIllustration: FC = () => (
       <GameOver maxHeight="7.625rem" maxWidth="11.3125rem" width="100%" />
     </Motion>
     <Box width="100%" position="absolute">
-      <MiniMoon maxHeight="38.0625rem" maxWidth="38.0625rem" width="100%" />
+      <MiniMoon maxHeight="30rem" maxWidth="30rem" width="100%" />
     </Box>
     <Motion
-      width="7rem"
-      height="8rem"
-      mt="32rem"
+      width="5rem"
+      height="6rem"
+      mt="26rem"
       zIndex="2"
       position="absolute"
       initial={{ opacity: 0 }}
