@@ -45,7 +45,7 @@ const LotterySection: FC = () => (
             win incredibel prices in the burrrd Lottery
           </Typography>
           {/*eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
-          <a href="#" target="_blank">
+          <a href="#" target="_blank" onClick={(e) => e.preventDefault()}>
             <Button
               bg="#FFF"
               mt="3rem"
@@ -66,6 +66,7 @@ const LotterySection: FC = () => (
               ]}
               textTransform="uppercase"
               mx="auto"
+              cursor="not-allowed"
             >
               COMING SOON
             </Button>
