@@ -55,11 +55,11 @@ const HeroSection: FC = () => {
               color="#000"
               textAlign="center"
               fontFamily="Roboto"
-              fontSize="14px"
+              fontSize="0.875rem"
               fontStyle="normal"
               fontWeight="500"
-              lineHeight="20px"
-              letterSpacing="0.1px"
+              lineHeight="1.25rem"
+              letterSpacing="0.006rem"
             >
               Built on solana
             </Typography>
@@ -79,7 +79,7 @@ const HeroSection: FC = () => {
               width="8.75rem"
               py="1rem"
               px="1.2rem"
-              fontSize="14px"
+              fontSize="0.875rem"
               border="3px solid #000"
               borderRadius="0.8rem"
               boxShadow="4px 4px 0px 0px #000"
