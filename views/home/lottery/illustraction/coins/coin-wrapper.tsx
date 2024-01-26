@@ -9,8 +9,8 @@ export const CoinWrapper: FC<LotteryCoinWrapperProps> = ({
   size,
   ...props
 }) => {
-  const translateY = -7;
-  const delay = 0.5;
+  const translateY = Math.random() * 15 - 20;
+  const delay = Math.random() * (1.5 - 0.3) + 0.3;
 
   return (
     <Motion

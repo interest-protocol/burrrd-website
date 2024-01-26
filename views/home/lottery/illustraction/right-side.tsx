@@ -38,7 +38,6 @@ const RightIllustration: FC = () => {
         top="45%"
       />
       <CoinWrapper Icon={RightBigBlackCoin} size="45%" right="20%" top="70%" />
-      <CoinWrapper Icon={SquareYellowSVG} size="8%" left="45%" top="80%" />
       <CoinWrapper Icon={SquareRedSVG} size="8%" right="35%" top="92%" />
       <CoinWrapper
         Icon={RightLastCoinSVG}
