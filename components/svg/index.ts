@@ -35,6 +35,8 @@ export { default as ScenarioSVG } from './scenario';
 export { default as SkoolNFTSVG } from './skool-nft';
 export { default as SmokerBurrrdSVG } from './smoker-burrrd';
 export { default as SolanaLogo } from './solana-logo';
+export { default as SquareRedSVG } from './square-red';
+export { default as SquareYellowSVG } from './square-yellow';
 export { default as StabLineSVG } from './stab-line';
 export { default as StabbedPepeSVG } from './stabbed-pepe';
 export { default as StarSVG } from './star';
