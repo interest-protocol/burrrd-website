@@ -24,7 +24,7 @@ const Title: FC = () => (
   >
     <CardHeader name="As seen on" bg="#FF7E61" isTitle />
     <Box mx="auto" width="70%" height="70%" mt="1.53rem" display="flex">
-      <img width="100%" alt="As seen on" src="/images/as-seen-on/burrrd.png" />
+      <img width="100%" alt="As seen on" src="/images/as-seen-on/burrrd.webp" />
     </Box>
   </Box>
 );
