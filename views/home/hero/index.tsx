@@ -13,6 +13,7 @@ const HeroSection: FC = () => {
   return (
     <Box
       variant="container"
+      minHeight="55rem"
       p={[
         '3.375rem 1.25rem',
         '3.375rem 1.25rem',
@@ -24,6 +25,7 @@ const HeroSection: FC = () => {
     >
       <Box
         width="100%"
+        maxWidth="64rem"
         gap={['3rem', '3rem', '3rem', '2.5rem']}
         display="flex"
         gridColumn="1/-1"
@@ -31,7 +33,6 @@ const HeroSection: FC = () => {
         justifyContent="space-around"
         alignItems="center"
         flexDirection={['column', 'column', 'column', 'row']}
-        maxWidth="64rem"
         mx="auto"
         mb={['6rem', '6rem', '6rem', 'unset']}
       >
@@ -39,19 +40,29 @@ const HeroSection: FC = () => {
           <Button
             border="3px solid #000"
             borderRadius="9999rem"
-            boxShadow="4px 4px 0px 0px #000"
             backgroundColor="#FFF"
             fontSize={['0.5rem', '1rem']}
             fontWeight="500"
             mb="2.5rem"
-            p="1rem"
-            width={['11rem', '15rem']}
+            width={['11rem', '11.5rem']}
             lineHeight="1.25rem"
             letterSpacing="0.8px"
             gap="0.5rem"
           >
-            Built on solana
-            <SolanaLogo maxHeight="1.5rem" maxWidth="1.5rem" />
+            <SolanaLogo maxHeight="2rem" maxWidth="2rem" />
+            <Typography
+              variant="small"
+              color="#000"
+              textAlign="center"
+              fontFamily="Roboto"
+              fontSize="0.875rem"
+              fontStyle="normal"
+              fontWeight="500"
+              lineHeight="1.25rem"
+              letterSpacing="0.006rem"
+            >
+              Built on solana
+            </Typography>
           </Button>
           <Typography
             as="h2"
@@ -65,22 +76,23 @@ const HeroSection: FC = () => {
           </Typography>
           <Link href="/buy">
             <Button
-              py="1.5rem"
-              px="2.5rem"
-              fontWeight="700"
+              width="8.75rem"
+              py="1rem"
+              px="1.2rem"
+              fontSize="0.875rem"
               border="3px solid #000"
-              borderRadius="1.25rem"
+              borderRadius="0.8rem"
               boxShadow="4px 4px 0px 0px #000"
-              backgroundColor={theme.theme.colors.septenary}
+              backgroundColor="#FFD766"
             >
-              BUY NOW
+              BUY BURRRD
             </Button>
           </Link>
         </Box>
         <Box
           pt={['0rem', '0rem', '0rem', '2rem']}
           width="100%"
-          minWidth="18.75rem"
+          minWidth="20rem"
           maxWidth="37.5rem"
           margin={['0 auto', '0 auto', '0 auto', 'unset']}
           height={['23.75rem', '31.25rem', '37.5rem', '31.25rem']}
