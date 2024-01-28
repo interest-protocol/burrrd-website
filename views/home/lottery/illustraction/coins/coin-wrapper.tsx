@@ -9,6 +9,7 @@ export const CoinWrapper: FC<LotteryCoinWrapperProps> = ({
   size,
   ...props
 }) => {
+  const duration = Math.random() + 1;
   const translateY = Math.random() * 15 - 20;
   const delay = Math.random() * (1.5 - 0.3) + 0.3;
 
@@ -21,7 +22,7 @@ export const CoinWrapper: FC<LotteryCoinWrapperProps> = ({
       }}
       transition={{
         delay,
-        duration: 0.7,
+        duration,
         ease: easeInOut,
         repeat: Infinity,
         repeatType: 'reverse',
