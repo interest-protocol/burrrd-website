@@ -1,8 +1,8 @@
 import { Box, Button } from '@interest-protocol/ui-kit';
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useCallback, useEffect, useRef, useState } from 'react';
 import { v4 } from 'uuid';
 
-import useScreenSizeListener from '@/hooks/use-screen-size-listener';
+import useEventListener from '@/hooks/use-event-listener';
 import { CircleArrowLeftSVG, CircleArrowRightSVG } from '@/svg';
 
 import { AMBASSORS } from './ambassors.data';
@@ -11,8 +11,16 @@ import TitleCard from './card/title-card';
 
 const Ambassors: FC = () => {
   const [cardWidth, setCardWith] = useState<number>(26);
+  const [screenWidth, setScreenWidth] = useState<number>(0);
   const boxRef = useRef<HTMLDivElement>(null);
-  const { width } = useScreenSizeListener();
+
+  const handelResizeScreen = useCallback(() => {
+    const screenWidth = window.innerWidth;
+
+    setScreenWidth(screenWidth);
+  }, []);
+
+  useEventListener('resize', handelResizeScreen, true);
 
   useEffect(() => {
     const extraSmallScreenWidth = 400;
@@ -21,21 +29,21 @@ const Ambassors: FC = () => {
 
     let newCardWidth = 0;
 
-    if (width < extraSmallScreenWidth) {
+    if (screenWidth < extraSmallScreenWidth) {
       newCardWidth = 22 * 16;
-    } else if (width < smallScreenWidth) {
-      newCardWidth = 21 * 16;
-    } else if (width <= mediumScreenWidth) {
-      newCardWidth = 24 * 16;
-    } else {
+    } else if (screenWidth < smallScreenWidth) {
+      newCardWidth = 27 * 16;
+    } else if (screenWidth <= mediumScreenWidth) {
       newCardWidth = 26 * 16;
+    } else {
+      newCardWidth = 28 * 16;
     }
 
     setCardWith(newCardWidth);
-  }, [width]);
+  }, [screenWidth]);
 
   const handleScroll = (direction: 'left' | 'right') => {
-    console.log(cardWidth);
+    console.log(screenWidth);
     const box = boxRef.current;
 
     if (box !== null) {
