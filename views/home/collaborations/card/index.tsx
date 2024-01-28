@@ -8,15 +8,15 @@ const Card: FC<CardProps> = ({ name, img, link }) => (
   <Box
     p="1.5rem"
     bg="#fff"
-    maxWidth="26rem"
+    maxWidth="90%"
     border="2px solid"
-    borderColor="#000"
     borderRadius="1rem"
-    minWidth="19.125rem"
     transform="scale(1)"
+    borderColor="#000"
     boxShadow="12px 12px 0px 0px #000"
     nHover={{ transform: 'scale(1.02)' }}
     transition="transform 300ms ease-in-out"
+    minWidth={['19rem', '25rem', '30rem', '30rem', '19.125rem']}
   >
     <CardHeader name={name} link={link} />
     <Box
@@ -24,9 +24,9 @@ const Card: FC<CardProps> = ({ name, img, link }) => (
       mt="1.53rem"
       width="11.25rem"
       overflow="hidden"
-      border="2px solid #000"
       height="11.25rem"
       borderRadius="50%"
+      border="2px solid #000"
     >
       <img alt={name} width="100%" src={img} />
     </Box>

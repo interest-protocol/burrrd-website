@@ -10,12 +10,13 @@ const Collaborators: FC = () => (
   <Box
     py="5rem"
     display="flex"
+    alignItems="center"
     flexDirection="column"
     justifyContent="center"
-    alignItems="center"
   >
     <Title />
     <Box
+      width="100%"
       display="flex"
       flexWrap="wrap"
       justifyContent="center"
@@ -24,7 +25,12 @@ const Collaborators: FC = () => (
       flexDirection={['column', 'column', 'column', 'column', 'row']}
     >
       {COLLABORATORS.map((colaborator) => (
-        <Box key={v4()} display="flex">
+        <Box
+          key={v4()}
+          display="flex"
+          justifyContent="center"
+          width={['100%', '100%', 'auto', 'auto', 'auto']}
+        >
           <Card {...colaborator} />
         </Box>
       ))}
