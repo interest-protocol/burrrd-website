@@ -93,6 +93,7 @@ const TokenomicsSection: FC = () => {
               initial={isMobile ? { x: '50%' } : { x: '90%' }}
               whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
               top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-13.25rem']}
+              pl={['NONE', 'NONE', 'NONE', '7rem']}
               transition={{
                 type: 'spring',
                 stiffness: 300,
@@ -365,7 +366,7 @@ const TokenomicsSection: FC = () => {
                         '4px 4px 0px #000',
                       ]}
                     >
-                      locked liquidity
+                      Rugcheck
                       <Box
                         as="span"
                         display="inline-block"
@@ -382,15 +383,13 @@ const TokenomicsSection: FC = () => {
                     </Typography>
                     <Box
                       p="1rem"
-                      bg="#FFC701"
-                      color="black"
                       borderRadius="50%"
                       position="absolute"
-                      transform="rotate(-40deg)"
-                      maxWidth={['4rem', '5rem', '5rem', '7rem']}
-                      maxHeight={['6rem', '5rem', '5rem', '7rem']}
-                      left={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
-                      bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
+                      transform="rotate(-5deg)"
+                      maxWidth={['4rem', '5rem', '5rem', '10rem']}
+                      maxHeight={['6rem', '5rem', '5rem', '10rem']}
+                      left={['-1.5rem', '-2rem', '-2rem', '-4.5rem']}
+                      bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-5.6985rem']}
                     >
                       <DexScreenerSVG
                         width="100%"
