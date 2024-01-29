@@ -6,13 +6,13 @@ export const COLLABORATORS = [
     post: 'https://twitter.com/cetsfk/status/1740417421360365913',
   },
   {
-    name: 'Namaste',
+    name: 'Sensei Gifts',
     link: 'https://twitter.com/SenseiGifts',
     img: '/images/collabs/namaste.jpeg',
     post: 'https://twitter.com/SenseiGifts/status/1740090942898811246',
   },
   {
-    name: 'Monkey Baby Business',
+    name: 'MBB',
     link: 'https://twitter.com/MonkeyBabyBiz',
     img: '/images/collabs/monkey-baby-businezz.png',
     post: 'https://twitter.com/BURRRD/status/1742626159248990479',
