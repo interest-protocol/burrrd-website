@@ -27,7 +27,7 @@ const CardHeader: FC<CardHeaderProps> = ({ name, link, bg, isTitle }) => (
         <Typography
           my="unset"
           fontWeight="400"
-          fontSize="1.5rem"
+          fontSize="2rem"
           fontFamily="Roboto"
           variant="displayLarge"
           color={bg ? 'white' : 'unset'}

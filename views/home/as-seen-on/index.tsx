@@ -10,9 +10,10 @@ const AsSeenOn: FC = () => (
   <Box p="2rem" width="fit-content" mx="auto">
     <Box
       gap="2rem"
-      display="grid"
+      display={['grid', 'grid', 'grid', 'flex']}
       justifyContent="center"
-      gridTemplateColumns={['1fr', '1fr', '1fr', '1fr 1fr 1fr']}
+      gridTemplateColumns={['1fr', '1fr', '1fr', '26rem 26rem 26rem']}
+      flexWrap="wrap"
     >
       <Title />
       {AS_SEEN_ON_LIST.map(({ name, img, link, bg }) => (
