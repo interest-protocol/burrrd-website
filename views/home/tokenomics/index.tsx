@@ -323,7 +323,7 @@ const TokenomicsSection: FC = () => {
                 cursor="pointer"
                 onClick={() => {
                   if (window) {
-                    track('Rugcheck');
+                    track('Dex Screener');
                     window.open(
                       'https://dexscreener.com/solana/cr7z6x8zuv3xlmulj5bmnhnrb7focg88mknl6bcxknw1',
                       '_blank',
