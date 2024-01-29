@@ -7,6 +7,7 @@ import Frame from '@/components/frame';
 import useEventListener from '@/hooks/use-event-listener';
 import {
   ArrowTopRightSVG,
+  DexScreenerSVG,
   FireLeftSVG,
   FireRightSVG,
   SmokerBurrrdSVG,
@@ -310,6 +311,88 @@ const TokenomicsSection: FC = () => {
                       bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
                     >
                       <FireLeftSVG
+                        width="100%"
+                        maxWidth="inherit"
+                        maxHeight="inherit"
+                      />
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
+              <Box
+                cursor="pointer"
+                onClick={() => {
+                  if (window) {
+                    track('Rugcheck');
+                    window.open(
+                      'https://dexscreener.com/solana/cr7z6x8zuv3xlmulj5bmnhnrb7focg88mknl6bcxknw1',
+                      '_blank',
+                      'noopener,noreferrer'
+                    );
+                  }
+                }}
+              >
+                <Box
+                  mb="6rem"
+                  px="auto"
+                  width="100%"
+                  display="flex"
+                  maxWidth="82.5rem"
+                  justifyContent="center"
+                >
+                  <Box
+                    pl="3rem"
+                    bg="white"
+                    display="flex"
+                    color="#FFC701"
+                    alignItems="center"
+                    position="relative"
+                    pr={['1.5rem', '3rem']}
+                    py={['1rem', '1.5rem']}
+                    justifyContent="center"
+                    borderRadius={['1rem', '2rem']}
+                  >
+                    <Typography
+                      margin="0"
+                      variant="title1"
+                      letterSpacing="0.6rem"
+                      textTransform="uppercase"
+                      fontSize={['1.5rem', '3rem', '3rem', '5.25rem']}
+                      textShadow={[
+                        '2px 2px 0px #000',
+                        '3px 3px 0px #000',
+                        '3px 3px 0px #000',
+                        '4px 4px 0px #000',
+                      ]}
+                    >
+                      locked liquidity
+                      <Box
+                        as="span"
+                        display="inline-block"
+                        ml={['0.5rem', '2rem', '2rem', '3rem']}
+                        maxWidth={['1.2rem', '2rem', '2rem', '3.5rem']}
+                        maxHeight={['1.2rem', '2rem', '2rem', '3.5rem']}
+                      >
+                        <ArrowTopRightSVG
+                          width="100%"
+                          maxWidth="inherit"
+                          maxHeight="inherit"
+                        />
+                      </Box>
+                    </Typography>
+                    <Box
+                      p="1rem"
+                      bg="#FFC701"
+                      color="black"
+                      borderRadius="50%"
+                      position="absolute"
+                      transform="rotate(-40deg)"
+                      maxWidth={['4rem', '5rem', '5rem', '7rem']}
+                      maxHeight={['6rem', '5rem', '5rem', '7rem']}
+                      left={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
+                      bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
+                    >
+                      <DexScreenerSVG
                         width="100%"
                         maxWidth="inherit"
                         maxHeight="inherit"
