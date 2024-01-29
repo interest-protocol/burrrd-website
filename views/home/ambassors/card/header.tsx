@@ -11,7 +11,6 @@ const CardHeader: FC<CardHeaderProps> = ({ name, link }) => (
       my="unset"
       fontWeight="400"
       fontSize="1.5rem"
-      fontStyle="normal"
       fontFamily="Roboto"
       variant="displayLarge"
     >

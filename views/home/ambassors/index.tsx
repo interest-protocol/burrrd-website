@@ -1,62 +1,49 @@
-import { Box, Button } from '@interest-protocol/ui-kit';
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { Box } from '@interest-protocol/ui-kit';
+import { FC, useRef } from 'react';
+import Slider from 'react-slick';
 import { v4 } from 'uuid';
-
-import useEventListener from '@/hooks/use-event-listener';
-import { CircleArrowLeftSVG, CircleArrowRightSVG } from '@/svg';
 
 import { AMBASSORS } from './ambassors.data';
 import Card from './card';
 import TitleCard from './card/title-card';
+import Controllers from './controllers';
 
 const Ambassors: FC = () => {
-  const [cardWidth, setCardWith] = useState<number>(26);
-  const [screenWidth, setScreenWidth] = useState<number>(0);
-  const boxRef = useRef<HTMLDivElement>(null);
+  const sliderRef = useRef<Slider>(null);
 
-  const handelResizeScreen = useCallback(() => {
-    const screenWidth = window.innerWidth;
+  const sliderResponsiviness = [
+    {
+      breakpoint: 1100,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      },
+    },
+    {
+      breakpoint: 970,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ];
 
-    setScreenWidth(screenWidth);
-  }, []);
-
-  useEventListener('resize', handelResizeScreen, true);
-
-  useEffect(() => {
-    const extraSmallScreenWidth = 400;
-    const smallScreenWidth = 600;
-    const mediumScreenWidth = 998;
-
-    let newCardWidth = 0;
-
-    if (screenWidth < extraSmallScreenWidth) {
-      newCardWidth = 22 * 16;
-    } else if (screenWidth < smallScreenWidth) {
-      newCardWidth = 27 * 16;
-    } else if (screenWidth <= mediumScreenWidth) {
-      newCardWidth = 26 * 16;
-    } else {
-      newCardWidth = 28 * 16;
+  const handlePrevious = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
     }
+  };
 
-    setCardWith(newCardWidth);
-  }, [screenWidth]);
-
-  const handleScroll = (direction: 'left' | 'right') => {
-    console.log(screenWidth);
-    const box = boxRef.current;
-
-    if (box !== null) {
-      const currentScroll = box.scrollLeft;
-      const newScroll =
-        direction === 'left'
-          ? currentScroll - cardWidth
-          : currentScroll + cardWidth;
-
-      box.scrollTo({
-        left: newScroll,
-        behavior: 'smooth',
-      });
+  const handleNext = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
     }
   };
 
@@ -64,58 +51,40 @@ const Ambassors: FC = () => {
     <Box
       py="5rem"
       display="flex"
+      alignItems="center"
       flexDirection="column"
       justifyContent="center"
-      alignItems="center"
     >
-      <Box width="100%" p="6rem 1.5rem" justifyContent="center">
-        <Box
-          py="2rem"
-          px={['0', '0.5rem', '1rem']}
+      <Box
+        width="100%"
+        p="6rem 2rem"
+        overflow="hidden"
+        maxWidth="82.5rem"
+        justifyContent="center"
+      >
+        <Slider
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           //@ts-ignore
-          ref={boxRef}
-          display="flex"
-          transition="0.3s"
-          overflowX="scroll"
-          flexDirection="row"
-          gap={['2rem', '2rem', '4rem', '2rem']}
+          autoplay
+          dots={false}
+          speed={1500}
+          arrows={false}
+          ref={sliderRef}
+          slidesToShow={3}
+          infinite={false}
+          slidesToScroll={2}
+          responsive={sliderResponsiviness}
         >
-          <TitleCard />
+          <Box px="1rem" py="1rem">
+            <TitleCard />
+          </Box>
           {AMBASSORS.map((ambassor) => (
-            <Box key={v4()} display="flex">
+            <Box key={v4()} py="1rem" px="1rem">
               <Card {...ambassor} />
             </Box>
           ))}
-        </Box>
-        <Box display="flex" gap="0.625rem" justifyContent="flex-end">
-          <Button
-            p="0"
-            bg="none"
-            border="none"
-            variant="tonal"
-            onClick={() => handleScroll('left')}
-          >
-            <CircleArrowLeftSVG
-              width="100%"
-              maxWidth="2.5rem"
-              maxHeight="2.5rem"
-            />
-          </Button>
-          <Button
-            p="0"
-            bg="none"
-            border="none"
-            variant="tonal"
-            onClick={() => handleScroll('right')}
-          >
-            <CircleArrowRightSVG
-              width="100%"
-              maxWidth="2.5rem"
-              maxHeight="2.5rem"
-            />
-          </Button>
-        </Box>
+        </Slider>
+        <Controllers handleNext={handleNext} handlePrevious={handlePrevious} />
       </Box>
     </Box>
   );

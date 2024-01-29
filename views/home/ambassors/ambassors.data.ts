@@ -18,7 +18,7 @@ export const AMBASSORS = [
     post: 'https://twitter.com/BURRRD/status/1742626159248990479',
   },
   {
-    name: 'Tombstones',
+    name: 'Tombstoned',
     link: 'https://www.tombstoned.app/',
     img: '/images/collabs/tombstones.jpeg',
   },

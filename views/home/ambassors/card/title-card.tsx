@@ -15,24 +15,23 @@ const TitleCard: FC = () => (
     transform="scale(1)"
     flexDirection="column"
     minHeight="19.8125rem"
-    justifyContent="center"
     boxShadow="12px 12px 0px 0px #000"
     nHover={{ transform: 'scale(1.02)' }}
-    minWidth={['20rem', '26rem', '26rem']}
     transition="transform 300ms ease-in-out"
   >
-    <Box display="flex" mb="1.5rem">
+    <Box mb="1.5rem" display="flex">
       <Typography
         my="unset"
+        color="white"
         fontWeight="700"
-        fontSize={['2.8rem', '3.5625rem']}
-        fontStyle="normal"
         lineHeight="4rem"
         fontFamily="Asap"
+        fontStyle="normal"
         variant="displayLarge"
-        color="white"
+        letterSpacing="-0.01563rem"
+        fontSize={['2rem', '1.8rem', '2rem', '2rem', '2.2rem']}
       >
-        AMBASSORS
+        AMBASSADORS
       </Typography>
     </Box>
     <LoudSpeakerSVG maxWidth="10.25rem" maxHeight="10.8125rem" width="100%" />
