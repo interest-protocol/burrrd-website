@@ -26,8 +26,6 @@ const Home: FC = () => (
       <Box bg="linear-gradient(180deg, #9047AC 8.06%, #DB77F8 100%)" py="1rem">
         <DisclaimerSection />
       </Box>
-      <RoadmapSection />
-      <DisclaimerSection />
       <LotterySection />
       <Advisor />
       <Partners />
