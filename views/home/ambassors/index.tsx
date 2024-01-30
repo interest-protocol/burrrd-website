@@ -1,5 +1,5 @@
 import { Box } from '@interest-protocol/ui-kit';
-import { FC, useRef, useState } from 'react';
+import { FC, useRef } from 'react';
 import Slider from 'react-slick';
 import { v4 } from 'uuid';
 
@@ -10,7 +10,6 @@ import Controllers from './controllers';
 
 const Ambassors: FC = () => {
   const sliderRef = useRef<Slider>(null);
-  const [isUserInteracting, setUserInteracting] = useState(false);
 
   const handlePrevious = () => {
     if (sliderRef.current) {
@@ -22,10 +21,6 @@ const Ambassors: FC = () => {
     if (sliderRef.current) {
       sliderRef.current.slickNext();
     }
-  };
-
-  const handleAfterChange = () => {
-    setUserInteracting(false);
   };
 
   return (
@@ -46,17 +41,16 @@ const Ambassors: FC = () => {
         <Slider
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           //@ts-ignore
-          autoplay={!isUserInteracting}
-          dots={false}
-          speed={1000}
-          arrows={false}
           ref={sliderRef}
-          infinite={true}
+          autoplay
+          infinite
+          speed={900}
+          dots={false}
+          swipeToSlide
+          arrows={false}
           slidesToShow={3}
           initialSlide={0}
-          slidesToScroll={2}
           responsive={sliderResponsiviness}
-          afterChange={handleAfterChange}
         >
           <Box px="1rem" py="1rem">
             <TitleCard />
