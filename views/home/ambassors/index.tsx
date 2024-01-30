@@ -42,12 +42,10 @@ const Ambassors: FC = () => {
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           //@ts-ignore
           ref={sliderRef}
-          autoplay
-          infinite
-          speed={900}
+          speed={800}
           dots={false}
-          swipeToSlide
           arrows={false}
+          infinite={false}
           slidesToShow={3}
           initialSlide={0}
           responsive={sliderResponsiviness}
