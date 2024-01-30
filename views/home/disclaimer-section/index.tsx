@@ -4,22 +4,20 @@ import { FC } from 'react';
 import DisclaimerBox from './disclaimer-box';
 import Illustration from './illustration';
 
-const DisclaimerSection: FC = () => {
-  return (
-    <Box pb="8rem" px="3.75rem">
-      <Box
-        mx="auto"
-        py="5.75rem"
-        maxWidth="1024px"
-        flexDirection="column"
-        gridTemplateColumns="55% 45%"
-        display={['flex', 'flex', 'flex', 'flex', 'grid']}
-      >
-        <DisclaimerBox />
-        <Illustration />
-      </Box>
+const DisclaimerSection: FC = () => (
+  <Box pb="8rem" px="3.75rem">
+    <Box
+      mx="auto"
+      py="5.75rem"
+      maxWidth="1024px"
+      flexDirection="column"
+      gridTemplateColumns="55% 45%"
+      display={['flex', 'flex', 'flex', 'flex', 'grid']}
+    >
+      <DisclaimerBox />
+      <Illustration />
     </Box>
-  );
-};
+  </Box>
+);
 
 export default DisclaimerSection;
