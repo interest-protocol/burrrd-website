@@ -1,4 +1,5 @@
 import { Box, Typography } from '@interest-protocol/ui-kit';
+import Link from 'next/link';
 import { FC } from 'react';
 
 import { useTheme } from '@/context/theme-context';
@@ -36,21 +37,21 @@ const HeroSection: FC = () => {
       >
         <Box>
           <Button
-            borderTop="3px solid #000"
-            borderLeft="3px solid #000"
-            borderRight="8px solid #000"
-            borderBottom="8px solid #000"
+            border="3px solid #000"
             borderRadius="9999rem"
+            boxShadow="4px 4px 0px 0px #000"
             backgroundColor="#FFF"
             fontSize={['0.5rem', '1rem']}
-            fontWeight="300"
-            mb="3rem"
-            py="1rem"
-            px="0.5rem"
-            whiteSpace="nowrap"
+            fontWeight="500"
+            mb="2.5rem"
+            p="1rem"
             width={['11rem', '15rem']}
+            lineHeight="1.25rem"
+            letterSpacing="0.8px"
+            gap="0.5rem"
           >
-            Built on solana <SolanaLogo maxHeight="1.5rem" maxWidth="1.5rem" />
+            Built on solana
+            <SolanaLogo maxHeight="1.5rem" maxWidth="1.5rem" />
           </Button>
           <Typography
             as="h2"
@@ -62,18 +63,19 @@ const HeroSection: FC = () => {
           >
             The cutest but most savage meme coin. The sh&iexcl;tcoin slayer.
           </Typography>
-          <Button
-            py="1.5rem"
-            px="2.5rem"
-            borderTop="3px solid #000"
-            borderLeft="3px solid #000"
-            borderRight="8px solid #000"
-            borderBottom="8px solid #000"
-            borderRadius="1rem"
-            backgroundColor={theme.theme.colors.septenary}
-          >
-            Buy now
-          </Button>
+          <Link href="/buy">
+            <Button
+              py="1.5rem"
+              px="2.5rem"
+              fontWeight="700"
+              border="3px solid #000"
+              borderRadius="1.25rem"
+              boxShadow="4px 4px 0px 0px #000"
+              backgroundColor={theme.theme.colors.septenary}
+            >
+              BUY NOW
+            </Button>
+          </Link>
         </Box>
         <Box
           pt={['0rem', '0rem', '0rem', '2rem']}

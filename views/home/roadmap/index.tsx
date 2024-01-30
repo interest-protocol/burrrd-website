@@ -12,6 +12,7 @@ const RoadmapSection: FC = () => (
     mx="auto"
     pb="5rem"
     mt="20rem"
+    id="roadmap"
     position="relative"
     px={['1rem', '1rem', '1rem', '5rem']}
     width={['20rem', '33rem', '45rem', '60rem', '80rem']}

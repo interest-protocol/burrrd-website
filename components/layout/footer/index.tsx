@@ -1,4 +1,5 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
+import { track } from '@vercel/analytics';
 import { FC, useCallback, useState } from 'react';
 import { v4 } from 'uuid';
 
@@ -6,9 +7,11 @@ import Frame from '@/components/frame';
 import { SOCIALS } from '@/constants';
 import useEventListener from '@/hooks/use-event-listener';
 import { BurrrdSVG, ConverstionBalloonSVG } from '@/svg';
-import HowToBuySection from '@/views/home/how-to-buy-section';
+import HowToBuySection from '@/views/home/how-to-buy';
 
-const Footer: FC = () => {
+import { LayoutProps } from '../layout.types';
+
+const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
@@ -22,7 +25,7 @@ const Footer: FC = () => {
       width="100%"
       background="linear-gradient(180deg, #DC77F7 19.58%, #7B2FC4 149.72%)"
     >
-      <HowToBuySection />
+      {!withoutRoadmap && <HowToBuySection />}
       <Box
         mx="auto"
         pt="6rem"
@@ -190,7 +193,15 @@ const Footer: FC = () => {
                   initial={{ y: 0 }}
                   whileHover={{ y: -10 }}
                 >
-                  <a href={url} target="_blank" rel="noreferrer">
+                  <Box
+                    cursor="pointer"
+                    onClick={() => {
+                      if (window) {
+                        track(name);
+                        window.open(url, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                  >
                     <Frame
                       bg="white"
                       display="flex"
@@ -215,24 +226,9 @@ const Footer: FC = () => {
                       ]}
                       border="4px solid"
                     >
-                      <Icon maxHeight="2rem" maxWidth="2rem" width="100%" />
-                      <Typography
-                        m="0"
-                        variant="medium"
-                        fontFamily="Roboto Mono"
-                        textDecoration="underline"
-                        fontSize={[
-                          '.75rem',
-                          '.75rem',
-                          '.75rem',
-                          '.75rem',
-                          '1rem',
-                        ]}
-                      >
-                        {name}
-                      </Typography>
+                      <Icon maxHeight="2.5rem" maxWidth="2.5rem" width="100%" />
                     </Frame>
-                  </a>
+                  </Box>
                 </Motion>
               ))}
             </Box>
