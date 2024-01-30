@@ -15,4 +15,8 @@ export const MENU_ITEMS = [
     title: 'Chart',
     url: '/chart',
   },
+  {
+    title: 'Lottery',
+    url: '/#lottery',
+  },
 ];
