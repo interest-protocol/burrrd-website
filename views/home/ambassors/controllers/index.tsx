@@ -3,10 +3,7 @@ import { FC } from 'react';
 
 import { CircleArrowLeftSVG, CircleArrowRightSVG } from '@/svg';
 
-interface ControllersProps {
-  handlePrevious: () => void;
-  handleNext: () => void;
-}
+import { ControllersProps } from './controllers.types';
 
 const Controllers: FC<ControllersProps> = ({ handleNext, handlePrevious }) => (
   <Box display="flex" pt="1rem" gap="0.625rem" justifyContent="flex-end">
