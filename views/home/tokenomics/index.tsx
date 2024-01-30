@@ -74,11 +74,11 @@ const TokenomicsSection: FC = () => {
             <Motion
               zIndex="1"
               position="absolute"
-              top={['1rem', '1rem', '1rem', '-13rem']}
+              top={['1rem', '1rem', '1rem', '-11.8rem']}
               right={['0rem', '0rem', '0rem', 'unset']}
-              left={['unset', 'unset', 'unset', '-2.5625rem']}
+              left={['unset', 'unset', 'unset', '2.5625rem']}
               maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
-              width={['9.375rem', '9.375rem', '9.375rem', '23.563rem']}
+              width={['9.375rem', '9.375rem', '9.375rem', '20.563rem']}
             >
               <SmokerBurrrdSVG
                 maxHeight="50rem"
@@ -92,8 +92,8 @@ const TokenomicsSection: FC = () => {
               left={['50%', '50%', '50%', '55%']}
               initial={isMobile ? { x: '50%' } : { x: '90%' }}
               whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
-              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-13.25rem']}
-              pl={['NONE', 'NONE', 'NONE', '7rem']}
+              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-10rem']}
+              pl={['NONE', 'NONE', 'NONE', '18rem']}
               transition={{
                 type: 'spring',
                 stiffness: 300,
@@ -106,7 +106,7 @@ const TokenomicsSection: FC = () => {
                 color="white"
                 variant="displayLarge"
                 textTransform="uppercase"
-                fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
+                fontSize={['3.125rem', '3.125rem', '3.125rem', '3.8rem']}
               >
                 Tokenomics
               </Typography>
