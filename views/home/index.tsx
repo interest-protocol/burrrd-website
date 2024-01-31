@@ -18,20 +18,22 @@ const Home: FC = () => (
   <Layout>
     <HeroSection />
     <AboutSection />
-    <Box bg="linear-gradient(180deg, #000000 8.06%,#2A123B 100%)">
+    <Box bg="linear-gradient(180deg,#000000 8.06%,#2A123B 100%)" py="1rem">
       <TokenomicsSection />
     </Box>
-    <Box bg="linear-gradient(180deg, #2A123B 8.06%, #9047AC 100%)" py="1rem">
+    <Box bg="linear-gradient(180deg,#2A123B 8.06%, #9047AC 100%)" py="1rem">
       <RoadmapSection />
     </Box>
-    <Box bg="linear-gradient(180deg, #9047AC 8.06%, #DB77F8 100%)" py="1rem">
+    <Box bg="linear-gradient(180deg,#9047AC 8.06%, #DB77F8 100%)" py="1rem">
       <DisclaimerSection />
     </Box>
     <LotterySection />
-    <Advisor />
-    <Partners />
-    <Collaborators />
-    <AsSeenOn />
+    <Box bg="linear-gradient(180deg, #DB77F8 8.06%,#9147B8 )" py="1rem">
+      <Advisor />
+      <Partners />
+      <Collaborators />
+      <AsSeenOn />
+    </Box>
   </Layout>
 );
 
