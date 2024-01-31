@@ -75,7 +75,6 @@ const TokenomicsSection: FC = () => {
               zIndex="1"
               position="absolute"
               top={['1rem', '1rem', '1rem', '-11.8rem']}
-              right={['0rem', '0rem', '0rem', 'unset']}
               left={['unset', 'unset', 'unset', '2.5625rem']}
               maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
               width={['9.375rem', '9.375rem', '9.375rem', '20.563rem']}
@@ -87,13 +86,16 @@ const TokenomicsSection: FC = () => {
               />
             </Motion>
             <Motion
+              display="flex"
+              justifyContent="flex-end"
+              alignItems="flex-end"
               position="absolute"
               viewport={{ once: true }}
-              left={['50%', '50%', '50%', '55%']}
+              left={['55%', '55%', '55%', '55%']}
               initial={isMobile ? { x: '50%' } : { x: '90%' }}
               whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
-              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-10rem']}
-              pl={['NONE', 'NONE', 'NONE', '18rem']}
+              top={['3.2rem', '2.5rem', '2.5rem', '-10rem']}
+              pl={['7rem', '14rem', '14rem', '18rem']}
               transition={{
                 type: 'spring',
                 stiffness: 300,
@@ -106,7 +108,7 @@ const TokenomicsSection: FC = () => {
                 color="white"
                 variant="displayLarge"
                 textTransform="uppercase"
-                fontSize={['3.125rem', '3.125rem', '3.125rem', '3.8rem']}
+                fontSize={['1.5rem', '2rem', '2rem', '3.8rem']}
               >
                 Tokenomics
               </Typography>
@@ -404,24 +406,23 @@ const TokenomicsSection: FC = () => {
           </Box>
           <Motion
             left="50%"
-            height="auto"
             position="absolute"
             viewport={{ once: true }}
             whileInView={{ rotate: 11.04 }}
             initial={{ rotate: 0, x: '-52%' }}
-            bottom={['-5rem', '-5rem', '-5rem', '-4.5rem']}
+            bottom={['-5rem', '-5rem', '-5rem', '-5.5rem']}
           >
             <Frame
-              p="1rem 2rem"
+              p="1rem"
               display="flex"
               color="white"
               boxShadow="10px 10px 0px 0px white"
               border="4px solid white"
-              width="max-content"
+              width={['25rem', '25rem', '25rem', '40rem']}
               borderRadius="2rem"
               flexDirection="column"
-              bg="black"
-              fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
+              bg="#000"
+              fontSize={['2.5rem', '2.5rem', '2.5rem', '4rem']}
             >
               <Typography as="span" fontWeight="700" variant="displayLarge">
                 No Taxes,
