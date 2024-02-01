@@ -6,7 +6,7 @@ import { ArrowUpRightSVG } from '@/svg';
 import { CardHeaderProps } from './card.types';
 
 const CardHeader: FC<CardHeaderProps> = ({ name }) => (
-  <Box display="flex" justifyContent="space-between" alignItems="center">
+  <Box display="grid" gridTemplateColumns="1fr 2rem">
     <Typography
       my="unset"
       fontWeight="400"
@@ -32,7 +32,7 @@ const CardHeader: FC<CardHeaderProps> = ({ name }) => (
         color: 'white',
       }}
     >
-      <ArrowUpRightSVG maxHeight="75%" maxWidth="75%" width="100%" />
+      <ArrowUpRightSVG maxHeight="100%" maxWidth="100%" width="100%" />
     </Box>
   </Box>
 );
