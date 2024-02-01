@@ -14,13 +14,13 @@ const HeroSection: FC = () => {
     <Box
       variant="container"
       minHeight="55rem"
+      mt="-1rem"
       p={[
         '3.375rem 1.25rem',
         '3.375rem 1.25rem',
         '3.375rem 1.25rem',
         '7.5rem 9.375rem',
       ]}
-      borderBottom="2px solid"
       bg={theme.theme.gradient.radialGradientViolet}
     >
       <Box
