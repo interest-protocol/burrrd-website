@@ -35,7 +35,7 @@ const Title = () => (
           fontWeight="700"
           variant="displayLarge"
           textTransform="uppercase"
-          fontSize={['3rem', '3.125rem', '3.125rem', '5.5rem']}
+          fontSize={['2.5rem', '3.125rem', '3.125rem', '5.5rem']}
         >
           Collaborations
         </Typography>
