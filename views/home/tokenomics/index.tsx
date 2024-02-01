@@ -48,7 +48,6 @@ const TokenomicsSection: FC = () => {
         width="100%"
         display="flex"
         gridColumn="1/-1"
-        borderTop="2px solid"
         pb={['10.625rem', '10.625rem', '10.625rem', '0']}
       >
         <Box

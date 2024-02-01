@@ -26,13 +26,13 @@ const AboutSection: FC = () => {
   };
   return (
     <Box
-      bg="#000000"
+      bg="#111"
       id="about"
       width="100%"
-      minHeight="31.813rem"
       display="flex"
-      justifyContent="center"
       alignItems="center"
+      minHeight="31.813rem"
+      justifyContent="center"
     >
       <Box
         my="5rem"
