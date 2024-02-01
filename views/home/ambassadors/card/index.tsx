@@ -5,31 +5,33 @@ import { CardProps } from './card.types';
 import CardHeader from './header';
 
 const Card: FC<CardProps> = ({ name, img, link }) => (
-  <Box
-    p="1.5rem"
-    bg="#fff"
-    border="2px solid"
-    borderColor="#000"
-    borderRadius="1rem"
-    transform="scale(1)"
-    minHeight="19.8125rem"
-    boxShadow="12px 12px 0px 0px #000"
-    nHover={{ transform: 'scale(1.02)' }}
-    transition="transform 300ms ease-in-out"
-  >
-    <CardHeader name={name} link={link} />
+  <a href={link} target="_blank" rel="noreferrer">
     <Box
-      mx="auto"
-      mt="1.53rem"
-      width="11.25rem"
-      overflow="hidden"
-      border="2px solid #000"
-      height="11.25rem"
-      borderRadius="50%"
+      p="1.5rem"
+      bg="#fff"
+      border="2px solid"
+      borderColor="#000"
+      borderRadius="1rem"
+      transform="scale(1)"
+      minHeight="19.8125rem"
+      boxShadow="12px 12px 0px 0px #000"
+      nHover={{ transform: 'scale(1.02)' }}
+      transition="transform 300ms ease-in-out"
     >
-      <img alt={name} width="100%" src={img} />
+      <CardHeader name={name} />
+      <Box
+        mx="auto"
+        mt="1.53rem"
+        width="11.25rem"
+        overflow="hidden"
+        height="11.25rem"
+        borderRadius="50%"
+        border="2px solid #000"
+      >
+        <img alt={name} width="100%" src={img} />
+      </Box>
     </Box>
-  </Box>
+  </a>
 );
 
 export default Card;

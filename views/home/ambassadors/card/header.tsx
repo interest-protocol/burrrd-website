@@ -5,7 +5,7 @@ import { ArrowUpRightSVG } from '@/svg';
 
 import { CardHeaderProps } from './card.types';
 
-const CardHeader: FC<CardHeaderProps> = ({ name, link }) => (
+const CardHeader: FC<CardHeaderProps> = ({ name }) => (
   <Box display="flex" justifyContent="space-between" alignItems="center">
     <Typography
       my="unset"
@@ -16,26 +16,24 @@ const CardHeader: FC<CardHeaderProps> = ({ name, link }) => (
     >
       {name}
     </Typography>
-    <a href={link} target="_blank" rel="noreferrer">
-      <Box
-        width="2rem"
-        height="2rem"
-        display="flex"
-        cursor="pointer"
-        border="2px solid"
-        borderRadius="5rem"
-        alignItems="center"
-        borderColor="#000"
-        justifyContent="center"
-        transition="all 300ms ease-in-out"
-        nHover={{
-          bg: 'black',
-          color: 'white',
-        }}
-      >
-        <ArrowUpRightSVG maxHeight="75%" maxWidth="75%" width="100%" />
-      </Box>
-    </a>
+    <Box
+      width="2rem"
+      height="2rem"
+      display="flex"
+      cursor="pointer"
+      border="2px solid"
+      borderRadius="5rem"
+      alignItems="center"
+      borderColor="#000"
+      justifyContent="center"
+      transition="all 300ms ease-in-out"
+      nHover={{
+        bg: 'black',
+        color: 'white',
+      }}
+    >
+      <ArrowUpRightSVG maxHeight="75%" maxWidth="75%" width="100%" />
+    </Box>
   </Box>
 );
 
