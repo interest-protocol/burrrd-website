@@ -1,10 +1,9 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
 import { track } from '@vercel/analytics';
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
-import useEventListener from '@/hooks/use-event-listener';
 import {
   ArrowTopRightSVG,
   DexScreenerSVG,
@@ -17,15 +16,6 @@ import {
 import { DISTRIBUTION, WEEDS } from './tokenomics.data';
 
 const TokenomicsSection: FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  const handleSetDesktop = useCallback(() => {
-    const mediaIsMobile = !window.matchMedia('(min-width: 62em)').matches;
-    setIsMobile(mediaIsMobile);
-  }, []);
-
-  useEventListener('resize', handleSetDesktop, true);
-
   const countUpRef = useRef(null);
 
   const countup = useCountUp({
@@ -90,11 +80,10 @@ const TokenomicsSection: FC = () => {
               alignItems="flex-end"
               position="absolute"
               viewport={{ once: true }}
-              left={['55%', '55%', '55%', '55%']}
-              initial={isMobile ? { x: '50%' } : { x: '90%' }}
-              whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
+              right="0"
+              initial={{ x: '100%', opacity: 0 }}
+              whileInView={{ x: '0%', opacity: 1 }}
               top={['3.2rem', '2.5rem', '2.5rem', '-10rem']}
-              pl={['7rem', '14rem', '14rem', '18rem']}
               transition={{
                 type: 'spring',
                 stiffness: 300,
