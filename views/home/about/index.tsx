@@ -26,7 +26,6 @@ const AboutSection: FC = () => {
   };
   return (
     <Box
-      bg="#000000"
       id="about"
       width="100%"
       minHeight="31.813rem"
@@ -38,7 +37,6 @@ const AboutSection: FC = () => {
         my="5rem"
         width="60%"
         minHeight="19.813rem"
-        borderLeft={['none', 'none', 'none', '2px solid black']}
         nAfter={{
           top: '0',
           right: '0',
@@ -53,7 +51,7 @@ const AboutSection: FC = () => {
       >
         <Frame
           zIndex="1"
-          bg="#000"
+          bg="#111"
           position="relative"
           border="1px solid"
           borderRadius="1rem"
