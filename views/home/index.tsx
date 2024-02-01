@@ -5,7 +5,7 @@ import Layout from '@/components/layout';
 
 import AboutSection from './about';
 import Advisor from './advisor';
-import Ambassors from './ambassadors';
+import Ambassadors from './ambassadors';
 import AsSeenOn from './as-seen-on';
 import Collaborators from './collaborations';
 import DisclaimerSection from './disclaimer';
@@ -23,7 +23,7 @@ const Home: FC = () => (
       <RoadmapSection />
       <DisclaimerSection />
       <Advisor />
-      <Ambassors />
+      <Ambassadors />
       <Partners />
       <Collaborators />
       <AsSeenOn />
