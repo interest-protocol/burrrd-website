@@ -15,7 +15,7 @@ import {
 
 import { DISTRIBUTION, WEEDS } from './tokenomics.data';
 
-const TokenomicsSection: FC = () => {
+const Tokenomics: FC = () => {
   const countUpRef = useRef(null);
 
   const countup = useCountUp({
@@ -430,4 +430,4 @@ const TokenomicsSection: FC = () => {
   );
 };
 
-export default TokenomicsSection;
+export default Tokenomics;

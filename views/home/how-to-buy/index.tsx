@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 import Frame from '@/components/frame';
 
-const HowToBuySection: FC = () => (
+const HowToBuy: FC = () => (
   <Box variant="container" id="how-to-buy">
     <Box
       width="100%"
@@ -48,4 +48,4 @@ const HowToBuySection: FC = () => (
   </Box>
 );
 
-export default HowToBuySection;
+export default HowToBuy;

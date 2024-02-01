@@ -23,7 +23,7 @@ const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
   return (
     <Box
       width="100%"
-      background="linear-gradient(180deg, #DB76F6 0%, #451779 100%);
+      background="linear-gradient(180deg, #DB76F6 0%, #451779 100%)
       "
     >
       {!withoutRoadmap && <HowToBuySection />}
