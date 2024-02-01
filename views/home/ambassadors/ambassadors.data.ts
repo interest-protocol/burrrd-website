@@ -1,4 +1,4 @@
-export const AMBASSORS = [
+export const AMBASSADORS = [
   {
     name: 'CETS',
     link: 'https://cets.wtf/',
@@ -24,26 +24,17 @@ export const AMBASSORS = [
   },
 ];
 
-export const sliderResponsiviness = [
-  {
-    breakpoint: 1100,
-    settings: {
-      slidesToShow: 3,
-      slidesToScroll: 1,
-    },
-  },
+export const sliderResponsiveness = [
   {
     breakpoint: 970,
     settings: {
       slidesToShow: 2,
-      slidesToScroll: 1,
     },
   },
   {
     breakpoint: 600,
     settings: {
       slidesToShow: 1,
-      slidesToScroll: 1,
     },
   },
 ];

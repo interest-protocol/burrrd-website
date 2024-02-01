@@ -3,25 +3,15 @@ import { FC, useRef } from 'react';
 import Slider from 'react-slick';
 import { v4 } from 'uuid';
 
-import { AMBASSORS, sliderResponsiviness } from './ambassors.data';
+import { AMBASSADORS, sliderResponsiveness } from './ambassadors.data';
 import Card from './card';
 import TitleCard from './card/title-card';
 import Controllers from './controllers';
+import { ControllerRef } from './controllers/controllers.types';
 
-const Ambassors: FC = () => {
+const Ambassadors: FC = () => {
   const sliderRef = useRef<Slider>(null);
-
-  const handlePrevious = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-  };
-
-  const handleNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
-  };
+  const controllersRef = useRef<ControllerRef>(null);
 
   return (
     <Box
@@ -34,8 +24,9 @@ const Ambassors: FC = () => {
       <Box
         width="100%"
         p="6rem 2rem"
-        overflow="hidden"
+        overflow="visible"
         maxWidth="82.5rem"
+        className="card-slide"
         justifyContent="center"
       >
         <Slider
@@ -48,21 +39,23 @@ const Ambassors: FC = () => {
           infinite={false}
           slidesToShow={3}
           initialSlide={0}
-          responsive={sliderResponsiviness}
+          slidesToScroll={1}
+          responsive={sliderResponsiveness}
+          afterChange={(index) => controllersRef.current?.updateButtons(index)}
         >
           <Box px="1rem" py="1rem">
             <TitleCard />
           </Box>
-          {AMBASSORS.map((ambassor) => (
+          {AMBASSADORS.map((ambassor) => (
             <Box key={v4()} py="1rem" px="1rem">
               <Card {...ambassor} />
             </Box>
           ))}
         </Slider>
-        <Controllers handleNext={handleNext} handlePrevious={handlePrevious} />
+        <Controllers sliderRef={sliderRef} ref={controllersRef} />
       </Box>
     </Box>
   );
 };
 
-export default Ambassors;
+export default Ambassadors;
