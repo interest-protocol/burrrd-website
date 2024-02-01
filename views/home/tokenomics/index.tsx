@@ -115,7 +115,8 @@ const TokenomicsSection: FC = () => {
             </Motion>
             <Frame
               bg="white"
-              zIndex="2"
+              zIndex="1"
+              overflow="visible"
               border="4px solid"
               position="relative"
               borderRadius="2rem"
@@ -161,11 +162,12 @@ const TokenomicsSection: FC = () => {
                 />
               </Box>
               <Motion
+                zIndex="2"
                 right="1rem"
-                bottom="-2rem"
+                bottom="-1.5rem"
                 position="absolute"
                 viewport={{ once: true }}
-                initial={{ x: 300, opacity: 0 }}
+                initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 2, opacity: { delay: 2 } }}
               >
@@ -180,7 +182,7 @@ const TokenomicsSection: FC = () => {
                     p="0rem 1.5rem"
                     fontWeight="600"
                     variant="medium"
-                    fontSize="2.25rem"
+                    fontSize={['1rem', '2.25rem']}
                   >
                     Joints
                   </Typography>
@@ -368,7 +370,7 @@ const TokenomicsSection: FC = () => {
                         '4px 4px 0px #000',
                       ]}
                     >
-                      Rugcheck
+                      locked liquidity
                       <Box
                         as="span"
                         display="inline-block"
@@ -385,13 +387,15 @@ const TokenomicsSection: FC = () => {
                     </Typography>
                     <Box
                       p="1rem"
+                      bg="#FFC701"
+                      color="black"
                       borderRadius="50%"
                       position="absolute"
-                      transform="rotate(-5deg)"
-                      maxWidth={['4rem', '5rem', '5rem', '10rem']}
-                      maxHeight={['6rem', '5rem', '5rem', '10rem']}
-                      left={['-1.5rem', '-2rem', '-2rem', '-4.5rem']}
-                      bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-5.6985rem']}
+                      transform="rotate(-40deg)"
+                      maxWidth={['4rem', '5rem', '5rem', '7rem']}
+                      maxHeight={['6rem', '5rem', '5rem', '7rem']}
+                      left={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
+                      bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
                     >
                       <DexScreenerSVG
                         width="100%"
