@@ -7,9 +7,9 @@ import Frame from '@/components/frame';
 import useEventListener from '@/hooks/use-event-listener';
 import {
   ArrowTopRightSVG,
+  DexScreenerSVG,
   FireLeftSVG,
   FireRightSVG,
-  RugSVG,
   SmokerBurrrdSVG,
   StabLineSVG,
 } from '@/svg';
@@ -323,9 +323,9 @@ const TokenomicsSection: FC = () => {
                 cursor="pointer"
                 onClick={() => {
                   if (window) {
-                    track('Rugcheck');
+                    track('Dex Screener');
                     window.open(
-                      'https://rugcheck.xyz/tokens/F8qtcT3qnwQ24CHksuRrSELtm5k9ob8j64xAzj3JjsMs',
+                      'https://dexscreener.com/solana/cr7z6x8zuv3xlmulj5bmnhnrb7focg88mknl6bcxknw1',
                       '_blank',
                       'noopener,noreferrer'
                     );
@@ -365,7 +365,7 @@ const TokenomicsSection: FC = () => {
                         '4px 4px 0px #000',
                       ]}
                     >
-                      Rugcheck
+                      locked liquidity
                       <Box
                         as="span"
                         display="inline-block"
@@ -381,14 +381,18 @@ const TokenomicsSection: FC = () => {
                       </Box>
                     </Typography>
                     <Box
+                      p="1rem"
+                      bg="#FFC701"
+                      color="black"
+                      borderRadius="50%"
                       position="absolute"
                       transform="rotate(-40deg)"
                       maxWidth={['4rem', '5rem', '5rem', '7rem']}
-                      maxHeight={['6rem', '7rem', '7rem', '9rem']}
+                      maxHeight={['6rem', '5rem', '5rem', '7rem']}
                       left={['-1.5rem', '-2rem', '-2rem', '-3.5rem']}
                       bottom={['-1.8rem', '-1.8rem', '-1.8rem', '-2.6985rem']}
                     >
-                      <RugSVG
+                      <DexScreenerSVG
                         width="100%"
                         maxWidth="inherit"
                         maxHeight="inherit"
