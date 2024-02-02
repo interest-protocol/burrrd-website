@@ -26,6 +26,7 @@ const About: FC = () => {
   };
   return (
     <Box
+      bg="#111"
       id="about"
       width="100%"
       display="flex"
