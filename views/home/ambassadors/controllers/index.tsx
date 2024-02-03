@@ -71,6 +71,7 @@ const Controllers = forwardRef(({ sliderRef }: ControllersProps, ref) => {
         bg="none"
         border="none"
         variant="tonal"
+        cursor="pointer"
         onClick={handleNext}
         disabled={isNextDisabled}
         nDisabled={{ opacity: 0.7, cursor: 'not-allowed' }}
