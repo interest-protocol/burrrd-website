@@ -7,7 +7,7 @@ import PlusSVG from '@/components/svg/plus';
 import { useTheme } from '@/context/theme-context';
 import Button from '@/elements/button';
 
-const AboutSection: FC = () => {
+const About: FC = () => {
   const wrapperVariants = {
     open: {
       scale: 1,
@@ -26,6 +26,7 @@ const AboutSection: FC = () => {
   };
   return (
     <Box
+      bg="#111"
       id="about"
       width="100%"
       display="flex"
@@ -148,4 +149,4 @@ const AboutSection: FC = () => {
   );
 };
 
-export default AboutSection;
+export default About;

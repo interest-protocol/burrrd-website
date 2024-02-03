@@ -8,7 +8,7 @@ import { SolanaLogo } from '@/svg';
 
 import HeroIllustration from './hero-animation';
 
-const HeroSection: FC = () => {
+const Hero: FC = () => {
   const { theme } = useTheme();
   return (
     <Box
@@ -104,4 +104,4 @@ const HeroSection: FC = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

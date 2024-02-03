@@ -6,7 +6,7 @@ import Button from '@/elements/button';
 import LeftIllustration from './illustraction/left-side';
 import RightIllustration from './illustraction/right-side';
 
-const LotterySection: FC = () => (
+const Lottery: FC = () => (
   <Box variant="container" mx="auto" id="lottery" bg="#1B1622" py="3rem">
     <Box
       gap="1rem"
@@ -78,4 +78,4 @@ const LotterySection: FC = () => (
   </Box>
 );
 
-export default LotterySection;
+export default Lottery;
