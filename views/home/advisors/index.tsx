@@ -15,7 +15,7 @@ const Advisors: FC = () => (
   >
     <Scroller
       data={ADVISORS}
-      TitleWrapper={<Title title="ADVISORS" />}
+      TitleWrapper={<Title title="AMBASSADORS" />}
       scrollerResponsiveness={sliderResponsiveness}
     />
   </Box>
