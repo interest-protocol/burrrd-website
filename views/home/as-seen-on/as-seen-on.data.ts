@@ -14,3 +14,18 @@ export const AS_SEEN_ON = [
     post: 'https://bitnoticias.com.br/comunicado-de-imprensa/burrrd-a-criptomoeda-meme-conquistando-o-ecossistema-da-solana/',
   },
 ];
+
+export const sliderResponsiveness = [
+  {
+    breakpoint: 970,
+    settings: {
+      slidesToShow: 2,
+    },
+  },
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 1,
+    },
+  },
+];

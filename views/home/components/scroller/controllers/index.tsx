@@ -34,6 +34,11 @@ const Controllers = forwardRef(({ sliderRef }: ControllersProps, ref) => {
           sliderRef.current?.innerSlider?.list?.querySelectorAll('.slick-slide')
             .length ?? 1;
 
+        if (listSize < 3) {
+          setPrevDisabled(false);
+          setNextDisabled(false);
+        }
+
         if (currentIndex === 0 && !isPrevDisabled) setPrevDisabled(true);
 
         if (currentIndex !== 0 && isPrevDisabled) setPrevDisabled(false);

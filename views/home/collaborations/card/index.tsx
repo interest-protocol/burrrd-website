@@ -26,7 +26,6 @@ const Card: FC<CardProps> = ({ name, img, link }) => (
       overflow="hidden"
       height="11.25rem"
       borderRadius="50%"
-      border="2px solid #000"
     >
       <img alt={name} width="100%" src={img} />
     </Box>
