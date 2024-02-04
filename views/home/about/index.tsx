@@ -1,5 +1,4 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
-import { AnimatePresence } from 'framer-motion';
 import { FC, useState } from 'react';
 
 import Frame from '@/components/frame';
@@ -8,16 +7,6 @@ import { useTheme } from '@/context/theme-context';
 import Button from '@/elements/button';
 
 const About: FC = () => {
-  const wrapperVariants = {
-    open: {
-      scale: 1,
-      transition: { duration: 0.3, delayChildren: 1 },
-    },
-    closed: {
-      scale: 0,
-      transition: { duration: 0.8 },
-    },
-  };
   const { theme } = useTheme();
   const [toggle, setToggle] = useState<boolean>(false);
 
@@ -51,19 +40,21 @@ const About: FC = () => {
         }}
       >
         <Frame
-          zIndex="1"
           bg="#111"
+          borderColor="#FFF"
           position="relative"
           border="1px solid"
           borderRadius="1rem"
-          borderColor="#FFF"
           boxShadow="8px 8px 0px 0px #FFF"
         >
-          <Box
+          <Motion
             pb="0"
             pt="1rem"
             px="2rem"
             color="white"
+            overflow="hidden"
+            animate={{ height: 'auto' }}
+            transition={{ duration: 300 }}
             fontSize={['1rem', '1rem', '1rem', '1.5rem']}
             lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
           >
@@ -107,42 +98,37 @@ const About: FC = () => {
               had their moment to shine, but now it is BURRRD&rsquo;s turn to
               spread his wings!
             </Typography>
-
             <Typography variant="medium">
               With a determined glint in his beady eyes, BURRRD holds his blade
               above, leading his flock to slay all the wretched sh!tcoins that
               dare cross his path.
             </Typography>
-          </Box>
-          <AnimatePresence>
             {toggle && (
-              <Motion
-                layout
-                pt="0"
-                px="2rem"
-                exit={{ scale: 0 }}
-                initial={{ scale: 0 }}
-                variants={wrapperVariants}
-                fontSize={['1rem', '1rem', '1rem', '1.5rem']}
-                animate={toggle ? wrapperVariants.open : wrapperVariants.closed}
-                lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
-              >
-                <Typography variant="medium" color="white">
+              <>
+                <Typography
+                  variant="medium"
+                  color="white"
+                  fontSize={['1rem', '1rem', '1rem', '1.5rem']}
+                >
                   But BURRRD ins&rsquo;t just on a mission to eliminate the
                   rubbish; he has a bigger plan in mind. As he soars through the
                   crypto skies, the feathered hero is on a mission to take
                   everyone to the moon with his memetic power.
                 </Typography>
-                <Typography variant="medium" color="white">
+                <Typography
+                  variant="medium"
+                  color="white"
+                  fontSize={['1rem', '1rem', '1rem', '1.5rem']}
+                >
                   So, watch out, world! BURRRD is armed and ready to bring a
                   slice of justice to the crypto realm. Prepare to witness the
                   epic rise of the one and only BURRRD, as he carves his way
                   through the chaos and leads us all to the moonhalla, one meme
                   at a time!
                 </Typography>
-              </Motion>
+              </>
             )}
-          </AnimatePresence>
+          </Motion>
         </Frame>
       </Box>
     </Box>

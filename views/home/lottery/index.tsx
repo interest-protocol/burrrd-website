@@ -48,12 +48,14 @@ const Lottery: FC = () => (
             <Button
               bg="#FFF"
               mt="3rem"
+              mx="auto"
+              color="black"
               fontWeight="700"
               textAlign="center"
               borderRadius="10rem"
               border="3px solid #000"
+              textTransform="uppercase"
               boxShadow="10px 10px 0px 0px #000"
-              color="black"
               left={['unset', 'unset', 'unset', 'unset', '-75%']}
               fontSize={['1rem', '1.2rem', '1.5rem', '1.5rem', '2rem']}
               p={[
@@ -63,9 +65,6 @@ const Lottery: FC = () => (
                 '1.5rem 2.5rem',
                 '2rem 3rem',
               ]}
-              textTransform="uppercase"
-              mx="auto"
-              cursor="not-allowed"
             >
               Play and have fun
             </Button>
