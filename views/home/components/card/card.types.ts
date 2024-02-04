@@ -1,7 +1,7 @@
 export interface CardHeaderProps {
   name: string;
   bg?: string;
-  link: string;
+  link?: string;
   isTitle?: boolean;
 }
 
