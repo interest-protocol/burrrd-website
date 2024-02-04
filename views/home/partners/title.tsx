@@ -29,13 +29,11 @@ const Title: FC = () => (
     <Motion
       position="absolute"
       animate={{
-        rotate: [0, 30, 0],
-        scale: [1, 0.5, 1, 0.4, 1],
+        rotate: [0, -20, 0],
       }}
       transition={{
-        duration: 2.5,
+        duration: 0.75,
         repeat: Infinity,
-        repeatDelay: 1,
       }}
       top="-5rem"
       width="9rem"

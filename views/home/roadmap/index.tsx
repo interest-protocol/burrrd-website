@@ -7,7 +7,7 @@ import { CleaningDogeSVG, RoadmapPathSVG } from '@/svg';
 import RoadmapCard from './roadmap-card';
 import { ROADMAP_DATA } from './roadmap-card/roadmap.data';
 
-const RoadmapSection: FC = () => (
+const Roadmap: FC = () => (
   <Box
     mx="auto"
     pb="5rem"
@@ -42,4 +42,4 @@ const RoadmapSection: FC = () => (
   </Box>
 );
 
-export default RoadmapSection;
+export default Roadmap;

@@ -18,8 +18,21 @@ export const GlobalStyles = css`
   * {
     box-sizing: border-box;
   }
-  .slick-next:before,
-  .slick-prev:before {
-    color: #000;
+  .card-slide {
+    .slick-slider,
+    .slick-list {
+      overflow: visible;
+    }
+    .slick-slide {
+      transform: opacity 350ms ease-in-out;
+      opacity: 0.7;
+    }
+    .slick-slide.slick-active {
+      opacity: 1;
+    }
+    .slick-next:before,
+    .slick-prev:before {
+      color: #000;
+    }
   }
 `;

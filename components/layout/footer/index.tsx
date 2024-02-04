@@ -7,11 +7,8 @@ import Frame from '@/components/frame';
 import { SOCIALS } from '@/constants';
 import useEventListener from '@/hooks/use-event-listener';
 import { BurrrdSVG, ConverstionBalloonSVG } from '@/svg';
-import HowToBuySection from '@/views/home/how-to-buy';
 
-import { LayoutProps } from '../layout.types';
-
-const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
+const Footer: FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleSetDesktop = useCallback(() => {
@@ -20,12 +17,9 @@ const Footer: FC<LayoutProps> = ({ withoutRoadmap }) => {
   }, []);
 
   useEventListener('resize', handleSetDesktop, true);
+
   return (
-    <Box
-      width="100%"
-      background="linear-gradient(180deg, #DC77F7 19.58%, #7B2FC4 149.72%)"
-    >
-      {!withoutRoadmap && <HowToBuySection />}
+    <Box width="100%">
       <Box
         mx="auto"
         pt="6rem"
