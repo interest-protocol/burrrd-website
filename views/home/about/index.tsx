@@ -25,8 +25,9 @@ const About: FC = () => {
     >
       <Box
         my="5rem"
-        width="60%"
+        mx="3rem"
         minHeight="19.813rem"
+        width={['100%', '100%', '100%', '60%']}
         nAfter={{
           top: '0',
           right: '0',

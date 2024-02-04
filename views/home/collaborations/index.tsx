@@ -22,7 +22,7 @@ const Collaborators: FC = () => (
       maxWidth="82.5rem"
       p="7.5rem 2rem 6rem"
       gridTemplateColumns={[
-        '1fr 1fr',
+        '1fr',
         '1fr 1fr',
         '1fr 1fr',
         '1fr 1fr',

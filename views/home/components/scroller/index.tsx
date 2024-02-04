@@ -26,12 +26,12 @@ const Scroller: FC<ScrollerProps> = ({
       justifyContent="center"
     >
       <Slider
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        //@ts-ignore
-        ref={sliderRef}
         speed={800}
         dots={false}
         arrows={false}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        //@ts-ignore
+        ref={sliderRef}
         infinite={false}
         slidesToShow={3}
         initialSlide={0}
