@@ -42,7 +42,7 @@ const Lottery: FC = () => (
             textAlign="center"
             textTransform="uppercase"
           >
-            win incredibel prices in the burrrd Lottery
+            win incredible prices in the burrrd Lottery
           </Typography>
           <a href="https://burrrdlottery.com" target="_blank" rel="noreferrer">
             <Button
