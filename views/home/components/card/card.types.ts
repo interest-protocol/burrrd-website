@@ -1,8 +1,10 @@
 export interface CardHeaderProps {
   name: string;
-  link: string;
+  bg?: string;
+  isTitle?: boolean;
 }
 
 export interface CardProps extends CardHeaderProps {
-  logo: string;
+  img: string;
+  link: string;
 }

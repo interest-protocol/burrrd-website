@@ -4,11 +4,11 @@ import { FC } from 'react';
 import { CardProps } from './card.types';
 import CardHeader from './header';
 
-const Card: FC<CardProps> = ({ name, img, link }) => (
+const Card: FC<CardProps> = ({ name, img, link, bg, isTitle }) => (
   <a href={link} target="_blank" rel="noreferrer">
     <Box
       p="1.5rem"
-      bg="#fff"
+      bg={bg || '#fff'}
       border="2px solid"
       borderColor="#000"
       borderRadius="1rem"
@@ -18,7 +18,7 @@ const Card: FC<CardProps> = ({ name, img, link }) => (
       nHover={{ transform: 'scale(1.02)' }}
       transition="transform 300ms ease-in-out"
     >
-      <CardHeader name={name} />
+      <CardHeader name={name} bg={bg} isTitle={isTitle} />
       <Box
         mx="auto"
         mt="1.53rem"
@@ -26,7 +26,6 @@ const Card: FC<CardProps> = ({ name, img, link }) => (
         overflow="hidden"
         height="11.25rem"
         borderRadius="50%"
-        border="2px solid #000"
       >
         <img alt={name} width="100%" src={img} />
       </Box>

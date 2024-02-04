@@ -3,7 +3,9 @@ import { FC } from 'react';
 
 import { LoudSpeakerSVG } from '@/svg';
 
-const TitleCard: FC = () => (
+import { TitleProps } from './ambassadors.types';
+
+const Title: FC<TitleProps> = ({ title }) => (
   <Box
     p="1.5rem"
     bg="#FF7E61"
@@ -31,11 +33,11 @@ const TitleCard: FC = () => (
         letterSpacing="-0.01563rem"
         fontSize={['2rem', '1.8rem', '2rem', '2rem', '2.2rem']}
       >
-        AMBASSADORS
+        {title}
       </Typography>
     </Box>
     <LoudSpeakerSVG maxWidth="10.25rem" maxHeight="10.8125rem" width="100%" />
   </Box>
 );
 
-export default TitleCard;
+export default Title;
