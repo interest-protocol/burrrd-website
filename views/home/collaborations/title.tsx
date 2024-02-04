@@ -1,7 +1,7 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
 
 const Title = () => (
-  <Box mb={['0.4rem', '2rem', '5rem']} minWidth="120vw">
+  <Box mb="5rem" minWidth="120vw">
     <Box
       width="100%"
       display="flex"

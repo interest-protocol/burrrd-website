@@ -1,7 +1,7 @@
 import { Box, Motion } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 
-import { BurrrdSVG, GameOver, MiniMoon, Shadow } from '@/svg';
+import { GameOver, MiniMoon, StarSVG } from '@/svg';
 
 const HeroIllustration: FC = () => (
   <Motion
@@ -19,6 +19,22 @@ const HeroIllustration: FC = () => (
     whileHover={{ scale: 1.07 }}
   >
     <Motion
+      width="7rem"
+      height="8rem"
+      top="25%"
+      left="80%"
+      zIndex="2"
+      position="absolute"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, width: '2rem', height: '2rem' }}
+      transition={{ duration: 0.8, repeat: Infinity, repeatType: 'reverse' }}
+    >
+      <StarSVG maxWidth="3rem" maxHeight="3rem" />
+      <Box mt="-0.5rem" ml="4rem">
+        <StarSVG maxWidth="1.5rem" maxHeight="1.5rem" />
+      </Box>
+    </Motion>
+    <Motion
       position="absolute"
       zIndex="2"
       top="0"
@@ -32,44 +48,24 @@ const HeroIllustration: FC = () => (
     >
       <GameOver maxHeight="7.625rem" maxWidth="11.3125rem" width="100%" />
     </Motion>
+    <Box width="100%" position="absolute">
+      <MiniMoon maxHeight="30rem" maxWidth="30rem" width="100%" />
+    </Box>
     <Motion
-      initial={{ x: '200%', y: '-200%', scale: 0 }}
-      animate={{
-        x: '-50%',
-        y: '50%',
-        rotate: 360,
-        scale: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-      }}
-      transition={{
-        duration: 1.5,
-        delay: 3,
-        ease: 'easeInOut',
-        rotate: { duration: 0.3, repeat: 4, ease: 'linear' },
-      }}
-      top="50%"
-      left="50%"
+      width="5rem"
+      height="6rem"
+      mt="26rem"
       zIndex="2"
       position="absolute"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, width: '2rem', height: '2rem' }}
+      transition={{ duration: 0.8, repeat: Infinity, repeatType: 'reverse' }}
     >
-      <BurrrdSVG maxHeight="21.9375rem" maxWidth="21.375rem" width="100%" />
+      <Box ml="1.5rem">
+        <StarSVG maxWidth="3rem" maxHeight="3rem" />
+      </Box>
+      <StarSVG maxWidth="1.5rem" maxHeight="1.5rem" />
     </Motion>
-    <Box width="100%" position="absolute">
-      <Motion
-        zIndex="1"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1, x: '-50%', y: '60%' }}
-        transition={{
-          duration: 0.3,
-          delay: 4.5,
-        }}
-        top="60%"
-        left="50%"
-        position="absolute"
-      >
-        <Shadow maxHeight="5.25rem" maxWidth="18.375rem" width="95%" />
-      </Motion>
-      <MiniMoon maxHeight="38.0625rem" maxWidth="38.0625rem" width="100%" />
-    </Box>
   </Motion>
 );
 

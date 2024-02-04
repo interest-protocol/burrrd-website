@@ -1,10 +1,9 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
 import { track } from '@vercel/analytics';
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
-import useEventListener from '@/hooks/use-event-listener';
 import {
   ArrowTopRightSVG,
   DexScreenerSVG,
@@ -16,16 +15,7 @@ import {
 
 import { DISTRIBUTION, WEEDS } from './tokenomics.data';
 
-const TokenomicsSection: FC = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  const handleSetDesktop = useCallback(() => {
-    const mediaIsMobile = !window.matchMedia('(min-width: 62em)').matches;
-    setIsMobile(mediaIsMobile);
-  }, []);
-
-  useEventListener('resize', handleSetDesktop, true);
-
+const Tokenomics: FC = () => {
   const countUpRef = useRef(null);
 
   const countup = useCountUp({
@@ -48,7 +38,6 @@ const TokenomicsSection: FC = () => {
         width="100%"
         display="flex"
         gridColumn="1/-1"
-        borderTop="2px solid"
         pb={['10.625rem', '10.625rem', '10.625rem', '0']}
       >
         <Box
@@ -74,11 +63,10 @@ const TokenomicsSection: FC = () => {
             <Motion
               zIndex="1"
               position="absolute"
-              top={['1rem', '1rem', '1rem', '-13rem']}
-              right={['0rem', '0rem', '0rem', 'unset']}
-              left={['unset', 'unset', 'unset', '-2.5625rem']}
+              top={['1rem', '1rem', '1rem', '-11.8rem']}
+              left={['unset', 'unset', 'unset', '2.5625rem']}
               maxWidth={['12.5rem', '12.5rem', '12.5rem', '31.25rem']}
-              width={['9.375rem', '9.375rem', '9.375rem', '23.563rem']}
+              width={['9.375rem', '9.375rem', '9.375rem', '20.563rem']}
             >
               <SmokerBurrrdSVG
                 maxHeight="50rem"
@@ -87,12 +75,15 @@ const TokenomicsSection: FC = () => {
               />
             </Motion>
             <Motion
+              display="flex"
+              justifyContent="flex-end"
+              alignItems="flex-end"
               position="absolute"
               viewport={{ once: true }}
-              left={['50%', '50%', '50%', '55%']}
-              initial={isMobile ? { x: '50%' } : { x: '90%' }}
-              whileInView={isMobile ? { x: '-50%' } : { x: '-30%' }}
-              top={['-7.8125rem', '-7.8125rem', '-7.8125rem', '-13.25rem']}
+              right="0"
+              initial={{ x: '100%', opacity: 0 }}
+              whileInView={{ x: '0%', opacity: 1 }}
+              top={['3.2rem', '2.5rem', '2.5rem', '-10rem']}
               transition={{
                 type: 'spring',
                 stiffness: 300,
@@ -105,14 +96,15 @@ const TokenomicsSection: FC = () => {
                 color="white"
                 variant="displayLarge"
                 textTransform="uppercase"
-                fontSize={['3.125rem', '3.125rem', '3.125rem', '5.5rem']}
+                fontSize={['1.5rem', '2rem', '2rem', '3.8rem']}
               >
                 Tokenomics
               </Typography>
             </Motion>
             <Frame
               bg="white"
-              zIndex="2"
+              zIndex="1"
+              overflow="visible"
               border="4px solid"
               position="relative"
               borderRadius="2rem"
@@ -158,11 +150,12 @@ const TokenomicsSection: FC = () => {
                 />
               </Box>
               <Motion
+                zIndex="2"
                 right="1rem"
-                bottom="-2rem"
+                bottom="-1.5rem"
                 position="absolute"
                 viewport={{ once: true }}
-                initial={{ x: 300, opacity: 0 }}
+                initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 1, delay: 2, opacity: { delay: 2 } }}
               >
@@ -177,7 +170,7 @@ const TokenomicsSection: FC = () => {
                     p="0rem 1.5rem"
                     fontWeight="600"
                     variant="medium"
-                    fontSize="2.25rem"
+                    fontSize={['1rem', '2.25rem']}
                   >
                     Joints
                   </Typography>
@@ -405,24 +398,23 @@ const TokenomicsSection: FC = () => {
           </Box>
           <Motion
             left="50%"
-            height="auto"
             position="absolute"
             viewport={{ once: true }}
             whileInView={{ rotate: 11.04 }}
             initial={{ rotate: 0, x: '-52%' }}
-            bottom={['-5rem', '-5rem', '-5rem', '-4.5rem']}
+            bottom={['-5rem', '-5rem', '-5rem', '-5.5rem']}
           >
             <Frame
-              p="1rem 2rem"
+              p="1rem"
               display="flex"
               color="white"
               boxShadow="10px 10px 0px 0px white"
               border="4px solid white"
-              width="max-content"
+              width={['25rem', '25rem', '25rem', '40rem']}
               borderRadius="2rem"
               flexDirection="column"
-              bg="black"
-              fontSize={['1.875rem', '1.875rem', '1.875rem', '6rem']}
+              bg="#000"
+              fontSize={['2.5rem', '2.5rem', '2.5rem', '4rem']}
             >
               <Typography as="span" fontWeight="700" variant="displayLarge">
                 No Taxes,
@@ -438,4 +430,4 @@ const TokenomicsSection: FC = () => {
   );
 };
 
-export default TokenomicsSection;
+export default Tokenomics;

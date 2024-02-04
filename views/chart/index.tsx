@@ -7,7 +7,7 @@ import { ScenarioSVG } from '@/svg';
 import ChartGraph from './chart-graph';
 
 const Chart: FC = () => (
-  <Layout withoutRoadmap>
+  <Layout>
     <Box
       bg="black"
       display="flex"
