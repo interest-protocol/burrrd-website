@@ -1,40 +1,23 @@
 import { Box } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
-import { v4 } from 'uuid';
 
-import { ADVISORS } from './advisors.data';
-import Card from './card';
+import Scroller from '../components/scroller';
+import { ADVISORS, sliderResponsiveness } from './advisors.data';
 import Title from './title';
 
 const Advisors: FC = () => (
   <Box
-    pt="5rem"
     display="flex"
     alignItems="center"
     flexDirection="column"
     justifyContent="center"
+    p="6rem 0rem 2rem 0rem"
   >
-    <Title />
-    <Box
-      width="100%"
-      display="flex"
-      flexWrap="wrap"
-      justifyContent="center"
-      padding="7.5rem 0.75rem 6rem 0.75rem"
-      gap={['4rem', '4rem', '4rem', '2rem']}
-      flexDirection={['column', 'column', 'column', 'column', 'row']}
-    >
-      {ADVISORS.map((advisor) => (
-        <Box
-          key={v4()}
-          display="flex"
-          justifyContent="center"
-          width={['100%', '100%', 'auto', 'auto', 'auto']}
-        >
-          <Card {...advisor} />
-        </Box>
-      ))}
-    </Box>
+    <Scroller
+      data={ADVISORS}
+      TitleWrapper={<Title title="ADVISORS" />}
+      scrollerResponsiveness={sliderResponsiveness}
+    />
   </Box>
 );
 

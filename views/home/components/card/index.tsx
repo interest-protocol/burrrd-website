@@ -4,8 +4,8 @@ import { FC } from 'react';
 import { CardProps } from './card.types';
 import CardHeader from './header';
 
-const Card: FC<CardProps> = ({ name, img, link, bg, isTitle }) => (
-  <a href={link} target="_blank" rel="noreferrer">
+const Card: FC<CardProps> = ({ name, img, link, bg, isTitle, post }) => (
+  <a href={post ?? link} target="_blank" rel="noreferrer">
     <Box
       p="1.5rem"
       bg={bg || '#fff'}
@@ -18,7 +18,7 @@ const Card: FC<CardProps> = ({ name, img, link, bg, isTitle }) => (
       nHover={{ transform: 'scale(1.02)' }}
       transition="transform 300ms ease-in-out"
     >
-      <CardHeader name={name} bg={bg} isTitle={isTitle} />
+      <CardHeader name={name} bg={bg} isTitle={isTitle} link={link} />
       <Box
         mx="auto"
         mt="1.53rem"

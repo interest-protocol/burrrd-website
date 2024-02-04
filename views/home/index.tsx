@@ -6,7 +6,6 @@ import Footer from '@/components/layout/footer';
 
 import AboutSection from './about';
 import Advisors from './advisors';
-import Ambassadors from './ambassadors';
 import AsSeenOn from './as-seen-on';
 import Collaborators from './collaborations';
 import Disclaimer from './disclaimer';
@@ -28,10 +27,9 @@ const Home: FC = () => (
     </Box>
     <Lottery />
     <Box background="linear-gradient(180deg, #DB76F6 0%, #451779 100%)">
-      <Ambassadors />
+      <Advisors />
       <Partners />
       <Collaborators />
-      <Advisors />
       <AsSeenOn />
       <HowToBuy />
       <Footer />

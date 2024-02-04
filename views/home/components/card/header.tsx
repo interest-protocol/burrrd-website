@@ -5,7 +5,7 @@ import { ArrowUpRightSVG } from '@/svg';
 
 import { CardHeaderProps } from './card.types';
 
-const CardHeader: FC<CardHeaderProps> = ({ name, bg, isTitle }) =>
+const CardHeader: FC<CardHeaderProps> = ({ name, bg, isTitle, link }) =>
   isTitle ? (
     <Box mb="1.5rem" display="flex">
       <Typography
@@ -52,6 +52,12 @@ const CardHeader: FC<CardHeaderProps> = ({ name, bg, isTitle }) =>
           bg: 'black',
           color: 'white',
         }}
+        {...(!!link && {
+          onClick: (e) => {
+            e.stopPropagation();
+            window.open(link, '_blank', 'noopener,noreferrer');
+          },
+        })}
       >
         <ArrowUpRightSVG maxHeight="100%" maxWidth="100%" width="100%" />
       </Box>
