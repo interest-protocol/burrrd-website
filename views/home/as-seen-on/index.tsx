@@ -11,6 +11,7 @@ const AsSeenOn: FC = () => (
     alignItems="center"
     flexDirection="column"
     justifyContent="center"
+    p="6rem 0rem 2rem 0rem"
   >
     <Scroller
       data={AS_SEEN_ON}

@@ -8,7 +8,7 @@ import Title from './title';
 
 const Advisors: FC = () => (
   <Box
-    py="5rem"
+    pt="5rem"
     display="flex"
     alignItems="center"
     flexDirection="column"

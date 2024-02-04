@@ -19,7 +19,7 @@ const Scroller: FC<ScrollerProps> = ({
   return (
     <Box
       width="100%"
-      p="3rem 2rem"
+      p="0rem 2rem"
       overflow="visible"
       maxWidth="82.5rem"
       className="card-slide"

@@ -7,7 +7,7 @@ import { PARTNERS } from './partners.data';
 import Title from './title';
 
 const Partners: FC = () => (
-  <Box p="2rem" width="fit-content" mx="auto">
+  <Box p="6rem 0.75rem 8rem 0.75rem" width="fit-content" mx="auto">
     <Box
       gap="2rem"
       display="grid"

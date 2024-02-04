@@ -7,11 +7,11 @@ import Title from './title';
 
 const Ambassadors: FC = () => (
   <Box
-    py="5rem"
     display="flex"
     alignItems="center"
     flexDirection="column"
     justifyContent="center"
+    p="6rem 0rem 2rem 0rem"
   >
     <Scroller
       data={AMBASSADORS}
