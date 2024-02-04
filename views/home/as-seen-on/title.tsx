@@ -25,8 +25,8 @@ const Title: FC<TitleProps> = ({ title }) => (
     <CardHeader name={title} bg="#FF7E61" isTitle />
     <Box
       mx="auto"
-      width={['70%', '70%', '65%', '65%', '60%']}
-      height="60%"
+      width={['10rem', '10rem', '65%', '65%', '60%']}
+      height="15%"
       mt="1.53rem"
       display="flex"
     >

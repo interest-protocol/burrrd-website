@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { CardProps } from './card.types';
 import CardHeader from './header';
 
-const Card: FC<CardProps> = ({ name, logo, link }) => (
+const Card: FC<CardProps> = ({ name, img, link }) => (
   <Box
     bg="#fff"
     p="1.5rem"
@@ -19,7 +19,7 @@ const Card: FC<CardProps> = ({ name, logo, link }) => (
   >
     <CardHeader name={name} link={link} />
     <Box mt="1.53rem" mx="auto" width="60%" height="60%">
-      <img alt={name} width="100%" src={logo} />
+      <img alt={name} width="100%" src={img} />
     </Box>
   </Box>
 );

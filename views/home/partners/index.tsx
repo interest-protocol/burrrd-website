@@ -2,7 +2,7 @@ import { Box } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 import { v4 } from 'uuid';
 
-import Card from './card';
+import Card from '../components/card';
 import { PARTNERS } from './partners.data';
 import Title from './title';
 

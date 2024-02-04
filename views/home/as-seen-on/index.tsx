@@ -7,7 +7,6 @@ import Title from './title';
 
 const AsSeenOn: FC = () => (
   <Box
-    py="5rem"
     display="flex"
     alignItems="center"
     flexDirection="column"

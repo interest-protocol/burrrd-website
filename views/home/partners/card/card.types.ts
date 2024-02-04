@@ -4,5 +4,5 @@ export interface CardHeaderProps {
 }
 
 export interface CardProps extends CardHeaderProps {
-  logo: string;
+  img: string;
 }
