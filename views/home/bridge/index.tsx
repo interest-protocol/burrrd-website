@@ -6,7 +6,7 @@ import { useTheme } from '@/context/theme-context';
 import Button from '@/elements/button';
 import { KillingSpreeSVG, QuestionSVG } from '@/svg';
 
-const BridgeSection: FC = () => {
+const Bridge: FC = () => {
   const { theme } = useTheme();
   return (
     <Box variant="container" borderBottom="2px solid black" id="bridge">
@@ -105,4 +105,4 @@ const BridgeSection: FC = () => {
   );
 };
 
-export default BridgeSection;
+export default Bridge;
