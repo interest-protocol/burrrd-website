@@ -32,7 +32,7 @@ const Lottery: FC = () => (
             m="unset"
             textAlign="center"
           >
-            DReam big{<br />} Play small
+            Dream big{<br />} Play small
           </Typography>
 
           <Typography
@@ -42,7 +42,7 @@ const Lottery: FC = () => (
             textAlign="center"
             textTransform="uppercase"
           >
-            win incredible prices in the burrrd Lottery
+            win incredible prizes in the burrrd Lottery
           </Typography>
           <a href="https://burrrdlottery.com" target="_blank" rel="noreferrer">
             <Button

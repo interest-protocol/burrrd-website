@@ -167,7 +167,7 @@ const Tokenomics: FC = () => {
                     variant="medium"
                     fontSize={['1rem', '2.25rem']}
                   >
-                    Joints
+                    BURRRD
                   </Typography>
                 </Frame>
               </Motion>
