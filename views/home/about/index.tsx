@@ -4,7 +4,6 @@ import { FC, useState } from 'react';
 import Frame from '@/components/frame';
 import PlusSVG from '@/components/svg/plus';
 import { useTheme } from '@/context/theme-context';
-import Button from '@/elements/button';
 import { MinusSVG } from '@/svg';
 
 const About: FC = () => {
