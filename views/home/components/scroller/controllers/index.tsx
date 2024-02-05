@@ -1,5 +1,5 @@
 import { Box, Button } from '@interest-protocol/ui-kit';
-import { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
+import { forwardRef, useImperativeHandle, useState } from 'react';
 import { ResponsiveObject, Settings } from 'react-slick';
 
 import { CircleArrowLeftSVG, CircleArrowRightSVG } from '@/svg';
@@ -11,7 +11,9 @@ const Controllers = forwardRef(({ sliderRef }: ControllersProps, ref) => {
   const [isNextDisabled, setNextDisabled] = useState(false);
 
   const getCurrentSlidesToShow = () => {
-    const breakpoint = (sliderRef.current?.state as any).breakpoint ?? null;
+    const breakpoint =
+      (sliderRef.current?.state as unknown as { breakpoint?: number })
+        .breakpoint ?? null;
 
     if (!breakpoint) return sliderRef.current?.props.slidesToShow ?? 0;
 
@@ -23,19 +25,6 @@ const Controllers = forwardRef(({ sliderRef }: ControllersProps, ref) => {
       ).slidesToShow ?? 0
     );
   };
-
-  useEffect(() => {
-    const slidesToShow = getCurrentSlidesToShow();
-
-    const listSize =
-      sliderRef.current?.innerSlider?.list?.querySelectorAll('.slick-slide')
-        .length ?? 1;
-
-    if (listSize <= slidesToShow) {
-      setPrevDisabled(true);
-      setNextDisabled(true);
-    }
-  }, []);
 
   useImperativeHandle(
     ref,

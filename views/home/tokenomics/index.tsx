@@ -34,12 +34,7 @@ const Tokenomics: FC = () => {
 
   return (
     <Box variant="container" id="tokenomics">
-      <Box
-        width="100%"
-        display="flex"
-        gridColumn="1/-1"
-        pb={['10.625rem', '10.625rem', '10.625rem', '0']}
-      >
+      <Box width="100%" display="flex" gridColumn="1/-1">
         <Box
           mx="auto"
           width="100%"
@@ -406,15 +401,15 @@ const Tokenomics: FC = () => {
           >
             <Frame
               p="1rem"
+              bg="#000"
               display="flex"
               color="white"
-              boxShadow="10px 10px 0px 0px white"
-              border="4px solid white"
-              width={['25rem', '25rem', '25rem', '40rem']}
               borderRadius="2rem"
               flexDirection="column"
-              bg="#000"
-              fontSize={['2.5rem', '2.5rem', '2.5rem', '4rem']}
+              border="4px solid white"
+              boxShadow="10px 10px 0px 0px white"
+              width={['20rem', '25rem', '25rem', '40rem']}
+              fontSize={['2rem', '2.5rem', '2.5rem', '4rem']}
             >
               <Typography as="span" fontWeight="700" variant="displayLarge">
                 No Taxes,

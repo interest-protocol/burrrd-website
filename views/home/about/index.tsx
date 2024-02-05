@@ -4,7 +4,7 @@ import { FC, useState } from 'react';
 import Frame from '@/components/frame';
 import PlusSVG from '@/components/svg/plus';
 import { useTheme } from '@/context/theme-context';
-import Button from '@/elements/button';
+import { MinusSVG } from '@/svg';
 
 const About: FC = () => {
   const { theme } = useTheme();
@@ -25,8 +25,9 @@ const About: FC = () => {
     >
       <Box
         my="5rem"
-        width="60%"
+        mx="3rem"
         minHeight="19.813rem"
+        width={['100%', '100%', '100%', '60%']}
         nAfter={{
           top: '0',
           right: '0',
@@ -59,10 +60,10 @@ const About: FC = () => {
             lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
           >
             <Box
+              mb="5rem"
               display="flex"
-              justifyContent="space-between"
               alignItems="center"
-              mb="10rem"
+              justifyContent="space-between"
             >
               <Typography
                 fontFamily="Roboto"
@@ -75,22 +76,34 @@ const About: FC = () => {
               >
                 About
               </Typography>
-              <Button
-                size="small"
-                height="3rem"
-                width="3rem"
-                border="none"
+              <Box
+                bg="white"
                 color="#000"
-                borderRadius="100%"
-                fontSize="1.5rem"
+                width="3rem"
+                height="3rem"
+                border="none"
+                display="flex"
+                borderRadius="50%"
+                alignItems="center"
                 onClick={toggleText}
+                justifyContent="center"
               >
                 {toggle ? (
-                  '-'
+                  <MinusSVG
+                    width="100%"
+                    height="100%"
+                    maxHeight="2rem"
+                    maxWidth="2rem"
+                  />
                 ) : (
-                  <PlusSVG width="100%" maxHeight="2rem" maxWidth="2rem" />
+                  <PlusSVG
+                    width="100%"
+                    height="100%"
+                    maxHeight="2rem"
+                    maxWidth="2rem"
+                  />
                 )}
-              </Button>
+              </Box>
             </Box>
             <Typography variant="medium" fontWeight="400">
               BURRRD had enough of the never-ending sh¡tcoin circus, with all

@@ -35,9 +35,10 @@ const DisclaimerBox: FC = () => (
         textAlign="center"
         fontSize={['1rem', '1rem', '1rem', '1.125rem']}
       >
-        BURRRD is a meme coin with no intrinsic value or expectation of
-        financial return. There is no formal team or roadmap. The coin is
-        completely useless and for entertainment purposes only.
+        BURRRD is a meme coin primarily designed for entertainment purposes. The
+        {"project's"} focus is on providing a lighthearted and enjoyable
+        experiences. BURRRD is going to stab all meme coins on its way to the
+        top.
       </Box>
     </Box>
     <Box
