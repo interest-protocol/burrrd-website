@@ -9,7 +9,7 @@ const PlusSVG: FC<SVGProps> = ({ maxHeight, maxWidth, ...props }) => (
     fill="none"
     {...props}
   >
-    <path d="M14 1.99609H0V-0.00390625H14V1.99609Z" fill="currentColor" />
+    <path d="M14 1.99609H0V-0.00390625H14V1.99609Z" fill="#111" />
   </svg>
 );
 

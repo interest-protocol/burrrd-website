@@ -19,13 +19,13 @@ import Tokenomics from './tokenomics';
 const Home: FC = () => (
   <Layout>
     <Hero />
+    <Lottery />
     <AboutSection />
     <Box bg="linear-gradient(180deg, #111111 8.06%, #3B1259 57.12%, #DC77F7 100%)">
       <Tokenomics />
       <Roadmap />
       <Disclaimer />
     </Box>
-    <Lottery />
     <Box background="linear-gradient(180deg, #DB76F6 0%, #451779 100%)">
       <Advisors />
       <Partners />
