@@ -32,7 +32,7 @@ const Lottery: FC = () => (
             m="unset"
             textAlign="center"
           >
-            DReam big{<br />} Play small
+            Dream big{<br />} Play small
           </Typography>
 
           <Typography
