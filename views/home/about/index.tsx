@@ -90,9 +90,19 @@ const About: FC = () => {
                 justifyContent="center"
               >
                 {toggle ? (
-                  <MinusSVG width="100%" maxHeight="2rem" maxWidth="2rem" />
+                  <MinusSVG
+                    width="100%"
+                    height="100%"
+                    maxHeight="2rem"
+                    maxWidth="2rem"
+                  />
                 ) : (
-                  <PlusSVG width="100%" maxHeight="2rem" maxWidth="2rem" />
+                  <PlusSVG
+                    width="100%"
+                    height="100%"
+                    maxHeight="2rem"
+                    maxWidth="2rem"
+                  />
                 )}
               </Button>
             </Box>
