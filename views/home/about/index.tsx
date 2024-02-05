@@ -77,9 +77,9 @@ const About: FC = () => {
               >
                 About
               </Typography>
-              <Button
+              <Box
+                bg="white"
                 color="#000"
-                size="small"
                 width="3rem"
                 height="3rem"
                 border="none"
@@ -104,7 +104,7 @@ const About: FC = () => {
                     maxWidth="2rem"
                   />
                 )}
-              </Button>
+              </Box>
             </Box>
             <Typography variant="medium" fontWeight="400">
               BURRRD had enough of the never-ending sh¡tcoin circus, with all
