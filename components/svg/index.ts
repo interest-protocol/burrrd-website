@@ -31,6 +31,7 @@ export { default as MenuSVG } from './list-two-lines';
 export { default as BurrrdLogoSVG } from './logo';
 export { default as LoudSpeakerSVG } from './loud-speaker';
 export { default as MediumSVG } from './medium';
+export { default as MinusSVG } from './minus';
 export { default as OwlitSVG } from './owlit';
 export { default as QuestionSVG } from './question';
 export { default as ReleapSVG } from './releap';

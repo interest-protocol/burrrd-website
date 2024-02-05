@@ -5,6 +5,7 @@ import Frame from '@/components/frame';
 import PlusSVG from '@/components/svg/plus';
 import { useTheme } from '@/context/theme-context';
 import Button from '@/elements/button';
+import { MinusSVG } from '@/svg';
 
 const About: FC = () => {
   const { theme } = useTheme();
@@ -60,10 +61,10 @@ const About: FC = () => {
             lineHeight={['1.5rem', '1.5rem', '1.5rem', '2rem']}
           >
             <Box
+              mb="5rem"
               display="flex"
-              justifyContent="space-between"
               alignItems="center"
-              mb="10rem"
+              justifyContent="space-between"
             >
               <Typography
                 fontFamily="Roboto"
@@ -77,17 +78,19 @@ const About: FC = () => {
                 About
               </Typography>
               <Button
-                size="small"
-                height="3rem"
-                width="3rem"
-                border="none"
                 color="#000"
-                borderRadius="100%"
-                fontSize="1.5rem"
+                size="small"
+                width="3rem"
+                height="3rem"
+                border="none"
+                display="flex"
+                borderRadius="50%"
+                alignItems="center"
                 onClick={toggleText}
+                justifyContent="center"
               >
                 {toggle ? (
-                  '-'
+                  <MinusSVG width="100%" maxHeight="2rem" maxWidth="2rem" />
                 ) : (
                   <PlusSVG width="100%" maxHeight="2rem" maxWidth="2rem" />
                 )}
