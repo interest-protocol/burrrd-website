@@ -4,6 +4,7 @@ export { default as ArrowTopRightSVG } from './arrow-top-right';
 export { default as ArrowUpRightSVG } from './arrow-up-right';
 export { default as BurrrdSVG } from './burrrd';
 export { default as BurrrdCleaningSVG } from './burrrd-cleaning';
+export { default as BurrrdCoinsSVG } from './burrrd-coins';
 export { default as BurrrdKnifeSVG } from './burrrd-knife';
 export * from './burrrd-on-the-moon';
 export { default as BurrrdRockSVG } from './burrrd-rock';

@@ -2,20 +2,25 @@ import { Box, Typography } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 
 import Button from '@/elements/button';
-
-import LeftIllustration from './illustraction/left-side';
-import RightIllustration from './illustraction/right-side';
+import { BurrrdCoinsSVG } from '@/svg';
 
 const Lottery: FC = () => (
-  <Box variant="container" mx="auto" id="lottery" bg="#1B1622" py="3rem">
+  <Box
+    variant="container"
+    mx="auto"
+    id="lottery"
+    bg="#1B1622"
+    display="flex"
+    justifyContent="center"
+    alignItems="center"
+  >
     <Box
       gap="1rem"
-      width="100%"
       display="flex"
       flexDirection={['column', 'column', 'column', 'row']}
-      pb={['2rem', '2rem', '2rem', '7rem']}
+      pb={['2rem', '2rem', '2rem', '5rem']}
+      mt={['2rem', '2rem', '2rem', '5rem']}
     >
-      <LeftIllustration />
       <Box
         zIndex="1"
         borderColor="white"
@@ -71,7 +76,15 @@ const Lottery: FC = () => (
           </a>
         </Box>
       </Box>
-      <RightIllustration />
+    </Box>
+    <Box
+      height="37.5rem"
+      width="34.75rem"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <BurrrdCoinsSVG width="100%" maxHeight="30rem" maxWidth="30rem" />
     </Box>
   </Box>
 );
