@@ -12,6 +12,7 @@ const Lottery: FC = () => (
     bg="#1B1622"
     display="flex"
     justifyContent="center"
+    flexDirection={['column', 'column', 'column', 'row']}
     alignItems="center"
   >
     <Box
