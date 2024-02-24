@@ -24,8 +24,8 @@ const Partners: FC = () => (
     {PARTNERS.map((partner, index) => (
       <Box
         key={v4()}
-        mt={['unset', 'unset', 'unset', index % 3 !== 1 ? '-10.5rem' : 'unset']}
-        mb={['unset', 'unset', 'unset', index % 3 !== 1 ? '10.5rem' : 'unset']}
+        mt={['unset', 'unset', 'unset', index % 3 !== 1 ? '-9rem' : 'unset']}
+        mb={['unset', 'unset', 'unset', index % 3 !== 1 ? '9rem' : 'unset']}
       >
         <Card {...partner} />
       </Box>

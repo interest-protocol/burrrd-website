@@ -5,7 +5,6 @@ import { HandsSVG } from '@/svg';
 
 const Title: FC = () => (
   <Box
-    mb="1.5rem"
     bg="#FF7E61"
     p="1.5rem 3rem"
     border="2px solid"
