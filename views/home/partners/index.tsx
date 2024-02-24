@@ -8,7 +8,7 @@ import Title from './title';
 
 const Partners: FC = () => (
   <Box
-    py="6rem"
+    pt="6rem"
     px="3rem"
     mx="auto"
     gap="2rem"
@@ -18,20 +18,15 @@ const Partners: FC = () => (
     justifyContent="center"
     gridTemplateColumns={['1fr', '1fr', '1fr', '1fr 1fr 1fr']}
   >
+    <Box />
+    <Title />
+    <Box />
     {PARTNERS.map((partner, index) => (
-      <Box key={v4()}>
-        {(index == 0 || index == 1) && (
-          <Box
-            display={[
-              index == 0 ? 'block' : 'none',
-              index == 0 ? 'block' : 'none',
-              index == 0 ? 'block' : 'none',
-              index == 1 ? 'block' : 'none',
-            ]}
-          >
-            <Title />
-          </Box>
-        )}
+      <Box
+        key={v4()}
+        mt={['unset', 'unset', 'unset', index % 3 !== 1 ? '-10.5rem' : 'unset']}
+        mb={['unset', 'unset', 'unset', index % 3 !== 1 ? '10.5rem' : 'unset']}
+      >
         <Card {...partner} />
       </Box>
     ))}

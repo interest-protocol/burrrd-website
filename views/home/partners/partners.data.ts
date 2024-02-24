@@ -17,4 +17,28 @@ export const PARTNERS = [
     img: '/images/partners/gotbit.webp',
     post: 'https://x.com/BURRRD/status/1747680212861551092',
   },
+  {
+    name: 'Stoned Ape Crew',
+    link: 'https://www.stonedapecrew.com/',
+    img: '/images/partners/kamino.webp',
+    post: 'https://twitter.com/StonedApeCrew/status/1741135499215908897',
+  },
+  {
+    name: 'Zebec',
+    link: 'https://card.zebec.io/burrrd',
+    img: '/images/partners/bonkbot.webp',
+    post: 'https://twitter.com/BURRRD/status/1743316601443668042',
+  },
+  {
+    name: 'Gotbit',
+    link: 'https://gotbit.io/',
+    img: '/images/partners/memecon.webp',
+    post: 'https://x.com/BURRRD/status/1747680212861551092',
+  },
+  {
+    name: 'Gotbit',
+    link: 'https://gotbit.io/',
+    img: '/images/partners/world-store.webp',
+    post: 'https://x.com/BURRRD/status/1747680212861551092',
+  },
 ];
