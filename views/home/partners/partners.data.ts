@@ -17,4 +17,28 @@ export const PARTNERS = [
     img: '/images/partners/gotbit.webp',
     post: 'https://x.com/BURRRD/status/1747680212861551092',
   },
+  {
+    name: 'Kamino',
+    link: 'https://app.kamino.finance/',
+    img: '/images/partners/kamino.webp',
+    post: 'https://twitter.com/KaminoFinance',
+  },
+  {
+    name: 'Bonkbot',
+    link: 'https://www.bonkbot.io/',
+    img: '/images/partners/bonkbot.webp',
+    post: 'https://twitter.com/bonkbot_io',
+  },
+  {
+    name: 'Memecon',
+    link: 'https://memecon.lol/',
+    img: '/images/partners/memecon.webp',
+    post: 'https://twitter.com/MEMECON_lol',
+  },
+  {
+    name: 'World Store',
+    link: 'https://worldstore.mirrorworld.fun/',
+    img: '/images/partners/world-store.webp',
+    post: 'https://twitter.com/joinmirrorworld',
+  },
 ];
