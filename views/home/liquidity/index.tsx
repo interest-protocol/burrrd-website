@@ -2,20 +2,25 @@ import { Box, Typography } from '@interest-protocol/ui-kit';
 import { FC } from 'react';
 
 import Button from '@/elements/button';
+import { BurrrdCoinsSVG } from '@/svg';
 
-import LeftIllustration from './illustraction/left-side';
-import RightIllustration from './illustraction/right-side';
-
-const Lottery: FC = () => (
-  <Box variant="container" mx="auto" id="lottery" py="3rem">
+const Liquidity: FC = () => (
+  <Box
+    mx="auto"
+    id="lottery"
+    display="flex"
+    variant="container"
+    alignItems="center"
+    justifyContent="center"
+    flexDirection={['column', 'column', 'column', 'row']}
+  >
     <Box
       gap="1rem"
-      width="100%"
       display="flex"
-      pb={['2rem', '2rem', '2rem', '7rem']}
       flexDirection={['column', 'column', 'column', 'row']}
+      pb={['2rem', '2rem', '2rem', '5rem']}
+      mt={['2rem', '2rem', '2rem', '5rem']}
     >
-      <LeftIllustration />
       <Box
         zIndex="1"
         borderColor="white"
@@ -32,7 +37,8 @@ const Lottery: FC = () => (
             m="unset"
             textAlign="center"
           >
-            Dream big{<br />} Play small
+            Add liquidity
+            <br /> and win rewards
           </Typography>
 
           <Typography
@@ -42,9 +48,13 @@ const Lottery: FC = () => (
             textAlign="center"
             textTransform="uppercase"
           >
-            win incredible prizes in the burrrd Lottery
+            win incredible rewards in the Kamino Liquidity Pool
           </Typography>
-          <a href="https://burrrdlottery.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://app.kamino.finance/liquidity/DJqHyMs9cHCyokg2rcG4yLB9VjmgAKSeCA2jiey4eokE"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button
               bg="#FFF"
               mt="3rem"
@@ -66,14 +76,22 @@ const Lottery: FC = () => (
                 '2rem 3rem',
               ]}
             >
-              Play and have fun
+              Start now
             </Button>
           </a>
         </Box>
       </Box>
-      <RightIllustration />
+    </Box>
+    <Box
+      height="37.5rem"
+      width="34.75rem"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <BurrrdCoinsSVG width="100%" maxHeight="30rem" maxWidth="30rem" />
     </Box>
   </Box>
 );
 
-export default Lottery;
+export default Liquidity;
