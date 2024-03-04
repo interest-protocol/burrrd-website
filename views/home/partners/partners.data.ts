@@ -41,4 +41,10 @@ export const PARTNERS = [
     img: '/images/partners/world-store.webp',
     post: 'https://twitter.com/joinmirrorworld',
   },
+  {
+    name: 'Hello Moon',
+    link: 'https://www.hellomoon.io/nfts/top-projects',
+    img: '/images/partners/hello-moon.svg',
+    post: 'https://x.com/BURRRD/status/1764779265306829023?s=20',
+  },
 ];
