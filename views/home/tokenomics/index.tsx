@@ -1,6 +1,6 @@
 import { Box, Motion, Typography } from '@interest-protocol/ui-kit';
 import { track } from '@vercel/analytics';
-import { FC, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { useCountUp } from 'react-countup';
 
 import Frame from '@/components/frame';
@@ -13,24 +13,32 @@ import {
   StabLineSVG,
 } from '@/svg';
 
-import { DISTRIBUTION, WEEDS } from './tokenomics.data';
+import { DISTRIBUTION } from './tokenomics.data';
 
 const Tokenomics: FC = () => {
   const countUpRef = useRef(null);
+  const [weeds, setWeeds] = useState(0);
+
+  useEffect(() => {
+    fetch('/api/v1/get-burrrd-supply')
+      .then((res) => res.json?.())
+      .then(setWeeds)
+      .catch(console.log);
+  }, []);
 
   const countup = useCountUp({
     ref: countUpRef,
     start: 0,
     duration: 4,
-    end: WEEDS,
+    end: weeds,
     useGrouping: true,
     scrollSpyOnce: true,
     enableScrollSpy: true,
   });
 
   useEffect(() => {
-    countup.start();
-  }, [countup]);
+    if (weeds) countup.start();
+  }, [countup, weeds]);
 
   return (
     <Box variant="container" id="tokenomics">

@@ -1,5 +1,3 @@
-export const WEEDS = 65_274_943_826_001;
-
 export const DISTRIBUTION = [
   {
     percentage: '10%',
