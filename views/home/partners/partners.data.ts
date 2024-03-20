@@ -12,10 +12,10 @@ export const PARTNERS = [
     post: 'https://twitter.com/BURRRD/status/1743316601443668042',
   },
   {
-    name: 'Gotbit',
-    link: 'https://gotbit.io/',
-    img: '/images/partners/gotbit.webp',
-    post: 'https://x.com/BURRRD/status/1747680212861551092',
+    name: 'EMG',
+    link: 'https://emgroups.io/',
+    img: '/images/partners/emg.webp',
+    post: 'https://x.com/EmeldiGroup/status/1770451122827960448?s=20',
   },
   {
     name: 'Kamino',
