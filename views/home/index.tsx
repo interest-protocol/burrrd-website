@@ -31,7 +31,6 @@ const Home: FC = () => (
       <Disclaimer />
     </Box>
     <Box background="linear-gradient(180deg, #DB76F6 0%, #451779 100%)">
-      <Advisors />
       <Partners />
       <Collaborators />
       <AsSeenOn />
