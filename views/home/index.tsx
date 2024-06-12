@@ -5,7 +5,6 @@ import Layout from '@/components/layout';
 import Footer from '@/components/layout/footer';
 
 import AboutSection from './about';
-import Advisors from './advisors';
 import AsSeenOn from './as-seen-on';
 import Collaborators from './collaborations';
 import Disclaimer from './disclaimer';
