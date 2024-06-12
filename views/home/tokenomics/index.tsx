@@ -13,8 +13,6 @@ import {
   StabLineSVG,
 } from '@/svg';
 
-import { DISTRIBUTION } from './tokenomics.data';
-
 const Tokenomics: FC = () => {
   const countUpRef = useRef(null);
   const [weeds, setWeeds] = useState(0);
@@ -190,40 +188,6 @@ const Tokenomics: FC = () => {
             mt={['4rem', '4rem', '4rem', '6.25rem']}
           >
             <Box color="white" textAlign="center">
-              <Box
-                display="flex"
-                width="100%"
-                flexDirection={['column', 'column', 'column', 'row']}
-                justifyContent="space-between"
-                mb="4rem"
-              >
-                {DISTRIBUTION.map((el, index) => (
-                  <Box key={index} display="flex" flexDirection="column">
-                    <Typography
-                      fontFamily="Inter"
-                      variant="title1"
-                      fontWeight="500"
-                      margin="0"
-                      fontSize={['5rem', '5rem', '5rem', '6rem']}
-                      background={`linear-gradient(90deg, ${el.grad1} -0.41%, ${el.grad2} 99.59%)`}
-                      WebkitTextFillColor="transparent"
-                      WebkitBackgroundClip="text"
-                    >
-                      {el.percentage}
-                    </Typography>
-                    <Typography
-                      variant="small"
-                      fontWeight="400"
-                      fontFamily="Inter"
-                      fontStyle="normal"
-                      fontSize="1.375rem"
-                      alignSelf={['center', 'center', 'center', 'flex-start']}
-                    >
-                      {el.title}
-                    </Typography>
-                  </Box>
-                ))}
-              </Box>
               <Box
                 cursor="pointer"
                 onClick={() => {
