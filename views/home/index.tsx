@@ -5,7 +5,6 @@ import Layout from '@/components/layout';
 import Footer from '@/components/layout/footer';
 
 import AboutSection from './about';
-import Advisors from './advisors';
 import AsSeenOn from './as-seen-on';
 import Collaborators from './collaborations';
 import Disclaimer from './disclaimer';
@@ -31,7 +30,6 @@ const Home: FC = () => (
       <Disclaimer />
     </Box>
     <Box background="linear-gradient(180deg, #DB76F6 0%, #451779 100%)">
-      <Advisors />
       <Partners />
       <Collaborators />
       <AsSeenOn />
